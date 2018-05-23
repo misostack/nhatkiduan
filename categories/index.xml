@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Nhật Kí Phát Triển Dự Án</title>
-    <link>http://io.misostack.com/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Nhật Kí Phát Triển Dự Án</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://io.misostack.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Uncategory</title>
-      <link>http://io.misostack.com/categories/uncategory/</link>
+      <link>/categories/uncategory/</link>
       <pubDate>Wed, 23 May 2018 18:36:57 +0700</pubDate>
       
-      <guid>http://io.misostack.com/categories/uncategory/</guid>
+      <guid>/categories/uncategory/</guid>
       <description></description>
     </item>
     
