@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Nhật Kí Phát Triển Dự Án</title>
-    <link>/posts/</link>
+    <link>nhatkiduan.misostack.com/posts/</link>
     <description>Recent content in Posts on Nhật Kí Phát Triển Dự Án</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 23 May 2018 18:36:57 +0700</lastBuildDate>
     
-	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="nhatkiduan.misostack.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hello 2</title>
-      <link>/posts/hello-2/</link>
+      <link>nhatkiduan.misostack.com/posts/hello-2/</link>
       <pubDate>Wed, 23 May 2018 18:36:57 +0700</pubDate>
       
-      <guid>/posts/hello-2/</guid>
+      <guid>nhatkiduan.misostack.com/posts/hello-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hello 1</title>
-      <link>/posts/hello-1/</link>
+      <link>nhatkiduan.misostack.com/posts/hello-1/</link>
       <pubDate>Wed, 23 May 2018 18:31:52 +0700</pubDate>
       
-      <guid>/posts/hello-1/</guid>
+      <guid>nhatkiduan.misostack.com/posts/hello-1/</guid>
       <description></description>
     </item>
     

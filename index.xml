@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nhật Kí Phát Triển Dự Án</title>
-    <link>/</link>
+    <link>nhatkiduan.misostack.com/</link>
     <description>Recent content on Nhật Kí Phát Triển Dự Án</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 23 May 2018 18:36:57 +0700</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="nhatkiduan.misostack.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hello 2</title>
-      <link>/posts/hello-2/</link>
+      <link>nhatkiduan.misostack.com/posts/hello-2/</link>
       <pubDate>Wed, 23 May 2018 18:36:57 +0700</pubDate>
       
-      <guid>/posts/hello-2/</guid>
+      <guid>nhatkiduan.misostack.com/posts/hello-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ngay 001</title>
-      <link>/projects/timeinvestment/ngay-001/</link>
+      <link>nhatkiduan.misostack.com/projects/timeinvestment/ngay-001/</link>
       <pubDate>Wed, 23 May 2018 18:35:43 +0700</pubDate>
       
-      <guid>/projects/timeinvestment/ngay-001/</guid>
+      <guid>nhatkiduan.misostack.com/projects/timeinvestment/ngay-001/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hello 1</title>
-      <link>/posts/hello-1/</link>
+      <link>nhatkiduan.misostack.com/posts/hello-1/</link>
       <pubDate>Wed, 23 May 2018 18:31:52 +0700</pubDate>
       
-      <guid>/posts/hello-1/</guid>
+      <guid>nhatkiduan.misostack.com/posts/hello-1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>/projects/</link>
+      <link>nhatkiduan.misostack.com/projects/</link>
       <pubDate>Wed, 23 May 2018 18:06:39 +0700</pubDate>
       
-      <guid>/projects/</guid>
+      <guid>nhatkiduan.misostack.com/projects/</guid>
       <description>List of projects</description>
     </item>
     
     <item>
       <title>Hugo Tips</title>
-      <link>/hugo/</link>
+      <link>nhatkiduan.misostack.com/hugo/</link>
       <pubDate>Wed, 23 May 2018 17:59:32 +0700</pubDate>
       
-      <guid>/hugo/</guid>
+      <guid>nhatkiduan.misostack.com/hugo/</guid>
       <description> Start dev server hugo server  Build hugo  New Page hugo new pagename.md  New Blog Post hugo new posts/post-name.md  New Project Day Post hugo new projects/pid-day001.md  </description>
     </item>
     
