@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on Nhật Kí Phát Triển Dự Án</title>
-    <link>http://nhatkiduan.misostack.com/blog/</link>
-    <description>Recent content in Blogs on Nhật Kí Phát Triển Dự Án</description>
+    <title>Pmp on Nhật Kí Phát Triển Dự Án</title>
+    <link>http://nhatkiduan.misostack.com/categories/pmp/</link>
+    <description>Recent content in Pmp on Nhật Kí Phát Triển Dự Án</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
     <lastBuildDate>Fri, 25 May 2018 18:01:17 +0700</lastBuildDate>
     
-	<atom:link href="http://nhatkiduan.misostack.com/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://nhatkiduan.misostack.com/categories/pmp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       <pubDate>Fri, 25 May 2018 18:01:17 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/blog/example/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hello</title>
-      <link>http://nhatkiduan.misostack.com/blog/hello/</link>
-      <pubDate>Thu, 24 May 2018 17:00:00 +0700</pubDate>
-      
-      <guid>http://nhatkiduan.misostack.com/blog/hello/</guid>
       <description></description>
     </item>
     
