@@ -45,7 +45,7 @@
       <pubDate>Thu, 24 May 2018 15:57:54 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/hugo/</guid>
-      <description> Start dev server hugo server  Build hugo  New Page hugo new pagename.md  hugo new / New Blog Post hugo new blog/post-name.md  New Project Day Post hugo new note/projectname-day001.md  </description>
+      <description>  Command Description     hugo server run dev server in local   hugo build   hugo new page-name.md new page   hugo new blog/post-name.md new blog post   hugo new note/projectname-day001.md new project note    </description>
     </item>
     
   </channel>
