@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Subjects on Nhật Kí Phát Triển Dự Án</title>
+    <link>http://nhatkiduan.misostack.com/subjects/</link>
+    <description>Recent content in Subjects on Nhật Kí Phát Triển Dự Án</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi-VN</language>
+    <copyright>Everything is mine</copyright>
+    <lastBuildDate>Tue, 29 May 2018 18:47:46 +0700</lastBuildDate>
+    
+	<atom:link href="http://nhatkiduan.misostack.com/subjects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java</title>
+      <link>http://nhatkiduan.misostack.com/subjects/java/</link>
+      <pubDate>Tue, 29 May 2018 18:47:46 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/subjects/java/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

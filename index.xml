@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Fri, 25 May 2018 18:01:17 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 29 May 2018 18:47:46 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bài 1 : Cài đặt Java</title>
+      <link>http://nhatkiduan.misostack.com/article/java-001-installation/</link>
+      <pubDate>Tue, 29 May 2018 18:47:46 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/java-001-installation/</guid>
+      <description> 1.Cài đặt Java Window
+Ubuntu
+2.Chạy chương trình java đầu tiên 3.Java code editors </description>
+    </item>
     
     <item>
       <title>Example</title>
@@ -45,7 +56,7 @@
       <pubDate>Thu, 24 May 2018 15:57:54 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/hugo/</guid>
-      <description>  Command Description     hugo server run dev server in local   hugo build   hugo new page-name.md new page   hugo new blog/post-name.md new blog post   hugo new note/projectname-day001.md new project note    </description>
+      <description>  Command Description     hugo server run dev server in local   hugo build   hugo new page-name.md new page   hugo new blog/post-name.md new blog post   hugo new note/projectname-day001.md new project note   hugo new article/subject-001-installation.md new subject&amp;#39;s article    </description>
     </item>
     
   </channel>

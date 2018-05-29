@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on Nhật Kí Phát Triển Dự Án</title>
+    <link>http://nhatkiduan.misostack.com/article/</link>
+    <description>Recent content in Articles on Nhật Kí Phát Triển Dự Án</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi-VN</language>
+    <copyright>Everything is mine</copyright>
+    <lastBuildDate>Tue, 29 May 2018 18:47:46 +0700</lastBuildDate>
+    
+	<atom:link href="http://nhatkiduan.misostack.com/article/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bài 1 : Cài đặt Java</title>
+      <link>http://nhatkiduan.misostack.com/article/java-001-installation/</link>
+      <pubDate>Tue, 29 May 2018 18:47:46 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/java-001-installation/</guid>
+      <description> 1.Cài đặt Java Window
+Ubuntu
+2.Chạy chương trình java đầu tiên 3.Java code editors </description>
+    </item>
+    
+  </channel>
+</rss>
