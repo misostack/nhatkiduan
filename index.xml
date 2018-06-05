@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Tue, 05 Jun 2018 15:07:49 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jun 2018 19:20:17 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bài 001 : Cài đặt ruby</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-001-installation/</link>
+      <pubDate>Tue, 05 Jun 2018 19:20:17 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-001-installation/</guid>
+      <description>Hướng dẫn cài đặt ruby trên ubuntu(16.04) Chi tiết các bước thực hiện
+ Cài đặt các gói ruby dependencies Cài đặt rbenv Cài đặt ruby Kiểm tra version Cài đặt gem bundler để quản lí packages  Cài đặt các gói ruby dependencies  sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev sudo apt-get install build-essential
+ Cài đặt rbenv  Link tham khảo : https://github.com/rbenv/rbenv  cd ~ git clone https://github.</description>
+    </item>
     
     <item>
       <title>Facebook Access Token</title>
@@ -76,7 +87,7 @@ Ubuntu
       <pubDate>Thu, 24 May 2018 15:57:54 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/hugo/</guid>
-      <description>  Command Description     hugo server run dev server in local   hugo build   hugo new page-name.md new page   hugo new blog/post-name.md new blog post   hugo new note/projectname-day001.md new project note   hugo new article/subject-001-installation.md new subject&amp;#39;s article    </description>
+      <description>   Command Description     hugo server run dev server in local   hugo build   hugo new page-name.md new page   hugo new blog/post-name.md new blog post   hugo new note/projectname-day001.md new project note   hugo new article/subject-001-installation.md new subject&amp;#39;s article    Links  https://discourse.gohugo.io/t/sort-order-only-bydate-or-byweight/6961/4 https://discourse.gohugo.io/t/question-regarding-next-prev-navigation/1055/3  </description>
     </item>
     
   </channel>
