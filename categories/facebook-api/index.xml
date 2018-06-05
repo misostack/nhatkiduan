@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Facebook Api on Nhật Kí Phát Triển Dự Án</title>
+    <link>http://nhatkiduan.misostack.com/categories/facebook-api/</link>
+    <description>Recent content in Facebook Api on Nhật Kí Phát Triển Dự Án</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi-VN</language>
+    <copyright>Everything is mine</copyright>
+    <lastBuildDate>Tue, 05 Jun 2018 15:07:49 +0700</lastBuildDate>
+    
+	<atom:link href="http://nhatkiduan.misostack.com/categories/facebook-api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Facebook Access Token</title>
+      <link>http://nhatkiduan.misostack.com/blog/facebook-reporting-api/</link>
+      <pubDate>Tue, 05 Jun 2018 15:07:49 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/blog/facebook-reporting-api/</guid>
+      <description> 1.Access Tokens Generating User Access Tokens
+There are two kinds of user access tokens:
+ Short Term User Token Generation System User Token Generation  1.1. Short Term User Token Generation </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Fri, 25 May 2018 18:01:17 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jun 2018 15:07:49 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Facebook Access Token</title>
+      <link>http://nhatkiduan.misostack.com/blog/facebook-reporting-api/</link>
+      <pubDate>Tue, 05 Jun 2018 15:07:49 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/blog/facebook-reporting-api/</guid>
+      <description> 1.Access Tokens Generating User Access Tokens
+There are two kinds of user access tokens:
+ Short Term User Token Generation System User Token Generation  1.1. Short Term User Token Generation </description>
+    </item>
     
     <item>
       <title>Example</title>

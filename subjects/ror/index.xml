@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Articles on Nhật Kí Phát Triển Dự Án</title>
-    <link>http://nhatkiduan.misostack.com/article/</link>
-    <description>Recent content in Articles on Nhật Kí Phát Triển Dự Án</description>
+    <title>Ror on Nhật Kí Phát Triển Dự Án</title>
+    <link>http://nhatkiduan.misostack.com/subjects/ror/</link>
+    <description>Recent content in Ror on Nhật Kí Phát Triển Dự Án</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
     <lastBuildDate>Tue, 05 Jun 2018 13:50:51 +0700</lastBuildDate>
     
-	<atom:link href="http://nhatkiduan.misostack.com/article/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://nhatkiduan.misostack.com/subjects/ror/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       
       <guid>http://nhatkiduan.misostack.com/article/ruby-000-ror/</guid>
       <description> Tổng quan về 1st stack 1. Backbone : ruby on rails ( ror ) Ruby version : &amp;gt;= 2.5.1 Rails version : &amp;gt;= 5.2.0  2. 3. Relational Databases PostgreSQL MYSQL  4. NoSQL Redis Memcached  5.Caching Caching stragies : https://devcenter.heroku.com/articles/caching-strategies Caching with rails : http://guides.rubyonrails.org/caching_with_rails.html  Cài đặt ruby Hướng dẫn cài đặt ruby trên ubuntu(16.04) </description>
-    </item>
-    
-    <item>
-      <title>Bài 1 : Cài đặt Java</title>
-      <link>http://nhatkiduan.misostack.com/article/java-001-installation/</link>
-      <pubDate>Tue, 29 May 2018 18:47:46 +0700</pubDate>
-      
-      <guid>http://nhatkiduan.misostack.com/article/java-001-installation/</guid>
-      <description> 1.Cài đặt Java Window
-Ubuntu
-2.Chạy chương trình java đầu tiên 3.Java code editors </description>
     </item>
     
   </channel>

@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Tue, 29 May 2018 18:47:46 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jun 2018 15:07:49 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Facebook Access Token</title>
+      <link>http://nhatkiduan.misostack.com/blog/facebook-reporting-api/</link>
+      <pubDate>Tue, 05 Jun 2018 15:07:49 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/blog/facebook-reporting-api/</guid>
+      <description> 1.Access Tokens Generating User Access Tokens
+There are two kinds of user access tokens:
+ Short Term User Token Generation System User Token Generation  1.1. Short Term User Token Generation </description>
+    </item>
+    
+    <item>
+      <title>1st stack: Ruby On Rails</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-000-ror/</link>
+      <pubDate>Tue, 05 Jun 2018 13:50:51 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-000-ror/</guid>
+      <description> Tổng quan về 1st stack 1. Backbone : ruby on rails ( ror ) Ruby version : &amp;gt;= 2.5.1 Rails version : &amp;gt;= 5.2.0  2. 3. Relational Databases PostgreSQL MYSQL  4. NoSQL Redis Memcached  5.Caching Caching stragies : https://devcenter.heroku.com/articles/caching-strategies Caching with rails : http://guides.rubyonrails.org/caching_with_rails.html  Cài đặt ruby Hướng dẫn cài đặt ruby trên ubuntu(16.04) </description>
+    </item>
     
     <item>
       <title>Bài 1 : Cài đặt Java</title>
