@@ -20,7 +20,7 @@
       <guid>http://nhatkiduan.misostack.com/article/ruby-001-installation/</guid>
       <description>Current Ruby stable version https://www.ruby-lang.org/en/downloads/
 2.5.1  1.Hướng dẫn cài đặt ruby với rbenv trên ubuntu(16.04) Chi tiết các bước thực hiện
- Cài đặt các gói ruby dependencies Cài đặt rbenv Cài đặt ruby Kiểm tra version Cài đặt gem bundler để quản lí packages  Update sudo apt-get update Cài đặt các gói ruby dependencies sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev sudo apt-get install -y build-essential Cài đặt rbenv  Link tham khảo : https://github.</description>
+ Cài đặt các gói ruby dependencies Cài đặt rbenv Cài đặt ruby Kiểm tra version Cài đặt gem bundler để quản lí packages  Update sudo apt-get update Cài đặt các gói ruby dependencies sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev sudo apt-get install -y curl gnupg build-essential Cài đặt rbenv  Link tham khảo : https://github.</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@ There are two kinds of user access tokens:
       <pubDate>Tue, 05 Jun 2018 13:50:51 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/ruby-000-ror/</guid>
-      <description> Tổng quan về 1st stack 1. Backbone : ruby on rails ( ror ) Ruby version : &amp;gt;= 2.5.1 Rails version : &amp;gt;= 5.2.0  2. Relational Databases PostgreSQL MYSQL  3. NoSQL Redis Memcached  4.Caching Caching stragies : https://devcenter.heroku.com/articles/caching-strategies Caching with rails : http://guides.rubyonrails.org/caching_with_rails.html  5.Best practice for production  https://medium.com/@rdsubhas/ruby-in-production-lessons-learned-36d7ab726d99  </description>
+      <description>Tổng quan về 1st stack 1. Backbone : ruby on rails ( ror ) Ruby version : &amp;gt;= 2.5.1 Rails version : &amp;gt;= 5.2.0  2. Relational Databases PostgreSQL MYSQL  3. NoSQL Redis Memcached  4.Caching Caching stragies : https://devcenter.heroku.com/articles/caching-strategies Caching with rails : http://guides.rubyonrails.org/caching_with_rails.html  5.Best practice for production  https://medium.com/@rdsubhas/ruby-in-production-lessons-learned-36d7ab726d99  6.Ruby released news  https://www.ruby-lang.org/en/news/2018/03/28/ruby-2-3-7-released/ https://github.com/ruby/ruby  Bonus php : http://php.net/supported-versions.php</description>
     </item>
     
     <item>

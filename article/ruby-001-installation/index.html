@@ -114,7 +114,7 @@
 
 
 <pre><code class="language-bash">sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
-sudo apt-get install -y build-essential</code></pre>
+sudo apt-get install -y curl gnupg build-essential</code></pre>
 
 
 <h3 id="cài-đặt-rbenv">Cài đặt rbenv</h3>
@@ -234,6 +234,234 @@ rbenv rehash
 <blockquote>
 <p>bundler exec ruby hello.rb</p>
 </blockquote>
+
+<h3 id="disable-rbenv">Disable .rbenv</h3>
+
+<pre><code class="language-bash">vi ~/.bashrc
+</code></pre>
+
+<p><strong>Nội dung file</strong></p>
+
+<pre><code class="language-bash"># .rbenv
+# export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;
+# eval &quot;$(rbenv init -)&quot;
+</code></pre>
+
+<p><strong>Sau khi edit xong reload lai bashrc</strong></p>
+
+<pre><code class="language-bash">source ~/.bashrc
+</code></pre>
+
+<p><strong>Thoát khỏi phiên đăng nhập để kiểm tra lại</strong></p>
+
+<pre><code class="language-bash">exit
+ssh ...
+ruby -v
+</code></pre>
+
+<h2 id="2-hướng-dẫn-cài-đặt-ruby-với-rvm-trên-ubuntu-16-04">2.Hướng dẫn cài đặt ruby với rvm trên ubuntu(16.04)</h2>
+
+<ul>
+<li><p>Link : <a href="https://github.com/rvm/rvm">https://github.com/rvm/rvm</a></p></li>
+
+<li><p><a href="https://github.com/rvm/ubuntu_rvm">https://github.com/rvm/ubuntu_rvm</a></p></li>
+</ul>
+
+<h3 id="cài-đặt-các-gói-ruby-dependencies-1">Cài đặt các gói ruby dependencies</h3>
+
+
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
+sudo apt-get install -y curl gnupg build-essential</code></pre>
+
+
+<h3 id="cài-đặt-rvm">Cài đặt RVM</h3>
+
+<pre><code class="language-bash">gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+</code></pre>
+
+<p><strong>Single User Installations</strong></p>
+
+<p><em>Single-User installations (recommended) - For an isolated install within a user&rsquo;s $HOME, not for root.</em></p>
+
+<pre><code class="language-bash">\curl -sSL https://get.rvm.io | bash -s stable
+</code></pre>
+
+<p><strong>Sau khi cài đặt xong hệ thống sẽ hiện câu thông báo sau</strong></p>
+
+<pre><code class="language-bash">Installing RVM to /home/ubuntu/.rvm/
+    Adding rvm PATH line to /home/ubuntu/.profile /home/ubuntu/.mkshrc /home/ubuntu/.bashrc /home/ubuntu/.zshrc.
+    Adding rvm loading line to /home/ubuntu/.profile /home/ubuntu/.bash_profile /home/ubuntu/.zlogin.
+Installation of RVM in /home/ubuntu/.rvm/ is almost complete:
+
+  * To start using RVM you need to run `source /home/ubuntu/.rvm/scripts/rvm`
+    in all your open shell windows, in rare cases you need to reopen all shell windows.
+</code></pre>
+
+<p><strong>Để sử dụng rvm ngay lập tức</strong></p>
+
+<pre><code class="language-bash">source /home/ubuntu/.rvm/scripts/rvm
+</code></pre>
+
+<p><strong>Gỡ bỏ rmv</strong></p>
+
+<pre><code class="language-bash">rvm implode
+</code></pre>
+
+<p><strong>Và chú ý cần remove các dòng PATH đã include sau khi cài</strong></p>
+
+<p>Tham khảo thêm về bashrc, profile tại đây : <a href="https://top.quora.com/What-is-bash_profile-and-what-is-its-use">https://top.quora.com/What-is-bash_profile-and-what-is-its-use</a></p>
+
+<h3 id="cài-đặt-ruby-1">Cài đặt ruby</h3>
+
+<pre><code class="language-bash">rvm install ruby-2.5.1
+rvm list
+</code></pre>
+
+<p><strong>Tạo alias</strong></p>
+
+<pre><code class="language-bash">rvm alias create alias-name ruby-version
+rvm alias delete alias-name
+</code></pre>
+
+<p><strong>Install bundler</strong></p>
+
+<pre><code class="language-bash">gem install bundler
+</code></pre>
+
+<p><strong>Instal node</strong></p>
+
+<pre><code class="language-bash">sudo apt-get install nodejs
+</code></pre>
+
+<p><a href="http://railsapps.github.io/installrubyonrails-ubuntu.html">http://railsapps.github.io/installrubyonrails-ubuntu.html</a></p>
+
+<p><strong>Example puma.service</strong></p>
+
+
+<a class="collapse-trigger" data-toggle="collapse" href="#example-puma-service" role="button" aria-expanded="false" 
+aria-controls="example-puma-service">
+    <strong>puma.service</strong>
+  </a>
+<div class="collapse" id="example-puma-service">
+<pre><code class="language-bash">ubuntu@cloud002:~# cat /etc/systemd/system/puma.service
+[Unit]
+Description=Puma HTTP Server
+After=network.target
+
+# Uncomment for socket activation (see below)
+# Requires=puma.socket
+
+[Service]
+# Foreground process (do not use --daemon in ExecStart or config.rb)
+Type=simple
+
+# Preferably configure a non-privileged user
+User=ubuntu
+Group=ubuntu
+
+# The path to the puma application root
+# Also replace the &#34;&lt;WD&gt;&#34; place holders below with this path.
+WorkingDirectory=/home/ubuntu/webs/ror
+
+# Helpful for debugging socket activation, etc.
+# Environment=PUMA_DEBUG=1
+
+# Variant: Use config file with `bind` directives instead:
+ExecStart=/home/ubuntu/.rbenv/shims/bundler exec --keep-file-descriptors puma -C /home/ubuntu/webs/ror/config/puma.rb
+# Variant: Use `bundle exec --keep-file-descriptors puma` instead of binstub
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target</code></pre>
+</div>
+
+
+<p><strong>Example puma.rb</strong></p>
+
+
+<a class="collapse-trigger" data-toggle="collapse" href="#example-puma-rb" role="button" aria-expanded="false" 
+aria-controls="example-puma-rb">
+    <strong>ror/config/puma.rb</strong>
+  </a>
+<div class="collapse" id="example-puma-rb">
+<pre><code class="language-bash"># Puma can serve each request in a thread from an internal thread pool.
+# The `threads` method setting takes two numbers: a minimum and maximum.
+# Any libraries that use thread pools should be configured to match
+# the maximum value specified for Puma. Default is set to 5 threads for minimum
+# and maximum; this matches the default thread size of Active Record.
+#
+threads_count = ENV.fetch(&#34;RAILS_MAX_THREADS&#34;) { 5 }
+threads threads_count, threads_count
+
+# Specifies the `port` that Puma will listen on to receive requests; default is 3000.
+#
+port        ENV.fetch(&#34;PORT&#34;) { 3000 }
+
+# Specifies the `environment` that Puma will run in.
+#
+environment ENV.fetch(&#34;RAILS_ENV&#34;) { &#34;development&#34; }
+
+# Specifies the number of `workers` to boot in clustered mode.
+# Workers are forked webserver processes. If using threads and workers together
+# the concurrency of the application would be max `threads` * `workers`.
+# Workers do not work on JRuby or Windows (both of which do not support
+# processes).
+#
+# workers ENV.fetch(&#34;WEB_CONCURRENCY&#34;) { 2 }
+workers = 1
+
+# Use the `preload_app!` method when specifying a `workers` number.
+# This directive tells Puma to first boot the application and load code
+# before forking the application. This takes advantage of Copy On Write
+# process behavior so workers use less memory. If you use this option
+# you need to make sure to reconnect any threads in the `on_worker_boot`
+# block.
+#
+# preload_app!
+
+# If you are preloading your application and using Active Record, it&#39;s
+# recommended that you close any connections to the database before workers
+# are forked to prevent connection leakage.
+#
+# before_fork do
+#   ActiveRecord::Base.connection_pool.disconnect! if defined?(ActiveRecord)
+# end
+
+# The code in the `on_worker_boot` will be called if you are using
+# clustered mode by specifying a number of `workers`. After each worker
+# process is booted, this block will be run. If you are using the `preload_app!`
+# option, you will want to use this block to reconnect to any threads
+# or connections that may have been created at application boot, as Ruby
+# cannot share connections between processes.
+#
+# on_worker_boot do
+#   ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
+# end
+#
+
+# Allow puma to be restarted by `rails restart` command.
+plugin :tmp_restart
+
+app_dir = File.expand_path(&#34;../..&#34;, __FILE__)
+shared_dir=&#34;/home/ubuntu/shared&#34;
+
+# Set up socket location
+bind &#34;unix://#{shared_dir}/sockets/puma.sock&#34;
+
+# Set master PID and state locations
+pidfile &#34;#{shared_dir}/pids/puma.pid&#34;
+state_path &#34;#{shared_dir}/pids/puma.state&#34;
+activate_control_app
+
+on_worker_boot do
+  require &#34;active_record&#34;
+  ActiveRecord::Base.connection.disconnect! rescue ActiveRecord::ConnectionNotEstablished
+  ActiveRecord::Base.establish_connection(YAML.load_file(&#34;#{app_dir}/config/database.yml&#34;)[rails_env])
+end</code></pre>
+</div>
+
 
     </article>
 
