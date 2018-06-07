@@ -85,7 +85,14 @@
         <h1>Bài 001 : Cài đặt ruby</h1>
         
 
-<h2 id="hướng-dẫn-cài-đặt-ruby-trên-ubuntu-16-04">Hướng dẫn cài đặt ruby trên ubuntu(16.04)</h2>
+<h2 id="current-ruby-stable-version">Current Ruby stable version</h2>
+
+<p><a href="https://www.ruby-lang.org/en/downloads/">https://www.ruby-lang.org/en/downloads/</a></p>
+
+<pre><code class="language-html">2.5.1
+</code></pre>
+
+<h2 id="1-hướng-dẫn-cài-đặt-ruby-với-rbenv-trên-ubuntu-16-04">1.Hướng dẫn cài đặt ruby với rbenv trên ubuntu(16.04)</h2>
 
 <p><strong>Chi tiết các bước thực hiện</strong></p>
 
@@ -97,17 +104,24 @@
 <li>Cài đặt gem bundler để quản lí packages</li>
 </ul>
 
+<h3 id="update">Update</h3>
+
+
+<pre><code class="language-bash">sudo apt-get update</code></pre>
+
+
 <h3 id="cài-đặt-các-gói-ruby-dependencies">Cài đặt các gói ruby dependencies</h3>
 
-<blockquote>
-<p>sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
-sudo apt-get install build-essential</p>
-</blockquote>
+
+<pre><code class="language-bash">sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
+sudo apt-get install -y build-essential</code></pre>
+
 
 <h3 id="cài-đặt-rbenv">Cài đặt rbenv</h3>
 
 <ul>
 <li>Link tham khảo : <a href="https://github.com/rbenv/rbenv">https://github.com/rbenv/rbenv</a></li>
+<li>Link su dung : <a href="http://javierjulio.com/rbenv/">http://javierjulio.com/rbenv/</a></li>
 </ul>
 
 <pre class="code-highlight"><code class="language-bash">
@@ -118,12 +132,31 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 ~/.rbenv/bin/rbenv init
 </code></pre>
 
+<p><strong>Kiểm tra rbenv root</strong></p>
+
+<pre><code class="language-bash">echo &quot;$(rbenv root)&quot;
+</code></pre>
+
+<p><strong>Cài đặt ruby-build cho rbenv</strong></p>
+
+<ul>
+<li>Link tham khảo : <a href="https://github.com/rbenv/ruby-build#readme">https://github.com/rbenv/ruby-build#readme</a></li>
+</ul>
+
+<pre><code class="language-bash">git clone https://github.com/rbenv/ruby-build.git &quot;$(rbenv root)&quot;/plugins/ruby-build
+</code></pre>
+
+<p><strong>Cập nhật</strong></p>
+
+<pre><code class="language-bash">cd &quot;$(rbenv root)&quot;/plugins/ruby-build &amp;&amp; git pull
+</code></pre>
+
 <p><strong>Sau khi cài xong chú ý gõ câu lệnh sau để add rbenv vào bashrc(lưu ý nhớ restart bash sau khi add)</strong></p>
 
 <pre><code class="language-bash">echo 'eval &quot;$(rbenv init -)&quot;' &gt;&gt; ~/.bashrc
 </code></pre>
 
-<p><strong>restart bash sau khi add</strong></p>
+<p><strong>Restart bash sau khi add</strong></p>
 
 <pre><code class="language-bash">source ~/.bashrc
 </code></pre>
@@ -131,31 +164,6 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 <p><strong>Kiểm tra rbenv đã cài đặt thành công chưa</strong></p>
 
 <pre><code class="language-bash">curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
-</code></pre>
-
-<p><strong>Cài đặt rebenv plugins</strong></p>
-
-<ul>
-<li>Link tham khảo : <a href="https://github.com/rbenv/ruby-build#readme">https://github.com/rbenv/ruby-build#readme</a></li>
-</ul>
-
-<p><em>As an rbenv plugin</em></p>
-
-<pre><code class="language-bash">$ mkdir -p &quot;$(rbenv root)&quot;/plugins 
-$ git clone https://github.com/rbenv/ruby-build.git &quot;$(rbenv root)&quot;/plugins/ruby-build
-</code></pre>
-
-<p><em>As a standalone program</em></p>
-
-<pre><code class="language-bash">$ git clone https://github.com/rbenv/ruby-build.git
-$ PREFIX=/usr/local ./ruby-build/install.sh
-</code></pre>
-
-<p><strong>Upgrade plugins</strong></p>
-
-<p><em>As an rbenv plugin</em></p>
-
-<pre><code class="language-bash">$ cd &quot;$(rbenv root)&quot;/plugins/ruby-build &amp;&amp; git pull
 </code></pre>
 
 <h3 id="cài-đặt-ruby">Cài đặt ruby</h3>
@@ -170,19 +178,28 @@ $ PREFIX=/usr/local ./ruby-build/install.sh
 
 <p><em>As an rbenv plugin</em></p>
 
-<blockquote>
-<p>cd ~/.rbenv</p>
+<p><strong>Make sure phân quyền chạy ruby thuộc về cùng 1 user</strong></p>
 
-<p>sudo chown -Rf ubuntu:ubuntu versions</p>
+<pre><code class="language-bash">cd ~/.rbenv
+sudo chown -Rf ubuntu:ubuntu versions 
+sudo chown -Rf ubuntu:ubuntu shims
+</code></pre>
 
-<p>sudo chown -Rf ubuntu:ubuntu shims</p>
+<p><strong>Tìm kiếm các gói ruby version</strong></p>
 
-<p>$ rbenv install &ndash;list                 # lists all available versions of Ruby</p>
+<pre><code class="language-bash">rbenv install --list | grep 2.5
+</code></pre>
 
-<p>$ rbenv install &ndash;verbose 2.4.2        # installs Ruby 2.4.2 to ~/.rbenv/versions</p>
+<p><strong>Cài đặt gói ruby stable hiện tại</strong></p>
 
-<p>$ rbenv global 2.4.2                   # set gem version for global to 2.4.2</p>
-</blockquote>
+<pre><code class="language-bash">rbenv install 2.5.1 --verbose
+rbenv rehash
+</code></pre>
+
+<p><strong>Set default</strong></p>
+
+<pre><code class="language-bash">rbenv global 2.5.1
+</code></pre>
 
 <h3 id="kiểm-tra-version">Kiểm tra version</h3>
 

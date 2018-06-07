@@ -86,6 +86,8 @@
         <h1>Hugo Tips</h1>
         
 
+<h2 id="1-commands">1.Commands</h2>
+
 <table class="table table-commands">
     <thead>
         <tr>
@@ -124,7 +126,45 @@
     </tbody>
 </table>
 
-<h2 id="links">Links</h2>
+<h2 id="2-shortcodes">2.Shortcodes</h2>
+
+<h3 id="2-1-hightlight-code">2.1.Hightlight Code</h3>
+
+<p><table class="table table-commands">
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    <tr>
+    <td class="command-text">&lt;OPENTAG&gt;</td>
+    <td class="command-description">&lt;hlcode&gt;</td>
+</tr>
+    <tr>
+    <td class="command-text">&lt;CLOSETAG&gt;</td>
+    <td class="command-description">&lt;/hlcode&gt;</td>
+</tr>    
+        
+    </tbody>
+</table></p>
+
+<pre><code class="language-html">{{&lt;OPENTAG id=&quot;example-highlight-text&quot; text=&quot;Example hightlight text&quot; 
+language=&quot;javascript&quot;&gt;}}
+    import './App.scss';
+    import hello from './hello';
+    hello();
+{{&lt;CLOSETAG&gt;}}
+
+{{&lt;OPENTAG language=&quot;bash&quot;&gt;}}
+sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
+sudo apt-get install -y build-essential
+{{&lt;CLOSETAG&gt;}}
+</code></pre>
+
+<h2 id="3-links">3.Links</h2>
 
 <ul>
 <li><a href="https://discourse.gohugo.io/t/sort-order-only-bydate-or-byweight/6961/4">https://discourse.gohugo.io/t/sort-order-only-bydate-or-byweight/6961/4</a></li>
