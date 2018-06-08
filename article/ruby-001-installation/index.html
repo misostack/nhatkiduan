@@ -316,17 +316,58 @@ Installation of RVM in /home/ubuntu/.rvm/ is almost complete:
 
 <pre><code class="language-bash">rvm install ruby-2.5.1
 rvm list
+rvm install ruby-2.3.0
+rvm list
 </code></pre>
 
-<p><strong>Tạo alias</strong></p>
+<p><strong>Chuyển đổi giữa các phiên bản</strong></p>
 
-<pre><code class="language-bash">rvm alias create alias-name ruby-version
+<pre><code class="language-bash">rvm 2.5.1
+</code></pre>
+
+<p><strong>Thiết lập default ruby version</strong></p>
+
+<pre><code class="language-bash">rvm --default use 2.5.1
+</code></pre>
+
+<p><strong>Tạo alias để dễ dàng chuyển đổi hơn</strong></p>
+
+<p>Có 1 alias mặc định là : default</p>
+
+<pre><code class="language-bash">rvm alias list
+rvm alias create alias-name ruby-version
 rvm alias delete alias-name
+</code></pre>
+
+<p><strong>Tạo gemset</strong></p>
+
+<pre><code class="language-bash">rvm 2.3.0
+rvm gemset create example
+rvm gemset list
+rvm gemset use example
+</code></pre>
+
+<p><strong>Ứng dụng rvm cho phép nhiều ứng dụng độc lập chạy các phiên bản ruby khác nhau</strong></p>
+
+<pre><code class="language-html">Giả sử chúng ta có các app như sau
+~/apps/app_a
+~/apps/app_b
+~/apps/app_c
+
+Và mỗi app này sẽ sử dụng các loại gem khác nhau, cũng như phiên bản ruby khác nhau, để làm được điều này,
+trong mỗi app ta sẽ sử dụng 2 file để chỉ định phiên bản ruby, cũng như gemset cho chúng:
+.ruby-version
+2.3.0
+.ruby-gemset
+app_a
 </code></pre>
 
 <p><strong>Install bundler</strong></p>
 
 <pre><code class="language-bash">gem install bundler
+</code></pre>
+
+<pre><code class="language-bash">bundle install
 </code></pre>
 
 <p><strong>Instal node</strong></p>
