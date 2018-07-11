@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Wed, 11 Jul 2018 10:48:10 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 11 Jul 2018 15:36:24 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Php Pros and Cons</title>
+      <link>http://nhatkiduan.misostack.com/blog/php-pros-and-cons/</link>
+      <pubDate>Wed, 11 Jul 2018 15:36:24 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/blog/php-pros-and-cons/</guid>
+      <description> PHP là gì PHP is a popular general-purpose scripting language that is especially suited to web development.
+Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.
+ Điểm mạnh  Dễ học, cú pháp cực kì đơn giản Cộng đồng lớn, nhiều framework lớn : Symfony, Laravel Đặc biệt CMS nổi tiếng hiện nay: wordpress Free, nhiều hosting hỗ trợ  Điểm yếu  Là ngôn ngữ thông dịch interpreted  Bắt đầu  PHP Tutorial : for newbie Wordpress : cms Codeignter : simple mvc php framework Symfony : large and powerful php framework Laravel : hot framework Lumen : build effective REST API  </description>
+    </item>
     
     <item>
       <title>Nodejs Pros and Cons</title>
