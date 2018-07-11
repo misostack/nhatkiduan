@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nhatkiduan.misostack.com/blog/nodejs-pros-and-cons/</loc>
+    <lastmod>2018-07-11T10:48:10+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nhatkiduan.misostack.com/article/ruby-001-installation/</loc>
     <lastmod>2018-06-05T19:20:17+07:00</lastmod>
   </url>
@@ -50,7 +55,7 @@
   
   <url>
     <loc>http://nhatkiduan.misostack.com/blog/</loc>
-    <lastmod>2018-06-05T15:07:49+07:00</lastmod>
+    <lastmod>2018-07-11T10:48:10+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -72,8 +77,14 @@
   </url>
   
   <url>
+    <loc>http://nhatkiduan.misostack.com/categories/languages/</loc>
+    <lastmod>2018-07-11T10:48:10+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://nhatkiduan.misostack.com/</loc>
-    <lastmod>2018-06-05T19:20:17+07:00</lastmod>
+    <lastmod>2018-07-11T10:48:10+07:00</lastmod>
     <priority>0</priority>
   </url>
   

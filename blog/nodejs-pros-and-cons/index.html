@@ -9,12 +9,12 @@
     <meta name="generator" content="misostack-seo" />    
     
     
-    <title>Example | Nhật Kí Phát Triển Dự Án</title>
+    <title>Nodejs Pros and Cons | Nhật Kí Phát Triển Dự Án</title>
     <meta name="robots" content="all" />
-    <meta name="keywords" content="Example" />
-    <meta name="description" content="Example" />
+    <meta name="keywords" content="Nodejs Pros and Cons" />
+    <meta name="description" content="Nodejs Pros and Cons" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://nhatkiduan.misostack.com/common/no-image-available.jpg" />
+    <meta property="og:image" content="http://nhatkiduan.misostack.com/posts/nodejs.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="750" />
     <meta property="og:image:height" content="300" />
@@ -82,31 +82,70 @@
                 <main class="content col-md-8">
                     
     <article class="article article-scrollby" data-target="#article-scrollpy">
-        <img src="http://nhatkiduan.misostack.com/common/no-image-available.jpg" class="img-responsive" alt="Example" />
-        <h1>Example</h1>
+        <img src="http://nhatkiduan.misostack.com/posts/nodejs.jpg" class="img-responsive" alt="Nodejs Pros and Cons" />
+        <h1>Nodejs Pros and Cons</h1>
         
 
-<h2 id="example-for-hlcode">Example for hlcode</h2>
+<h2 id="1-đầu-tiên-nodejs-là-cái-quái-gì-vậy">1.Đầu tiên nodejs là cái quái gì vậy?</h2>
 
+<pre><code class="language-markdown">Bạn nghĩ sao nếu javascript có thể chạy trên máy chủ?
+</code></pre>
 
-<pre><code class="language-javascript">import &#39;./App.scss&#39;;
-import hello from &#39;./hello&#39;;
-hello();</code></pre>
+<p><strong>Một điển hình về mô hình truyền thống</strong></p>
 
+<p><img src="/posts/js-client-structure.jpg" alt="js client structure" /></p>
 
-<h2 id="example-for-hlcode-with-collapse">Example for hlcode with collapse</h2>
+<p><strong>Mô hình mà js ở phía server</strong></p>
 
-<p>
-<a class="collapse-trigger" data-toggle="collapse" href="#example-highlight-text" role="button" aria-expanded="false" 
-aria-controls="example-highlight-text">
-    <strong>Example hightlight text</strong>
-  </a>
-<div class="collapse" id="example-highlight-text">
-<pre><code class="language-javascript">import &#39;./App.scss&#39;;
-import hello from &#39;./hello&#39;;
-hello();</code></pre>
+<p><img src="/posts/js-server-structure.jpg" alt="js server structure" /></p>
+
+<p>Được sự hậu thuẩn của google</p>
+
+<pre><code class="language-markdown">Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+</code></pre>
+
+<p>Trang chủ download nodejs: <a href="https://nodejs.org/en/">nodejs.org</a></p>
+
+<p>As an <a href="https://www.facebook.com/notes/it-terms-vietnam/synchronous-vs-asynchronous/1774898502589348/">asynchronous</a> event driven JavaScript runtime, Node is designed to build scalable network applications</p>
+
+<p>Một khái niệm quan trong khác nữa của nodejs là <a href="https://nodejs.org/en/docs/guides/blocking-vs-non-blocking/">blocking vs non-blocking</a></p>
+
+<p><strong>Concurrency and Throughput</strong></p>
+
+<p>JavaScript execution in Node.js is single threaded, so concurrency refers to the event loop&rsquo;s capacity to execute JavaScript callback functions after completing other work. Any code that is expected to run in a concurrent manner must allow the event loop to continue running as non-JavaScript operations, like I/O, are occurring.</p>
+
+<p>As an example, let&rsquo;s consider a case where each request to a web server takes 50ms to complete and 45ms of that 50ms is database I/O that can be done asynchronously. Choosing non-blocking asynchronous operations frees up that 45ms per request to handle other requests. This is a significant difference in capacity just by choosing to use non-blocking methods instead of blocking methods.</p>
+
+<p>The event loop is different than models in many other languages where additional threads may be created to handle concurrent work.</p>
+
+<h2 id="related-topics">Related topics</h2>
+
+<ul>
+<li><a href="https://github.com/libuv/libuv">https://github.com/libuv/libuv</a></li>
+<li><a href="https://www.quora.com/What-are-the-pros-and-cons-of-Node-js">https://www.quora.com/What-are-the-pros-and-cons-of-Node-js</a></li>
+<li><a href="https://www.cleveroad.com/blog/node-js-vs-ruby-on-rails--the-power-behind-technologies">https://www.cleveroad.com/blog/node-js-vs-ruby-on-rails--the-power-behind-technologies</a></li>
+<li><a href="https://tech.3si.vn/2017/07/10/nodejs-lua-chon-moi-cho-nen-tang-server-side/">https://tech.3si.vn/2017/07/10/nodejs-lua-chon-moi-cho-nen-tang-server-side/</a></li>
+</ul>
+
+<h2 id="summary">Summary</h2>
+
+<div class="imrportant">
+    <ol>
+        <li>It is single threaded, asynchronous and event-drive which makes it a good choice for real-time apps like messengers and all.</li>
+        <li>The main event loop is single-threaded but most of the I/O works run on separate threads, because the I/O APIs in Node.js are asynchronous/non-blocking by design,in order to accommodate the event loop.</li>
+        <li>Non IO Blocking</li>
+        <li>A good choice for web application development: website, file uploads, realtime webapp:chat,groupchat, Restful API</li>
 </div>
-</p>
+
+<h2 id="where-can-you-start">Where can you start?</h2>
+
+<ol>
+    <li>Javascript</li>
+    <li><a href="https://freetuts.net/ecmascript-2015-es6-la-gi-603.html">ES6</a></li>
+    <li>AboutNodeJS : https://nodejs.org/en/about/</li>
+    <li>ExpressJS : https://expressjs.com/</li>
+    <li>Koajs : https://koajs.com/
+</ol>
 
     </article>
 
