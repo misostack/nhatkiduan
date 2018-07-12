@@ -18,11 +18,14 @@
       <pubDate>Thu, 12 Jul 2018 13:47:31 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/blog/go-pros-and-cons/</guid>
-      <description>GO là gì Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.  Pros and Cons of GO Pros of GO Go Is Fast
+      <description>GO là gì Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.  Pros of GO Go Is Fast
 Go is compiled to machine code, it will naturally outperform languages that are interpreted or have virtual runtimes
 Easy to Learn
 Go’s syntax is small compared to other languages, and it’s easy to learn
-Static Typing</description>
+Static Typing
+Interface Types
+Standard Library
+Static Analysis Tools</description>
     </item>
     
     <item>
