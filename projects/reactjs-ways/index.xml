@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notes on Nhật Kí Phát Triển Dự Án</title>
-    <link>http://nhatkiduan.misostack.com/note/</link>
-    <description>Recent content in Notes on Nhật Kí Phát Triển Dự Án</description>
+    <title>Reactjs Ways on Nhật Kí Phát Triển Dự Án</title>
+    <link>http://nhatkiduan.misostack.com/projects/reactjs-ways/</link>
+    <description>Recent content in Reactjs Ways on Nhật Kí Phát Triển Dự Án</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
     <lastBuildDate>Tue, 31 Jul 2018 13:56:05 +0700</lastBuildDate>
     
-	<atom:link href="http://nhatkiduan.misostack.com/note/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://nhatkiduan.misostack.com/projects/reactjs-ways/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -28,15 +28,6 @@
       
       <guid>http://nhatkiduan.misostack.com/note/reactjs-ways-001/</guid>
       <description> Structure </description>
-    </item>
-    
-    <item>
-      <title>Example</title>
-      <link>http://nhatkiduan.misostack.com/note/example/</link>
-      <pubDate>Fri, 25 May 2018 10:43:50 +0700</pubDate>
-      
-      <guid>http://nhatkiduan.misostack.com/note/example/</guid>
-      <description></description>
     </item>
     
   </channel>
