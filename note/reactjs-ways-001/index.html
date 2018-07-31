@@ -183,7 +183,8 @@ ReactDOM.render(
 - State is similar to props, but it is private and fully controlled by the component. <br/>
 - Do Not Modify State Directly<br/>
 - State Updates May Be Asynchronous<br/>
-- State Updates are Merged
+- State Updates are Merged<br/>
+- The Data Flows Down
 </blockquote>
 
 <ul>
@@ -225,8 +226,7 @@ componentDidMount() {
         comments: response.comments
       });
     });
-  }
-```</code></pre>
+  }</code></pre>
 </div>
 
 <br/>
@@ -281,7 +281,59 @@ export default class Timer extends React.Component&lt;TimerProps, TimerState&gt;
     }
 }</code></pre>
 </div>
-</p>
+
+<br/></p>
+
+<h3 id="5-state-and-lifecyle"><strong>5.State and Lifecyle</strong></h3>
+
+<blockquote class="important">
+- React events are named using camelCase, rather than lowercase.<br/>
+- With JSX you pass a function as the event handler, rather than a string.
+</blockquote>
+
+<p><strong>Arrow Functions</strong></p>
+
+<pre><code class="language-javascript">// Basic Syntax with Multiple Parameters
+const multiplyES6 = (x, y) =&gt; { return x * y };
+console.log(multiplyES6(2,3));
+// Basic Syntax with One Parameter
+const phraseSplitterEs6 = phrase =&gt; phrase.split(&quot; &quot;);
+console.log(phraseSplitterEs6(&quot;ES6 Awesomeness&quot;));  // [&quot;ES6&quot;, &quot;Awesomeness&quot;]
+// Basic Syntax with No Parameters
+const docLogEs6 = () =&gt; { console.log('hello'); };
+docLogEs6();
+// Object Literal Syntax
+const setNameIdsEs6 = (id, name) =&gt; ({ id: id, name: name });
+console.log(setNameIdsEs6 (4, &quot;Kyle&quot;));   // Object {id: 4, name: &quot;Kyle&quot;}
+</code></pre>
+
+<p><em>Use Cases for Arrow Functions</em></p>
+
+<ul>
+<li><a href="https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/">https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/</a></li>
+<li><a href="https://javascriptplayground.com/real-life-es6-arrow-fn/">https://javascriptplayground.com/real-life-es6-arrow-fn/</a></li>
+</ul>
+
+<pre><code class="language-javascript">    const smartPhones = [
+        { name: 'iphone', price: 649 },
+        { name: 'Galaxy S6', price: 576 },
+        { name: 'Galaxy Note 5', price: 489 }
+    ];
+    console.log(smartPhones.map(smartphone =&gt; smartphone.price));
+    console.log(smartPhones.filter(smartphone =&gt; smartphone.price &gt; 500));
+    
+    // ES5
+    aAsync()
+    .then(function () { return bAsync(); })
+    .then(function () { return cAsync(); })
+    .done(function () { finish(); });    
+
+    // ES6
+    aAsync()
+    .then(() =&gt; return bAsync())
+    .then(() =&gt; return cAsync())
+    .done(() =&gt; finish)
+</code></pre>
 
 </article>
 
