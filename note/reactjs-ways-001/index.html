@@ -86,7 +86,202 @@
     <h1>Reactjs Ways 001</h1>
     
 
-<h2 id="structure">Structure</h2>
+<h2 id="reactjs-main-concepts">ReactJS Main Concepts</h2>
+
+<h3 id="1-jsx"><strong>1.JSX</strong></h3>
+
+<blockquote class="important">
+<ul>
+    <li>javascript syntax extension</li>
+    <li>Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.</li>
+</ul>
+</blockquote>
+
+<pre><code class="language-javascript">const element = &lt;img src={user.avatarUrl}&gt;&lt;/img&gt;;
+
+const element = &lt;h1&gt;Hello, {formatName(user)}!&lt;/h1&gt;
+
+const element = React.createElement(
+  'h1',
+  {className: 'greeting'},
+  'Hello, world!'
+);
+
+ReactDOM.render(element, document.getElementById('root'));
+</code></pre>
+
+<h3 id="2-render"><strong>2.Render</strong></h3>
+
+<blockquote class="important">
+<ol>
+<li>Elements are the smallest building blocks of React apps.</li>
+<li>React elements are immutable. Once you create an element, you can’t change its children or attributes</li>
+<li>React Only Updates What’s Necessary</li>
+</ol>
+</blockquote>
+
+<pre><code class="language-javascript">ReactDOM.render(element, document.getElementById('root'));
+</code></pre>
+
+<p><strong><a href="https://en.wikipedia.org/wiki/Immutable_object">https://en.wikipedia.org/wiki/Immutable_object</a></strong></p>
+
+<h3 id="3-components-and-props"><strong>3.Components and Props</strong></h3>
+
+<ul>
+<li>Rendering a Component</li>
+<li>Composing Components</li>
+<li>Extracting Components</li>
+<li>Props are Read-Only</li>
+</ul>
+
+<blockquote class="important">
+- Conceptually, components are like JavaScript functions. <br/>
+- They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.<br/>
+- All React components must act like <strong>pure functions</strong> with respect to their props.
+</blockquote>
+
+<p><strong>The simplest way to define a component is to write a JavaScript function:</strong></p>
+
+<pre><code class="language-javascript">function Welcome(props) {
+  return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+}
+</code></pre>
+
+<p><strong>Common way to define a component(ES6 class):</strong></p>
+
+<pre><code class="language-javascript">class Welcome extends React.Component {
+  render() {
+    return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;;
+  }
+}
+
+function Welcome(props) {
+  return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+}
+
+const element = &lt;Welcome name=&quot;Sara&quot; /&gt;;
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+</code></pre>
+
+<p><strong>Note:</strong></p>
+
+<ul>
+<li><a href="https://reactjs.org/docs/jsx-in-depth.html#user-defined-components-must-be-capitalized">https://reactjs.org/docs/jsx-in-depth.html#user-defined-components-must-be-capitalized</a></li>
+</ul>
+
+<blockquote class="important">
+- Always start component names with a capital letter.<br>
+- React treats components starting with lowercase letters as DOM tags
+</blockquote>
+
+<h3 id="4-state-and-lifecyle"><strong>4.State and Lifecyle</strong></h3>
+
+<blockquote class="important">
+- State is similar to props, but it is private and fully controlled by the component. <br/>
+- Do Not Modify State Directly<br/>
+- State Updates May Be Asynchronous<br/>
+- State Updates are Merged
+</blockquote>
+
+<ul>
+<li>Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state.</li>
+</ul>
+
+<p>
+<a class="collapse-trigger" data-toggle="collapse" href="#example-sample-component" role="button" aria-expanded="false" 
+aria-controls="example-sample-component">
+    <strong>sample-component</strong>
+  </a>
+<div class="collapse" id="example-sample-component">
+<pre><code class="language-javascript">// Wrong
+this.setState({
+  counter: this.state.counter &#43; this.props.increment,
+});
+
+// Correct
+this.setState((prevState, props) =&gt; ({
+  counter: prevState.counter &#43; props.increment
+}));
+
+// Correct
+this.setState(function(prevState, props) {
+  return {
+    counter: prevState.counter &#43; props.increment
+  };
+});
+
+componentDidMount() {
+    fetchPosts().then(response =&gt; {
+      this.setState({
+        posts: response.posts
+      });
+    });
+
+    fetchComments().then(response =&gt; {
+      this.setState({
+        comments: response.comments
+      });
+    });
+  }
+```</code></pre>
+</div>
+
+<br/>
+
+<a class="collapse-trigger" data-toggle="collapse" href="#example-timer-component" role="button" aria-expanded="false" 
+aria-controls="example-timer-component">
+    <strong>timer-component</strong>
+  </a>
+<div class="collapse" id="example-timer-component">
+<pre><code class="language-javascript">import * as React from &#34;react&#34;;
+interface TimerProps {
+    wrapperClass: string
+}
+
+interface TimerState {
+    date: Date
+}
+
+export default class Timer extends React.Component&lt;TimerProps, TimerState&gt; {
+    timerID: any;
+
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            date: new Date()
+        }
+        // let numbers: any = [9, 3, 6, 2];
+        // console.log(...numbers);
+        // console.log(&#34;Min number of this array &#34;, numbers, Math.min.apply(null, numbers));
+    }
+
+    tick() {
+        this.setState({
+            date: new Date()
+        })
+    }
+
+    componentDidMount() {
+        this.timerID = setInterval(() =&gt; {
+            this.tick();
+        }, 1000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
+
+    render() {
+        return (
+            &lt;div className={this.props.wrapperClass}&gt;&lt;i className=&#34;fa fa-clock mr-md-2&#34;&gt;&lt;/i&gt;{this.state.date.toLocaleTimeString()}&lt;/div&gt;
+        )
+    }
+}</code></pre>
+</div>
+</p>
 
 </article>
 
