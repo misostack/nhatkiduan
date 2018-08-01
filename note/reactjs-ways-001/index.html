@@ -349,6 +349,171 @@ console.log(setNameIdsEs6 (4, &quot;Kyle&quot;));   // Object {id: 4, name: &quo
 <li><p>Bind returns a new function, allowing you to pass in a this array and any number of arguments.</p></li>
 </ul>
 
+<pre><code class="language-javascript">class MyMath{
+  constructor(){
+      this.multipleTwo = this.multiple.bind(this, 2);
+  }
+  multiple = (x,y) =&gt;{
+    return x * y;
+  }
+  calculateWith2 = () =&gt; {
+    for(let i = 1; i &lt;=10;i++){
+      console.log('2*',i, '=',this.multipleTwo(i));
+    }
+  }
+}
+
+const obj = new MyMath();
+obj.calculateWith2();
+</code></pre>
+
+<h3 id="6-conditonal-rendering"><strong>6.Conditonal Rendering</strong></h3>
+
+<blockquote class="important">
+- Conditional rendering<br/>
+- Element Variables<br/>
+- Inline If with Logical && Operator<br/>
+- Preventing Component from Rendering<br/>
+</blockquote>
+
+<p><strong>Conditional rendering</strong></p>
+
+<pre><code class="language-javascript">    render() {
+        const isLogged = this.state.isLogged;
+        let button;
+        if (isLogged) {
+            button = &lt;a href=&quot;#logout&quot; className=&quot;btn btn-danger&quot; onClick={this.handleLogout}&gt;Logout&lt;/a&gt;
+        } else {
+            button = &lt;a href=&quot;#logout&quot; className=&quot;btn btn-primary&quot; onClick={this.handleLogin}&gt;Login&lt;/a&gt;
+        }
+        return (
+            button
+        )
+    }
+</code></pre>
+
+<p><strong>Element Variables</strong></p>
+
+<pre><code class="language-javascript">
+render() {
+    const isLogged = this.getLogInState();
+    let button;
+
+    if (isLogged) {
+        button = &lt;a href=&quot;#logout&quot; className=&quot;btn btn-danger&quot; onClick={this.handleLogout}&gt;Logout&lt;/a&gt;
+    } else {
+        button = &lt;a href=&quot;#logout&quot; className=&quot;btn btn-primary&quot; onClick={this.handleLogin}&gt;Login&lt;/a&gt;
+    }
+    return (
+        button
+    )
+}
+
+</code></pre>
+
+<p><strong>Inline If with Logical &amp;&amp; Operator</strong></p>
+
+<pre><code class="language-javascript">    const logInBtn = &lt;a href=&quot;#login&quot; className=&quot;btn btn-primary&quot; onClick={this.handleLogin}&gt;Login&lt;/a&gt;
+    const logOutBtn = &lt;a href=&quot;#logout&quot; className=&quot;btn btn-danger&quot; onClick={this.handleLogout}&gt;Logout&lt;/a&gt;
+    return (
+        isLogged ? logOutBtn : logInBtn
+    )
+</code></pre>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="http://bradfrost.com/blog/post/atomic-web-design/">Atomic Design</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export">Import &amp; Export modules</a></li>
+<li><a href="https://hackernoon.com/react-components-naming-convention-%EF%B8%8F-b50303551505">Naming Conventions</a></li>
+<li><a href="https://jaketrent.com/post/naming-event-handlers-react/">Event naming</a></li>
+<li><a href="https://web-design-weekly.com/2015/01/29/opinionated-guide-react-js-best-practices-conventions/">Best practice organization</a></li>
+<li><a href="https://unbug.gitbooks.io/react-native-training/content/45_naming_convention.html">Other best practice</a></li>
+</ul>
+
+<h3 id="7-lists-and-keys"><strong>7.Lists and Keys</strong></h3>
+
+<pre><code class="language-javascript">    public createModules(): any {
+        let modules: any = [];
+        this.state.modules.map((module: any, index: any) =&gt; {
+            modules.push((
+                &lt;li key={'module' + index}&gt;
+                    &lt;a href={module.path}&gt;{module.name}&lt;/a&gt;
+                &lt;/li&gt;
+            ))
+        });
+        return modules;
+    }
+</code></pre>
+
+<h3 id="8-form">8.Form</h3>
+
+<ul>
+<li><a href="https://reactjs.org/docs/forms.html">https://reactjs.org/docs/forms.html</a></li>
+<li><a href="https://reactjs.org/docs/uncontrolled-components.html#the-file-input-tag">https://reactjs.org/docs/uncontrolled-components.html#the-file-input-tag</a></li>
+</ul>
+
+<blockquote class="important">
+In most cases, we recommend using controlled components to implement forms. In a controlled component, form data is handled by a React component. The alternative is uncontrolled components, where form data is handled by the DOM itself.
+</blockquote>
+
+<h3 id="9-lifting-state-up">9.Lifting State Up</h3>
+
+<blockquote class="important">
+- Often, several components need to reflect the same changing data. We recommend lifting the shared state up to their closest common ancestor. Let’s see how this works in action.
+</blockquote>
+
+<blockquote class="important">
+- Lifting state involves writing more “boilerplate” code than two-way binding approaches, but as a benefit, it takes less work to find and isolate bugs. Since any state “lives” in some component and that component alone can change it, the surface area for bugs is greatly reduced. Additionally, you can implement any custom logic to reject or transform user input.
+</blockquote>
+
+<pre><code class="language-javascript">&lt;Navbar isLogged={this.state.isLogged} handleLoginState={this.handleLoginState} /&gt;
+&lt;main className=&quot;main container&quot;&gt;
+    &lt;div className=&quot;row clearfix&quot;&gt;
+        &lt;div className=&quot;col-md-3&quot;&gt;
+            &lt;Sidebar modules={this.state.modules} /&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;col-md-9&quot;&gt;
+            { /* HTML tags always use lowercase tag names, while React components start with Uppercase. */}
+            &lt;h1 style={inlineStyles} className=&quot;page-title&quot;&gt;{this.title ? this.title : 'ReactJS Ways'}&lt;/h1&gt;
+            &lt;LoginForm isLogged={this.state.isLogged} handleLoginState={this.handleLoginState} /&gt;
+            &lt;p&gt;
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum provident magni consequatur libero, eum aut numquam quisquam sunt quod aperiam quo eius, reprehenderit similique ex incidunt blanditiis, veritatis beatae quibusdam.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+
+<pre><code class="language-javascript">    handleSubmit(event: any) {
+        console.log(this.state.email, this.state.password, this.state.regionID, this.state.stores, this.state.remember ? 'Remember!' : &quot;Dont' remember me!&quot;);
+        this.props.handleLoginState(true);
+        event.preventDefault();
+    }
+    
+    render() {
+        let isLogged = this.props.isLogged;
+        if (isLogged) {
+            return null;
+        }
+        return (
+            &lt;form onSubmit={this.handleSubmit}&gt;
+                &lt;div className=&quot;form-group&quot;&gt;
+                    &lt;label&gt;Email address&lt;/label&gt;
+                    &lt;input type=&quot;email&quot; className=&quot;form-control&quot; onChange={this.handleChange} value={this.state.email} name=&quot;email&quot;
+                        aria-describedby=&quot;emailHelp&quot; placeholder=&quot;Enter email&quot; /&gt;
+                    &lt;small id=&quot;emailHelp&quot; className=&quot;form-text text-muted&quot;&gt;We'll never share your email with anyone else.&lt;/small&gt;
+                &lt;/div&gt;
+                &lt;div className=&quot;form-group&quot;&gt;
+                    &lt;label&gt;Password&lt;/label&gt;
+                    &lt;input type=&quot;password&quot; className=&quot;form-control&quot; onChange={this.handleChange} name=&quot;password&quot; placeholder=&quot;Password&quot; /&gt;
+                &lt;/div&gt;
+                &lt;button type=&quot;submit&quot; className=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+            &lt;/form&gt;
+        )
+    }
+</code></pre>
+
 </article>
 
                 </main>
