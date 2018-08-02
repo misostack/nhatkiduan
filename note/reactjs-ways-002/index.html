@@ -9,7 +9,7 @@
     <meta name="generator" content="misostack-seo" />    
     
     
-    <title>Reactjs Ways 002 | Nhật Kí Phát Triển Dự Án</title>
+    <title>Reactjs Ways - Advanced Solutions | Nhật Kí Phát Triển Dự Án</title>
     <meta name="robots" content="all" />
     <meta name="keywords" content="Reactjs Ways 002" />
     <meta name="description" content="Reactjs Ways 002" />
@@ -82,9 +82,36 @@
                 <main class="content col-md-8">
                     
 <article class="article article-scrollby" data-target="#article-scrollpy">
-    <img src="http://nhatkiduan.misostack.com/common/no-image-available.jpg" class="img-responsive" alt="Reactjs Ways 002" />
-    <h1>Reactjs Ways 002</h1>
+    <img src="http://nhatkiduan.misostack.com/common/no-image-available.jpg" class="img-responsive" alt="Reactjs Ways - Advanced Solutions" />
+    <h1>Reactjs Ways - Advanced Solutions</h1>
     
+
+<h3 id="1-accessibility">1.Accessibility</h3>
+
+<ul>
+<li><a href="https://reactjs.org/docs/accessibility.html">Full of story</a></li>
+<li><a href="https://a11yproject.com/checklist.html">Checklist</a></li>
+</ul>
+
+<p><strong>Step by step</strong></p>
+
+<ul>
+<li>WAI-ARIA</li>
+</ul>
+
+<pre><code class="language-javascript">    &lt;div className=&quot;form-group&quot;&gt;
+        &lt;label&gt;Email address&lt;/label&gt;
+        &lt;input type=&quot;email&quot; aria-label={`Please enter your email`} aria-required=&quot;true&quot;
+            className=&quot;form-control&quot; onChange={this.handleChange} value={this.state.email} name=&quot;email&quot;
+            aria-describedby=&quot;emailHelp&quot; placeholder=&quot;Enter email&quot; /&gt;
+        &lt;small id=&quot;emailHelp&quot; className=&quot;form-text text-muted&quot;&gt;We'll never share your email with anyone else.&lt;/small&gt;
+    &lt;/div&gt;
+</code></pre>
+
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Semantic HTML</a></li>
+</ul>
+
 </article>
 
                 </main>
@@ -112,7 +139,7 @@
             <ul class="sidebar-links">
             
             
-                <li><a href="/note/reactjs-ways-001/">Reactjs Ways 001</a></li>
+                <li><a href="/note/reactjs-ways-001/">Reactjs Ways - Main Concepts</a></li>
             
             </ul>        
         

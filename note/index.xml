@@ -13,21 +13,22 @@
     
     
     <item>
-      <title>Reactjs Ways 002</title>
+      <title>Reactjs Ways - Advanced Solutions</title>
       <link>http://nhatkiduan.misostack.com/note/reactjs-ways-002/</link>
       <pubDate>Tue, 31 Jul 2018 13:56:05 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/note/reactjs-ways-002/</guid>
-      <description></description>
+      <description> 1.Accessibility  Full of story Checklist  Step by step
+ WAI-ARIA  &amp;lt;div className=&amp;quot;form-group&amp;quot;&amp;gt; &amp;lt;label&amp;gt;Email address&amp;lt;/label&amp;gt; &amp;lt;input type=&amp;quot;email&amp;quot; aria-label={`Please enter your email`} aria-required=&amp;quot;true&amp;quot; className=&amp;quot;form-control&amp;quot; onChange={this.handleChange} value={this.state.email} name=&amp;quot;email&amp;quot; aria-describedby=&amp;quot;emailHelp&amp;quot; placeholder=&amp;quot;Enter email&amp;quot; /&amp;gt; &amp;lt;small id=&amp;quot;emailHelp&amp;quot; className=&amp;quot;form-text text-muted&amp;quot;&amp;gt;We&#39;ll never share your email with anyone else.&amp;lt;/small&amp;gt; &amp;lt;/div&amp;gt;   Semantic HTML  </description>
     </item>
     
     <item>
-      <title>Reactjs Ways 001</title>
+      <title>Reactjs Ways - Main Concepts</title>
       <link>http://nhatkiduan.misostack.com/note/reactjs-ways-001/</link>
       <pubDate>Tue, 31 Jul 2018 13:47:58 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/note/reactjs-ways-001/</guid>
-      <description>ReactJS Main Concepts 1.JSX  javascript syntax extension Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.   const element = &amp;lt;img src={user.avatarUrl}&amp;gt;&amp;lt;/img&amp;gt;; const element = &amp;lt;h1&amp;gt;Hello, {formatName(user)}!&amp;lt;/h1&amp;gt; const element = React.createElement( &#39;h1&#39;, {className: &#39;greeting&#39;}, &#39;Hello, world!&#39; ); ReactDOM.render(element, document.getElementById(&#39;root&#39;));  2.Render  Elements are the smallest building blocks of React apps. React elements are immutable. Once you create an element, you can’t change its children or attributes React Only Updates What’s Necessary   ReactDOM.</description>
+      <description>1.JSX  javascript syntax extension Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.   const element = &amp;lt;img src={user.avatarUrl}&amp;gt;&amp;lt;/img&amp;gt;; const element = &amp;lt;h1&amp;gt;Hello, {formatName(user)}!&amp;lt;/h1&amp;gt; const element = React.createElement( &#39;h1&#39;, {className: &#39;greeting&#39;}, &#39;Hello, world!&#39; ); ReactDOM.render(element, document.getElementById(&#39;root&#39;));  2.Render  Elements are the smallest building blocks of React apps. React elements are immutable. Once you create an element, you can’t change its children or attributes React Only Updates What’s Necessary   ReactDOM.</description>
     </item>
     
     <item>
