@@ -18,8 +18,12 @@
       <pubDate>Tue, 31 Jul 2018 13:56:05 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/note/reactjs-ways-002/</guid>
-      <description> 1.Accessibility  Full of story Checklist  Step by step
- WAI-ARIA  &amp;lt;div className=&amp;quot;form-group&amp;quot;&amp;gt; &amp;lt;label&amp;gt;Email address&amp;lt;/label&amp;gt; &amp;lt;input type=&amp;quot;email&amp;quot; aria-label={`Please enter your email`} aria-required=&amp;quot;true&amp;quot; className=&amp;quot;form-control&amp;quot; onChange={this.handleChange} value={this.state.email} name=&amp;quot;email&amp;quot; aria-describedby=&amp;quot;emailHelp&amp;quot; placeholder=&amp;quot;Enter email&amp;quot; /&amp;gt; &amp;lt;small id=&amp;quot;emailHelp&amp;quot; className=&amp;quot;form-text text-muted&amp;quot;&amp;gt;We&#39;ll never share your email with anyone else.&amp;lt;/small&amp;gt; &amp;lt;/div&amp;gt;   Semantic HTML  </description>
+      <description>1.Accessibility Refs
+ Full of story Checklist
+ WAI-ARIA
+  &amp;lt;div className=&amp;quot;form-group&amp;quot;&amp;gt; &amp;lt;label&amp;gt;Email address&amp;lt;/label&amp;gt; &amp;lt;input type=&amp;quot;email&amp;quot; aria-label={`Please enter your email`} aria-required=&amp;quot;true&amp;quot; className=&amp;quot;form-control&amp;quot; onChange={this.handleChange} value={this.state.email} name=&amp;quot;email&amp;quot; aria-describedby=&amp;quot;emailHelp&amp;quot; placeholder=&amp;quot;Enter email&amp;quot; /&amp;gt; &amp;lt;small id=&amp;quot;emailHelp&amp;quot; className=&amp;quot;form-text text-muted&amp;quot;&amp;gt;We&#39;ll never share your email with anyone else.&amp;lt;/small&amp;gt; &amp;lt;/div&amp;gt;   Semantic HTML
+ Accessible Forms
+  &amp;lt;div className=&amp;quot;form-group&amp;quot;&amp;gt; &amp;lt;label htmlFor=&amp;quot;email&amp;quot;&amp;gt;Email address&amp;lt;/label&amp;gt; &amp;lt;input id=&amp;quot;email&amp;quot; type=&amp;quot;email&amp;quot; aria-label={`Please enter your email`} aria-required=&amp;quot;true&amp;quot; className=&amp;quot;form-control&amp;quot; onChange={this.handleChange} value={this.state.email} name=&amp;quot;email&amp;quot; aria-describedby=&amp;quot;emailHelp&amp;quot; placeholder=&amp;quot;Enter email&amp;quot; /&amp;gt; &amp;lt;small id=&amp;quot;emailHelp&amp;quot; className=&amp;quot;form-text text-muted&amp;quot;&amp;gt;We&#39;ll never share your email with anyone else.</description>
     </item>
     
     <item>

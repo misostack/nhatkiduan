@@ -88,15 +88,14 @@
 
 <h3 id="1-accessibility">1.Accessibility</h3>
 
+<p><strong>Refs</strong></p>
+
 <ul>
 <li><a href="https://reactjs.org/docs/accessibility.html">Full of story</a></li>
-<li><a href="https://a11yproject.com/checklist.html">Checklist</a></li>
-</ul>
 
-<p><strong>Step by step</strong></p>
+<li><p><a href="https://a11yproject.com/checklist.html">Checklist</a></p></li>
 
-<ul>
-<li>WAI-ARIA</li>
+<li><p><strong>WAI-ARIA</strong></p></li>
 </ul>
 
 <pre><code class="language-javascript">    &lt;div className=&quot;form-group&quot;&gt;
@@ -109,7 +108,45 @@
 </code></pre>
 
 <ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Semantic HTML</a></li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Semantic HTML</a></p></li>
+
+<li><p><strong>Accessible Forms</strong></p></li>
+</ul>
+
+<pre><code class="language-javascript">    &lt;div className=&quot;form-group&quot;&gt;
+        &lt;label htmlFor=&quot;email&quot;&gt;Email address&lt;/label&gt;
+        &lt;input id=&quot;email&quot; type=&quot;email&quot; aria-label={`Please enter your email`} aria-required=&quot;true&quot;
+            className=&quot;form-control&quot; onChange={this.handleChange} value={this.state.email} name=&quot;email&quot;
+            aria-describedby=&quot;emailHelp&quot; placeholder=&quot;Enter email&quot; /&gt;
+        &lt;small id=&quot;emailHelp&quot; className=&quot;form-text text-muted&quot;&gt;We'll never share your email with anyone else.&lt;/small&gt;
+    &lt;/div&gt;
+</code></pre>
+
+<ul>
+<li><strong>User notifications:</strong></li>
+</ul>
+
+<p><a href="https://www.w3.org/WAI/tutorials/forms/notifications/">https://www.w3.org/WAI/tutorials/forms/notifications/</a></p>
+
+<pre><code class="language-html">&lt;!-- main heading --&gt;
+&lt;h1&gt;3 Errors – Billing Address&lt;/h1&gt;
+&lt;!-- page title --&gt;
+&lt;title&gt;Thank you for submitting your order.&lt;/title&gt;
+&lt;!-- dialog --&gt;
+&lt;script&gt;alert('Thanks for submitting the form!');&lt;/script&gt;
+&lt;!-- listing errors --&gt;
+&lt;!-- inline feedback --&gt;
+- After submit
+- During typing: Binary messages, Scaled feedback
+- On focus change
+</code></pre>
+
+<ul>
+<li><p><strong>Focus Control</strong></p></li>
+
+<li><p><strong>Mouse and pointer events</strong></p></li>
+
+<li><p><a href="https://speckyboy.com/custom-hover-click-effects-css-javascript/"><strong>Animations</strong></a></p></li>
 </ul>
 
 </article>
