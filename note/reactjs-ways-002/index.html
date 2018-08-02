@@ -175,6 +175,47 @@ export default class App extends React.Component {
 }
 </code></pre>
 
+<p><strong>Route-based code splitting</strong></p>
+
+<ul>
+<li><a href="https://reacttraining.com/react-router/">https://reacttraining.com/react-router/</a></li>
+</ul>
+
+<h3 id="3-context">3.Context</h3>
+
+<p><strong>Before You use context</strong></p>
+
+<pre><code class="language-html">Context is primarily used when some data needs to be accessible by many components at different nesting levels. Apply it sparingly because it makes component reuse more difficult.
+</code></pre>
+
+<pre><code class="language-html">If you only want to avoid passing some props through many levels, component composition is often a simpler solution than context.
+</code></pre>
+
+<pre><code class="language-javascript">&lt;Page user={user} /&gt;
+// ... which renders ...
+&lt;PageLayout user={user} /&gt;
+// ... which renders ...
+&lt;NavigationBar user={user} /&gt; 
+// ... which renders ...
+&lt;Avatar user={user} /&gt;
+</code></pre>
+
+<p><strong>becomes - no need context here</strong></p>
+
+<pre><code class="language-javascript">&lt;Page&gt;
+    &lt;PageLayout&gt;
+        &lt;NavigationBar&gt;
+            &lt;Avatar user={this.props.user} /&gt;
+        &lt;/NavigationBar&gt;
+    &lt;/PageLayout&gt;
+&lt;/Page&gt;
+</code></pre>
+
+<div>
+However, sometimes the same data needs to be accessible by many components in the tree, and at different nesting levels.
+Context lets you <strong>“broadcast”</strong> such data, and changes to it, to all components below. Common examples where using context might be simpler than the alternatives include managing the current locale, theme, or a data cache.
+</div>
+
 </article>
 
                 </main>
