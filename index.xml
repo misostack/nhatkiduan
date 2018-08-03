@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Tue, 31 Jul 2018 13:56:05 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 03 Aug 2018 10:18:06 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reactjs Ways - React Router - React Redux</title>
+      <link>http://nhatkiduan.misostack.com/note/reactjs-ways-003/</link>
+      <pubDate>Fri, 03 Aug 2018 10:18:06 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/note/reactjs-ways-003/</guid>
+      <description>1.Install  Refs : https://reacttraining.com/react-router/web/guides/philosophy  npm install react-router-dom -D  2.Folder Structure Refs: https://engineering.opsgenie.com/how-to-organize-react-files-before-its-messed-up-c85387f691be
+There are several ways, but in summary:
+By File Type
+This is very simple structure which almost use for small application and for learning purpose
+└── src └── actions └── group.js └── user.js └── components └── group-list.js └── group-item.js └── user-avatar.js └── user-box.js └── user-item.js └── containers └── App.js └── group.js └── user.js └── reducers └── group.</description>
+    </item>
     
     <item>
       <title>Reactjs Ways - Advanced Solutions</title>
