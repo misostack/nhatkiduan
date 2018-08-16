@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Fri, 03 Aug 2018 10:18:06 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 16 Aug 2018 16:00:49 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Api World</title>
+      <link>http://nhatkiduan.misostack.com/blog/the-api-world/</link>
+      <pubDate>Thu, 16 Aug 2018 16:00:49 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/blog/the-api-world/</guid>
+      <description>References  https://www.moesif.com/blog/api-guide/api-design-guidelines/ https://www.restapitutorial.com/lessons/restfulresourcenaming.html https://www.programmableweb.com/category/all/apis  Completely Stateless  Origin : https://www.youtube.com/watch?v=67mezK3NzpU  1.Several problems with session id
+One server is not enough
+ We use load balancer? Where to stored memory?  =&amp;gt; This will lead us to shared cache ==&amp;gt; not works with a overloading connections =&amp;gt; Distributed cache ( but complicated )
+ Sticky sessions in load balancer?  ==&amp;gt; Sticky sessions + distributed cache
+ Manage this in client side: JSON + WEB + TOKEN ( JWT )  JWT vs SessionID</description>
+    </item>
     
     <item>
       <title>Reactjs Ways - React Router - React Redux</title>

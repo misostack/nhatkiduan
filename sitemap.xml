@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nhatkiduan.misostack.com/blog/the-api-world/</loc>
+    <lastmod>2018-08-16T16:00:49+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nhatkiduan.misostack.com/note/reactjs-ways-003/</loc>
     <lastmod>2018-08-03T10:18:06+07:00</lastmod>
   </url>
@@ -85,7 +90,7 @@
   
   <url>
     <loc>http://nhatkiduan.misostack.com/blog/</loc>
-    <lastmod>2018-07-12T13:47:31+07:00</lastmod>
+    <lastmod>2018-08-16T16:00:49+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -114,7 +119,7 @@
   
   <url>
     <loc>http://nhatkiduan.misostack.com/</loc>
-    <lastmod>2018-08-03T10:18:06+07:00</lastmod>
+    <lastmod>2018-08-16T16:00:49+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -155,7 +160,7 @@
   
   <url>
     <loc>http://nhatkiduan.misostack.com/categories/uncategory/</loc>
-    <lastmod>2018-05-24T17:00:00+07:00</lastmod>
+    <lastmod>2018-08-16T16:00:49+07:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -9,6 +9,15 @@
     <meta name="generator" content="misostack-seo" />    
     
     
+    <title>The Api World | Nhật Kí Phát Triển Dự Án</title>
+    <meta name="robots" content="all" />
+    <meta name="keywords" content="The Api World" />
+    <meta name="description" content="The Api World" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://nhatkiduan.misostack.com/common/no-image-available.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="750" />
+    <meta property="og:image:height" content="300" />
 
     
     <link href="http://nhatkiduan.misostack.com/dist/styles.css" rel="stylesheet" />    
@@ -72,83 +81,83 @@
             <div class="row">
                 <main class="content col-md-8">
                     
-    <section class="row-section">
-        <h2 class="row-section-title">Blogs</h2>        
-        
-        <div class="row-section-content">                
-            <ul>
+    <article class="article article-scrollby" data-target="#article-scrollpy">
+        <img src="http://nhatkiduan.misostack.com/common/no-image-available.jpg" class="img-responsive" alt="The Api World" />
+        <h1>The Api World</h1>
+        <p>
             
-                <li class="row-section-content-item">
-                    <a class="row-section-content-item-link" href="http://nhatkiduan.misostack.com/blog/the-api-world/">The Api World - 16 Aug, 2018</a>
-                    
-                </li>
+            <a class="category-tag category-uncategory" href="http://nhatkiduan.misostack.com/categories/uncategory">uncategory</a>
             
-                <li class="row-section-content-item">
-                    <a class="row-section-content-item-link" href="http://nhatkiduan.misostack.com/blog/go-pros-and-cons/">Go Pros and Cons - 12 Jul, 2018</a>
-                    
-                </li>
-            
-                <li class="row-section-content-item">
-                    <a class="row-section-content-item-link" href="http://nhatkiduan.misostack.com/blog/ruby-pros-and-cons/">Ruby Pros and Cons - 11 Jul, 2018</a>
-                    
-                </li>
-            
-                <li class="row-section-content-item">
-                    <a class="row-section-content-item-link" href="http://nhatkiduan.misostack.com/blog/php-pros-and-cons/">Php Pros and Cons - 11 Jul, 2018</a>
-                    
-                </li>
-            
-                <li class="row-section-content-item">
-                    <a class="row-section-content-item-link" href="http://nhatkiduan.misostack.com/blog/nodejs-pros-and-cons/">Nodejs Pros and Cons - 11 Jul, 2018</a>
-                    
-                </li>
-            
-                <li class="row-section-content-item">
-                    <a class="row-section-content-item-link" href="http://nhatkiduan.misostack.com/blog/facebook-reporting-api/">Facebook Access Token - 05 Jun, 2018</a>
-                    
-                </li>
-            
-                <li class="row-section-content-item">
-                    <a class="row-section-content-item-link" href="http://nhatkiduan.misostack.com/blog/example/">Example - 25 May, 2018</a>
-                    
-                </li>
-            
-                <li class="row-section-content-item">
-                    <a class="row-section-content-item-link" href="http://nhatkiduan.misostack.com/blog/hello/">Hello - 24 May, 2018</a>
-                    
-                </li>
-                    
-            </ul>
-        </div>
+        </p>
         
 
-    </section>
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="https://www.moesif.com/blog/api-guide/api-design-guidelines/">https://www.moesif.com/blog/api-guide/api-design-guidelines/</a></li>
+<li><a href="https://www.restapitutorial.com/lessons/restfulresourcenaming.html">https://www.restapitutorial.com/lessons/restfulresourcenaming.html</a></li>
+<li><a href="https://www.programmableweb.com/category/all/apis">https://www.programmableweb.com/category/all/apis</a></li>
+</ul>
+
+<h2 id="completely-stateless">Completely Stateless</h2>
+
+<ul>
+<li>Origin : <a href="https://www.youtube.com/watch?v=67mezK3NzpU">https://www.youtube.com/watch?v=67mezK3NzpU</a></li>
+</ul>
+
+<p>1.Several problems with session id</p>
+
+<p><strong>One server is not enough</strong></p>
+
+<ul>
+<li>We use load balancer? Where to stored memory?</li>
+</ul>
+
+<p>=&gt; This will lead us to shared cache ==&gt; not works with a overloading connections
+=&gt; Distributed cache ( but complicated )</p>
+
+<ul>
+<li>Sticky sessions in load balancer?</li>
+</ul>
+
+<p>==&gt; Sticky sessions + distributed cache</p>
+
+<ol>
+<li>Manage this in client side: JSON + WEB + TOKEN ( JWT )</li>
+</ol>
+
+<p>JWT vs SessionID</p>
+
+    </article>
 
                 </main>
                 <aside id="primary-sidebar" class="sidebar col-md-4">
                     
-<div class="sidebar-fixed">
-        
-        
+    <div class="sidebar-fixed">
+        <div id="article-scrollpy" class="sidebar-widget">
+            <h3 class="widget-header"><a href="#">Đầu mục bài viết</a></h3>
+            <ul class="sidebar-links article-scrollpy-links">
+            </ul>
+        </div>   
+    </div>
+    <div class="sidebar-fixed">    
         <div class="sidebar-widget">
-            <h3 class="widget-header ucfirst"><span>categories</span></h3>
+            <h3 class="widget-header ucfirst"><span>Bài viết khác</span></h3>
             
-                <a class="category-tag facebook-api" href="http://nhatkiduan.misostack.com/categories/facebook-api">facebook-api</a>
             
-                <a class="category-tag languages" href="http://nhatkiduan.misostack.com/categories/languages">languages</a>
             
-                <a class="category-tag pmp" href="http://nhatkiduan.misostack.com/categories/pmp">pmp</a>
+
             
-                <a class="category-tag uncategory" href="http://nhatkiduan.misostack.com/categories/uncategory">uncategory</a>
-                    
+                <ul class="sidebar-links">
+                
+                
+                    <li><a href="/blog/hello/">Hello</a></li>
+                
+                </ul>
+                
         </div>
         
-        
-        
-        
-        
-                       
-</div>
+    </div>
 
                 </aside>
             </div>
