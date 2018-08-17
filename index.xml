@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Thu, 16 Aug 2018 16:00:49 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 17 Aug 2018 14:20:36 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Backend Roadmap</title>
+      <link>http://nhatkiduan.misostack.com/blog/backend-roadmap/</link>
+      <pubDate>Fri, 17 Aug 2018 14:20:36 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/blog/backend-roadmap/</guid>
+      <description>The right ways 1. Pick a language  If you are a beginner, pick one of scripting languages like: php, ruby, python, node.js( typescript ) If you have some frontend knowledge, you might fight node.js to be quite easier plus. If you have knowledge with one of scripting languages above, improve your knowledge and go deeper with it.  In this first steps, your targets can be:
+ Base knowledge of a scripting language OOP Programming Basic knowledge about HTTP Request and Response Common: Array Manipulation, File IO, CSV, JSON Package manager Library Unit Test  Main targets:</description>
+    </item>
     
     <item>
       <title>The Api World</title>
