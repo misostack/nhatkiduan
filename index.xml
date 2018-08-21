@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Fri, 17 Aug 2018 14:20:36 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 21 Aug 2018 14:30:58 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cài đặt ruby</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-001-install/</link>
+      <pubDate>Tue, 21 Aug 2018 14:30:58 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-001-install/</guid>
+      <description>Hướng dẫn cài đặt ruby trên các môi trường. Phiên bản ruby trong bài hướng dẫn hiện tại là 2.5.1.
+Link trang chủ : https://www.ruby-lang.org/en/downloads/
+Lời nói đầu về Ruby:
+ Ruby là một ngôn ngữ của sự cân đối. Nhà phát minh của nó Yukihiro “Matz” Matsumoto Rails là một framework lớn của ruby Rails được tạo ra vào năm 2013 bởi David Heinemeier Hansson trong khi làm việc với dự án Basecamp, và chính thức ra mắt vào năm 2004  Tham khảo thêm tại:</description>
+    </item>
     
     <item>
       <title>Backend Roadmap</title>
@@ -134,7 +146,7 @@ There are two kinds of user access tokens:
     </item>
     
     <item>
-      <title>1st stack: Ruby On Rails</title>
+      <title>Giới thiệu về Ruby On Rails</title>
       <link>http://nhatkiduan.misostack.com/article/ruby-000-ror/</link>
       <pubDate>Tue, 05 Jun 2018 13:50:51 +0700</pubDate>
       
