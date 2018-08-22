@@ -20,8 +20,7 @@
       <guid>http://nhatkiduan.misostack.com/article/ruby-001-install/</guid>
       <description>Hướng dẫn cài đặt ruby trên các môi trường. Phiên bản ruby trong bài hướng dẫn hiện tại là 2.5.1.
 Link trang chủ : https://www.ruby-lang.org/en/downloads/
-Lời nói đầu về Ruby:
- Ruby là một ngôn ngữ của sự cân đối. Nhà phát minh của nó Yukihiro “Matz” Matsumoto Rails là một framework lớn của ruby Rails được tạo ra vào năm 2013 bởi David Heinemeier Hansson trong khi làm việc với dự án Basecamp, và chính thức ra mắt vào năm 2004  Tham khảo thêm tại:</description>
+Cài đặt ruby trên window cho môi trường dev  Link cài đặt : https://rubyinstaller.org/downloads/  Lưu ý trên window cần cài đặt phiên bản ruby có tích hợp DevKit ( tool này tích hợp MSYS2-Devkit - công cụ build gems cho ruby trên window )</description>
     </item>
     
     <item>
@@ -41,7 +40,9 @@ Lời nói đầu về Ruby:
       <pubDate>Tue, 05 Jun 2018 13:50:51 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/ruby-000-ror/</guid>
-      <description>Tổng quan về 1st stack 1. Backbone : ruby on rails ( ror ) Ruby version : &amp;gt;= 2.5.1 Rails version : &amp;gt;= 5.2.0  2. Relational Databases PostgreSQL MYSQL  3. NoSQL Redis Memcached  4.Caching Caching stragies : https://devcenter.heroku.com/articles/caching-strategies Caching with rails : http://guides.rubyonrails.org/caching_with_rails.html  5.Best practice for production  https://medium.com/@rdsubhas/ruby-in-production-lessons-learned-36d7ab726d99  6.Ruby released news  https://www.ruby-lang.org/en/downloads/branches/ https://www.ruby-lang.org/en/downloads/releases/ https://www.ruby-lang.org/en/news/ https://github.com/ruby/ruby  Bonus php : http://php.net/supported-versions.php</description>
+      <description>Lời nói đầu về Ruby:
+ Ruby là một ngôn ngữ của sự cân đối. Nhà phát minh của nó Yukihiro “Matz” Matsumoto Rails là một framework lớn của ruby Rails được tạo ra vào năm 2013 bởi David Heinemeier Hansson trong khi làm việc với dự án Basecamp, và chính thức ra mắt vào năm 2004  Tham khảo thêm tại:
+ https://code.tutsplus.com/articles/ruby-on-rails-study-guide-the-history-of-rails--net-29439  1. Backbone : ruby on rails ( ror ) Ruby version : &amp;gt;= 2.</description>
     </item>
     
     <item>

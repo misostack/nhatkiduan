@@ -48,14 +48,5 @@ This is very simple structure which almost use for small application and for lea
       <description>1.JSX  javascript syntax extension Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.   const element = &amp;lt;img src={user.avatarUrl}&amp;gt;&amp;lt;/img&amp;gt;; const element = &amp;lt;h1&amp;gt;Hello, {formatName(user)}!&amp;lt;/h1&amp;gt; const element = React.createElement( &#39;h1&#39;, {className: &#39;greeting&#39;}, &#39;Hello, world!&#39; ); ReactDOM.render(element, document.getElementById(&#39;root&#39;));  2.Render  Elements are the smallest building blocks of React apps. React elements are immutable. Once you create an element, you can’t change its children or attributes React Only Updates What’s Necessary   ReactDOM.</description>
     </item>
     
-    <item>
-      <title>Example</title>
-      <link>http://nhatkiduan.misostack.com/note/example/</link>
-      <pubDate>Fri, 25 May 2018 10:43:50 +0700</pubDate>
-      
-      <guid>http://nhatkiduan.misostack.com/note/example/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
