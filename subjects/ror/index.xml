@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Tue, 21 Aug 2018 14:30:58 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 22 Aug 2018 10:52:27 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/subjects/ror/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tổng quan về ruby</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-002-basic/</link>
+      <pubDate>Wed, 22 Aug 2018 10:52:27 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-002-basic/</guid>
+      <description>Lời nói đầu, tổng hợp các keywords cần biết khi học ngôn ngữ ruby.
+ First step : https://www.tutorialspoint.com/ruby/index.htm  The Basics Unix shebang  Ref : https://en.wikipedia.org/wiki/Shebang_%28Unix%29 https://en.wikibooks.org/wiki/Ruby_Programming/Hello_world  example.rb
+#!/usr/bin/env ruby puts &#39;Hello world&#39;  Thì khi đó chúng ta có thể thực thi file này chỉ bằng cách
+./example.rb  The IO class  Official : https://ruby-doc.org/core-2.5.1/IO.html Ref : http://zetcode.com/lang/rubytutorial/io/  Unix Commands:
+ https://unix.stackexchange.com/questions/89386/what-is-symbol-and-in-unix-linux https://linux.101hacks.com/unix/bind/ https://www.</description>
+    </item>
     
     <item>
       <title>Cài đặt ruby</title>

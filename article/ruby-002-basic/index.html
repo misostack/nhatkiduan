@@ -9,10 +9,10 @@
     <meta name="generator" content="misostack-seo" />    
     
     
-    <title>Giới thiệu về Ruby On Rails | Nhật Kí Phát Triển Dự Án</title>
+    <title>Tổng quan về ruby | Nhật Kí Phát Triển Dự Án</title>
     <meta name="robots" content="all" />
-    <meta name="keywords" content="ror" />
-    <meta name="description" content="Ruby On Rails" />
+    <meta name="keywords" content="ruby" />
+    <meta name="description" content="Tổng quan các kiến thức cần biết về ruby" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://nhatkiduan.misostack.com/common/no-image-available.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -82,67 +82,79 @@
                 <main class="content col-md-8">
                     
     <article class="article article-scrollby" data-target="#article-scrollpy">
-        <h1>Giới thiệu về Ruby On Rails</h1>
+        <h1>Tổng quan về ruby</h1>
         
 
-<p>Lời nói đầu về Ruby:</p>
+<p>Lời nói đầu, tổng hợp các keywords cần biết khi học ngôn ngữ ruby.</p>
 
 <ul>
-<li>Ruby là một ngôn ngữ của sự cân đối. Nhà phát minh của nó Yukihiro <a href="http://www.rubyist.net/~matz/">“Matz”</a> Matsumoto</li>
-<li>Rails là một framework lớn của ruby</li>
-<li>Rails được tạo ra vào năm 2013 bởi David Heinemeier Hansson trong khi làm việc với dự án Basecamp, và chính thức ra mắt vào năm 2004</li>
+<li>First step : <a href="https://www.tutorialspoint.com/ruby/index.htm">https://www.tutorialspoint.com/ruby/index.htm</a></li>
 </ul>
 
-<p>Tham khảo thêm tại:</p>
+<h2 id="the-basics">The Basics</h2>
+
+<h3 id="unix-shebang">Unix shebang</h3>
 
 <ul>
-<li><a href="https://code.tutsplus.com/articles/ruby-on-rails-study-guide-the-history-of-rails--net-29439">https://code.tutsplus.com/articles/ruby-on-rails-study-guide-the-history-of-rails--net-29439</a></li>
+<li>Ref : <a href="https://en.wikipedia.org/wiki/Shebang_%28Unix%29">https://en.wikipedia.org/wiki/Shebang_%28Unix%29</a></li>
+<li><a href="https://en.wikibooks.org/wiki/Ruby_Programming/Hello_world">https://en.wikibooks.org/wiki/Ruby_Programming/Hello_world</a></li>
 </ul>
 
-<h3 id="1-backbone-ruby-on-rails-ror">1. Backbone : ruby on rails ( ror )</h3>
+<p>example.rb</p>
 
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Ruby version : &gt;= 2.5.1</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Rails version : &gt;= 5.2.0</label></li>
-</ul>
+<pre><code class="language-ruby">#!/usr/bin/env ruby
+puts 'Hello world'
+</code></pre>
 
-<h3 id="2-relational-databases">2. Relational Databases</h3>
+<p>Thì khi đó chúng ta có thể thực thi file này chỉ bằng cách</p>
 
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> PostgreSQL</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> MYSQL</label></li>
-</ul>
+<pre><code>./example.rb
+</code></pre>
 
-<h3 id="3-nosql">3. NoSQL</h3>
-
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Redis</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Memcached</label></li>
-</ul>
-
-<h3 id="4-caching">4.Caching</h3>
-
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Caching stragies : <a href="https://devcenter.heroku.com/articles/caching-strategies">https://devcenter.heroku.com/articles/caching-strategies</a></label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Caching with rails : <a href="http://guides.rubyonrails.org/caching_with_rails.html">http://guides.rubyonrails.org/caching_with_rails.html</a></label></li>
-</ul>
-
-<h3 id="5-best-practice-for-production">5.Best practice for production</h3>
+<h3 id="the-io-class">The IO class</h3>
 
 <ul>
-<li><a href="https://medium.com/@rdsubhas/ruby-in-production-lessons-learned-36d7ab726d99">https://medium.com/@rdsubhas/ruby-in-production-lessons-learned-36d7ab726d99</a></li>
+<li>Official : <a href="https://ruby-doc.org/core-2.5.1/IO.html">https://ruby-doc.org/core-2.5.1/IO.html</a></li>
+<li>Ref : <a href="http://zetcode.com/lang/rubytutorial/io/">http://zetcode.com/lang/rubytutorial/io/</a></li>
 </ul>
 
-<h3 id="6-ruby-released-news">6.Ruby released news</h3>
+<p><strong>Unix Commands:</strong></p>
 
 <ul>
-<li><a href="https://www.ruby-lang.org/en/downloads/branches/">https://www.ruby-lang.org/en/downloads/branches/</a></li>
-<li><a href="https://www.ruby-lang.org/en/downloads/releases/">https://www.ruby-lang.org/en/downloads/releases/</a></li>
-<li><a href="https://www.ruby-lang.org/en/news/">https://www.ruby-lang.org/en/news/</a></li>
-<li><a href="https://github.com/ruby/ruby">https://github.com/ruby/ruby</a></li>
+<li><a href="https://unix.stackexchange.com/questions/89386/what-is-symbol-and-in-unix-linux">https://unix.stackexchange.com/questions/89386/what-is-symbol-and-in-unix-linux</a></li>
+<li><a href="https://linux.101hacks.com/unix/bind/">https://linux.101hacks.com/unix/bind/</a></li>
+<li><a href="https://www.linux.org/threads/file-permissions-chmod.4124/">https://www.linux.org/threads/file-permissions-chmod.4124/</a></li>
 </ul>
 
-<p>Bonus php : <a href="http://php.net/supported-versions.php">http://php.net/supported-versions.php</a></p>
+<p><strong>Exercises</strong></p>
+
+<ul>
+<li><a href="https://www.w3resource.com/c-programming-exercises/file-handling/">https://www.w3resource.com/c-programming-exercises/file-handling/</a></li>
+</ul>
+
+<p><strong>Summary</strong></p>
+
+<h3 id="string-manipulation">String manipulation</h3>
+
+<ul>
+<li>Official : <a href="https://ruby-doc.org/core-2.5.1/String.html#method-i-chomp">https://ruby-doc.org/core-2.5.1/String.html#method-i-chomp</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-work-with-string-methods-in-ruby">https://www.digitalocean.com/community/tutorials/how-to-work-with-string-methods-in-ruby</a></li>
+</ul>
+
+<h3 id="file-io">File IO</h3>
+
+<ul>
+<li>File mode : <a href="https://ruby-doc.org/core-2.5.1/IO.html#method-c-new">https://ruby-doc.org/core-2.5.1/IO.html#method-c-new</a></li>
+<li>Official : <a href="https://ruby-doc.org/core-2.5.1/File.html#method-c-open">https://ruby-doc.org/core-2.5.1/File.html#method-c-open</a></li>
+<li>Binary : <a href="http://www.rubyguides.com/2017/01/read-binary-data/">http://www.rubyguides.com/2017/01/read-binary-data/</a></li>
+<li>PNG Parser : <a href="https://github.com/matugm/png_parser">https://github.com/matugm/png_parser</a></li>
+<li>Binary File Knowledge : <a href="https://www.nayuki.io/page/what-are-binary-and-text-files">https://www.nayuki.io/page/what-are-binary-and-text-files</a></li>
+<li><a href="http://www.visuality.pl/posts/cs-lessons-001-working-with-binary-files">http://www.visuality.pl/posts/cs-lessons-001-working-with-binary-files</a></li>
+<li><a href="https://www.webascender.com/blog/working-bits-bytes-ruby/">https://www.webascender.com/blog/working-bits-bytes-ruby/</a></li>
+<li>Pack : <a href="https://apidock.com/ruby/Array/pack">https://apidock.com/ruby/Array/pack</a></li>
+<li><a href="http://blog.anidear.com/2011/11/convert-string-to-binary-in-ruby.html">http://blog.anidear.com/2011/11/convert-string-to-binary-in-ruby.html</a></li>
+<li><a href="https://blog.bigbinary.com/2011/07/20/ruby-pack-unpack.html">https://blog.bigbinary.com/2011/07/20/ruby-pack-unpack.html</a></li>
+</ul>
 
     </article>
 
@@ -171,11 +183,11 @@
             <ul class="sidebar-links">
             
             
-                <li><a href="/article/ruby-002-basic/">Tổng quan về ruby</a></li>
-            
                 <li><a href="/article/ruby-001-install/">Cài đặt ruby</a></li>
             
                 <li><a href="/article/ruby-001-installation/">Bài 001 : Cài đặt ruby</a></li>
+            
+                <li><a href="/article/ruby-000-ror/">Giới thiệu về Ruby On Rails</a></li>
             
             </ul>        
         

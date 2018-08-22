@@ -236,42 +236,12 @@ ruby hello.rb
 
 <h2 id="các-công-cụ-hữu-ích-cho-ruby-developer">Các công cụ hữu ích cho ruby developer</h2>
 
-<p><strong>Gem bundler</strong></p>
-
 <ul>
-<li>Official : <a href="https://bundler.io/">https://bundler.io/</a></li>
-<li>Công cụ package manager hiệu quả của ruby</li>
+<li><a href="https://bundler.io/">Bundle &amp; Gemfile</a></li>
+<li><a href="https://rubygems.org/stats">https://rubygems.org/stats</a></li>
+<li><a href="http://www.ruby-forum.com/">http://www.ruby-forum.com/</a></li>
+<li><a href="http://rubyforadmins.com/input-and-output">Ruby for admins</a></li>
 </ul>
-
-<pre><code class="language-bash">gem install bundler
-</code></pre>
-
-<p>Example Gemfile</p>
-
-<pre><code class="language-bash">source 'https://rubygems.org' do
-    gem 'nokogiri'
-    gem 'rails', '5.0.0'
-    gem 'rack',  '&gt;=1.0'
-    gem 'thin',  '~&gt;1.1'
-    #If a gem's main file is different than the gem name, specify how to require it.
-    gem 'rack-cache', :require =&gt; 'rack/cache'
-    #Private gem server
-    gem 'my_gem', '1.0', :source =&gt; 'https://gems.example.com'
-    #Github
-    gem 'nokogiri', :git =&gt; 'https://github.com/tenderlove/nokogiri.git', :branch =&gt; '1.4'
-    #Local gem path
-    gem 'extracted_library', :path =&gt; './vendor/extracted_library'
-    #Grouping
-    gem 'wirble', :group =&gt; :development
-    gem 'debugger', :group =&gt; [:development, :test]
-    group :test do
-        gem 'rspec'
-    end    
-    #There are analogous shortcuts for Bitbucket (:bitbucket) and GitHub Gists (:gist).
-    gem 'capistrano-sidekiq', :github =&gt; 'seuros/capistrano-sidekiq'
-    gem 'keystone', :bitbucket =&gt; 'musicone/keystone'    
-end
-</code></pre>
 
     </article>
 
@@ -299,6 +269,8 @@ end
         
             <ul class="sidebar-links">
             
+            
+                <li><a href="/article/ruby-002-basic/">Tổng quan về ruby</a></li>
             
                 <li><a href="/article/ruby-001-installation/">Bài 001 : Cài đặt ruby</a></li>
             
