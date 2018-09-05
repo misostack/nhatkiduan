@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Wed, 22 Aug 2018 10:52:27 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 05 Sep 2018 13:41:28 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/article/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ruby Module and Classes</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-003-oop/</link>
+      <pubDate>Wed, 05 Sep 2018 13:41:28 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-003-oop/</guid>
+      <description>Object Oriented Programming  Data Abstraction Encapsulation Inheritance Polymorphism  class Animal # symbols : immutable attr_reader :name, :talk	def initialize @name = self.class.name.capitalize	end	def speak puts &amp;quot;#{@name} says &#39;hello&#39;&amp;quot; end end class Dog &amp;lt; Animal def initialize super @talk = &#39;gou gou gou&#39; end end class Cat &amp;lt; Animal def initialize super @talk = &#39;meow meow meow&#39; end	end dog = Dog.new dog.speak puts dog.name cat = Cat.</description>
+    </item>
     
     <item>
       <title>Tổng quan về ruby</title>
