@@ -3,6 +3,66 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nhatkiduan.misostack.com/article/ruby-015-json-xml-and-others/</loc>
+    <lastmod>2018-09-12T10:59:47+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nhatkiduan.misostack.com/article/ruby-014-mongodb/</loc>
+    <lastmod>2018-09-12T10:59:25+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nhatkiduan.misostack.com/article/ruby-013-postgresql/</loc>
+    <lastmod>2018-09-12T10:59:14+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nhatkiduan.misostack.com/article/ruby-012-mysql/</loc>
+    <lastmod>2018-09-12T10:58:43+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nhatkiduan.misostack.com/article/ruby-011-sqlite/</loc>
+    <lastmod>2018-09-12T10:57:17+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nhatkiduan.misostack.com/article/ruby-010-redis/</loc>
+    <lastmod>2018-09-11T10:48:10+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nhatkiduan.misostack.com/article/ruby-009-databases/</loc>
+    <lastmod>2018-09-11T10:47:48+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nhatkiduan.misostack.com/article/ruby-008-testing/</loc>
+    <lastmod>2018-09-11T10:47:20+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nhatkiduan.misostack.com/article/ruby-007-errors/</loc>
+    <lastmod>2018-09-11T10:37:16+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nhatkiduan.misostack.com/article/ruby-006-mixins/</loc>
+    <lastmod>2018-09-11T10:37:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nhatkiduan.misostack.com/article/ruby-005-hash/</loc>
+    <lastmod>2018-09-11T10:36:58+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nhatkiduan.misostack.com/article/ruby-004-arrays-blocks/</loc>
+    <lastmod>2018-09-05T16:10:05+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nhatkiduan.misostack.com/article/ruby-003-oop/</loc>
     <lastmod>2018-09-05T13:41:28+07:00</lastmod>
   </url>
@@ -94,7 +154,7 @@
   
   <url>
     <loc>http://nhatkiduan.misostack.com/article/</loc>
-    <lastmod>2018-09-05T13:41:28+07:00</lastmod>
+    <lastmod>2018-09-12T10:59:47+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -129,7 +189,7 @@
   
   <url>
     <loc>http://nhatkiduan.misostack.com/</loc>
-    <lastmod>2018-09-05T13:41:28+07:00</lastmod>
+    <lastmod>2018-09-12T10:59:47+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -152,7 +212,7 @@
   
   <url>
     <loc>http://nhatkiduan.misostack.com/subjects/ror/</loc>
-    <lastmod>2018-09-05T13:41:28+07:00</lastmod>
+    <lastmod>2018-09-12T10:59:47+07:00</lastmod>
     <priority>0</priority>
   </url>
   

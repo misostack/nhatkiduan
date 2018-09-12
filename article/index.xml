@@ -7,10 +7,121 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Wed, 05 Sep 2018 13:41:28 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 12 Sep 2018 10:59:47 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/article/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ruby 015 Json Xml and Others</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-015-json-xml-and-others/</link>
+      <pubDate>Wed, 12 Sep 2018 10:59:47 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-015-json-xml-and-others/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby 014 Mongodb</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-014-mongodb/</link>
+      <pubDate>Wed, 12 Sep 2018 10:59:25 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-014-mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby 013 Postgresql</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-013-postgresql/</link>
+      <pubDate>Wed, 12 Sep 2018 10:59:14 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-013-postgresql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby 012 Mysql</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-012-mysql/</link>
+      <pubDate>Wed, 12 Sep 2018 10:58:43 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-012-mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby 011 Sqlight</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-011-sqlite/</link>
+      <pubDate>Wed, 12 Sep 2018 10:57:17 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-011-sqlite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby 010 - Hướng dẫn sử dụng redis</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-010-redis/</link>
+      <pubDate>Tue, 11 Sep 2018 10:48:10 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-010-redis/</guid>
+      <description>1.Hướng dẫn cài đặt &amp;ndash; Hướng dẫn cài đặt trên ubuntu 16 Refs
+ https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04 https://askubuntu.com/questions/868848/how-to-install-redis-on-ubuntu-16-04  &amp;ndash; Cách đơn giản nhất sudo add-apt-repository ppa:chris-lea/redis-server sudo apt-get update sudo apt-get install redis-server  &amp;ndash; Cách cài đặt từ source Install the Build and Test Dependencies
+sudo apt-get update sudo apt-get install build-essential tcl  Download and Extract the Source Code
+cd /tmp curl -O http://download.redis.io/redis-stable.tar.gz tar xzvf redis-stable.tar.gz cd redis-stable  Build và Install Redis</description>
+    </item>
+    
+    <item>
+      <title>Ruby 009 Databases</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-009-databases/</link>
+      <pubDate>Tue, 11 Sep 2018 10:47:48 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-009-databases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby 008 Testing</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-008-testing/</link>
+      <pubDate>Tue, 11 Sep 2018 10:47:20 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-008-testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby 007 Errors</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-007-errors/</link>
+      <pubDate>Tue, 11 Sep 2018 10:37:16 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-007-errors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby 006 Mixins</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-006-mixins/</link>
+      <pubDate>Tue, 11 Sep 2018 10:37:08 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-006-mixins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby 005 Hash</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-005-hash/</link>
+      <pubDate>Tue, 11 Sep 2018 10:36:58 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-005-hash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby Arrays - Blocks</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-004-arrays-blocks/</link>
+      <pubDate>Wed, 05 Sep 2018 16:10:05 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-004-arrays-blocks/</guid>
+      <description> Arrays Blocks </description>
+    </item>
     
     <item>
       <title>Ruby Module and Classes</title>
