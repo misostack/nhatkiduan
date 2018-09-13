@@ -45,7 +45,7 @@
       <pubDate>Wed, 12 Sep 2018 10:58:43 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/ruby-012-mysql/</guid>
-      <description></description>
+      <description> Temp Local run bundle install --path=vendor rails s -p 3000 -b 0.0.0.0 -e development  mkdir -p puma/pids puma/sockets puma/log email = &amp;quot;adomik_test@adomik.com&amp;quot; password = &amp;quot;test123456test&amp;quot; CREATE USER &#39;webmaster&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;; GRANT ALL PRIVILEGES ON *.* TO &#39;webmaster&#39;@&#39;%&#39; WITH GRANT OPTION; SET PASSWORD FOR &#39;webmaster&#39;@&#39;%&#39; = PASSWORD(&#39;123456&#39;); mailcatcher --ip 0.0.0.0 -f -v  </description>
     </item>
     
     <item>
@@ -102,7 +102,10 @@ cd /tmp curl -O http://download.redis.io/redis-stable.tar.gz tar xzvf redis-stab
       <pubDate>Tue, 11 Sep 2018 10:37:08 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/ruby-006-mixins/</guid>
-      <description></description>
+      <description>Problems Imagine we have an app for sharing videos, musics, and other media.
+Musics and videos both need some of same functionality: users need to be able to play songs and videos back, as well as leave comments on them. There are some aspects that differ, howerver.Eg:
+Songs: we need to track the number of beats per minute(bpm)
+Videos: need to keep track of their resolution(in pixels, eg: 1920 x 1080 resolution).</description>
     </item>
     
     <item>
@@ -111,7 +114,7 @@ cd /tmp curl -O http://download.redis.io/redis-stable.tar.gz tar xzvf redis-stab
       <pubDate>Tue, 11 Sep 2018 10:36:58 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/ruby-005-hash/</guid>
-      <description></description>
+      <description>Hash A hash can be created by: - Implicit form - With Symbol - Or using new method  grades = { &amp;quot;Jane Doe&amp;quot; =&amp;gt; 10, &amp;quot;Jim Doe&amp;quot; =&amp;gt; 6 } puts &amp;quot;grades[&#39;Jane Done&#39;] = #{grades[&#39;Jane Doe&#39;]}&amp;quot; opts = {:font_size =&amp;gt; 10, :font_family =&amp;gt; &#39;Arial&#39;} puts &amp;quot;opts[:font_size] = #{opts[:font_size]}&amp;quot; new_opts = { font_size: 12, font_family: &#39;Arial&#39; } puts &amp;quot;new_opts[:font_size] = #{new_opts[:font_size]}&amp;quot; new_opts[:font_weight] = &#39;bold&#39; puts &amp;quot;new_opts[:font_weight] = #{new_opts[:font_weight]}&amp;quot;  Important notes about hash Hashes have a default value that is returned when accessing keys that do not exist in the hash.</description>
     </item>
     
     <item>

@@ -84,6 +84,26 @@
     <article class="article article-scrollby" data-target="#article-scrollpy">
         <h1>Ruby 012 Mysql</h1>
         
+
+<h2 id="temp">Temp</h2>
+
+<h2 id="local-run">Local run</h2>
+
+<pre><code class="language-ruby">bundle install --path=vendor
+rails s -p 3000 -b 0.0.0.0 -e development
+</code></pre>
+
+<pre><code class="language-bash">mkdir -p puma/pids puma/sockets puma/log
+email = &quot;adomik_test@adomik.com&quot;
+password = &quot;test123456test&quot;
+
+CREATE USER 'webmaster'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'webmaster'@'%' WITH GRANT OPTION;
+SET PASSWORD FOR 'webmaster'@'%' = PASSWORD('123456');
+
+mailcatcher --ip 0.0.0.0 -f -v
+</code></pre>
+
     </article>
 
                 </main>
