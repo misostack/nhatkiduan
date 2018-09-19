@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Wed, 12 Sep 2018 10:59:47 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 19 Sep 2018 14:39:41 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/article/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ruby 016 Web Apps</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-016-web-apps/</link>
+      <pubDate>Wed, 19 Sep 2018 14:39:41 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ruby-016-web-apps/</guid>
+      <description>First approach &amp;ndash; Set up project directory  Create your own project directory  &amp;ndash; Install sinatra lib for handling web requests  Set up routes Create first HTML Page Set up sinatra to respond with HTML  Overview
+ The lastest version of sinatra used thin as a web server instead of WEBrick Refs : http://code.macournoyer.com/thin/  gem install sinatra  #!/usr/bin/env ruby #puts $LOAD_PATH require &#39;sinatra&#39; get (&#39;/&#39;) do &#39;Home Page&#39; end  &amp;ndash; Display objects with HTML  Refs : https://ruby-doc.</description>
+    </item>
     
     <item>
       <title>Ruby 015 Json Xml and Others</title>
@@ -84,7 +94,9 @@ cd /tmp curl -O http://download.redis.io/redis-stable.tar.gz tar xzvf redis-stab
       <pubDate>Tue, 11 Sep 2018 10:47:20 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/ruby-008-testing/</guid>
-      <description></description>
+      <description>Types of Automated Tests There are actually many different types of automated tests in widespread use. Here are some of the most common:
+ Performance tests measure the speed of your program. Integration tests run your entire program, to ensure that all its methods, classes, and other components integrate together successfully. Unit tests run individual components (units) of your program, usually individual methods.  &amp;ndash;Unit Test Keywords
+ minitest assert_equal setup teardown  #!</description>
     </item>
     
     <item>
@@ -93,7 +105,7 @@ cd /tmp curl -O http://download.redis.io/redis-stable.tar.gz tar xzvf redis-stab
       <pubDate>Tue, 11 Sep 2018 10:37:16 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/ruby-007-errors/</guid>
-      <description></description>
+      <description>Keywords  rescue ensure raise {ErrorType} =&amp;gt; error error.message CustomError &amp;lt; StandardError  #!/usr/bin/env ruby class GreaterFive &amp;lt; StandardError end class EqualFive &amp;lt; StandardError end def example_errors number begin random_number = Random.new.rand(10) puts &#39;-&#39;*20 puts &amp;quot;Test Case #{number}&amp;quot;	raise GreaterFive, &amp;quot;#{random_number} &amp;gt; 5&amp;quot; if random_number &amp;gt; 5 raise EqualFive, &amp;quot;#{random_number} = 5&amp;quot; if random_number == 5 raise &amp;quot;#{random_number} &amp;lt; 5&amp;quot; rescue GreaterFive =&amp;gt; error puts &amp;quot;GreaterFive: #{error.message}&amp;quot; rescue EqualFive =&amp;gt; error puts &amp;quot;EqualFive: #{error.</description>
     </item>
     
     <item>

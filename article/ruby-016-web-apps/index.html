@@ -9,10 +9,10 @@
     <meta name="generator" content="misostack-seo" />    
     
     
-    <title>Ruby 013 Postgresql | Nhật Kí Phát Triển Dự Án</title>
+    <title>Ruby 016 Web Apps | Nhật Kí Phát Triển Dự Án</title>
     <meta name="robots" content="all" />
-    <meta name="keywords" content="Ruby 013 Postgresql" />
-    <meta name="description" content="Ruby 013 Postgresql" />
+    <meta name="keywords" content="Ruby 016 Web Apps" />
+    <meta name="description" content="Ruby 016 Web Apps" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://nhatkiduan.misostack.com/common/no-image-available.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -82,8 +82,78 @@
                 <main class="content col-md-8">
                     
     <article class="article article-scrollby" data-target="#article-scrollpy">
-        <h1>Ruby 013 Postgresql</h1>
+        <h1>Ruby 016 Web Apps</h1>
         
+
+<h2 id="first-approach">First approach</h2>
+
+<h3 id="set-up-project-directory">&ndash; Set up project directory</h3>
+
+<ul>
+<li>Create your own project directory</li>
+</ul>
+
+<p><img src="/posts/ruby-simple-webapp.png" alt="ruby simple webapp" /></p>
+
+<h3 id="install-sinatra-lib-for-handling-web-requests">&ndash; Install sinatra lib for handling web requests</h3>
+
+<ul>
+<li>Set up routes</li>
+<li>Create first HTML Page</li>
+<li>Set up sinatra to respond with HTML</li>
+</ul>
+
+<p><strong>Overview</strong></p>
+
+<ul>
+<li>The lastest version of sinatra used <strong>thin</strong> as a <strong>web server</strong> instead of WEBrick</li>
+<li>Refs : <a href="http://code.macournoyer.com/thin/">http://code.macournoyer.com/thin/</a></li>
+</ul>
+
+<pre><code class="language-bash">gem install sinatra
+</code></pre>
+
+<pre><code class="language-ruby">#!/usr/bin/env ruby
+#puts $LOAD_PATH
+require 'sinatra'
+
+get ('/') do
+	'Home Page'
+end
+</code></pre>
+
+<h3 id="display-objects-with-html">&ndash; Display objects with HTML</h3>
+
+<ul>
+<li>Refs : <a href="https://ruby-doc.org/stdlib-2.5.1/libdoc/erb/rdoc/ERB.html">https://ruby-doc.org/stdlib-2.5.1/libdoc/erb/rdoc/ERB.html</a></li>
+</ul>
+
+<pre><code class="language-ruby">$LOAD_PATH.unshift(File.join(File.dirname(__FILE__),'lib'))
+require 'sinatra'
+require 'todo'
+
+get ('/') do	
+	@paths = $LOAD_PATH
+	erb :&quot;todo/index&quot;
+end
+</code></pre>
+
+<pre><code class="language-erb">&lt;%# @paths %&gt;
+&lt;% @paths.each do |path| %&gt;
+&lt;li class=&quot;list-group-item&quot;&gt;&lt;%= path %&gt;&lt;/li&gt;
+&lt;% end %&gt;
+</code></pre>
+
+<h3 id="saving-and-loading-objects">&ndash; Saving and loading objects</h3>
+
+<ul>
+<li>Create a todo object base on form contents</li>
+<li>Save a todo object to a file</li>
+<li>Load the list of todo</li>
+<li>Find todo within file</li>
+<li>Display todo list</li>
+</ul>
+
     </article>
 
                 </main>
@@ -111,11 +181,11 @@
             <ul class="sidebar-links">
             
             
-                <li><a href="/article/ruby-016-web-apps/">Ruby 016 Web Apps</a></li>
-            
                 <li><a href="/article/ruby-015-json-xml-and-others/">Ruby 015 Json Xml and Others</a></li>
             
                 <li><a href="/article/ruby-014-mongodb/">Ruby 014 Mongodb</a></li>
+            
+                <li><a href="/article/ruby-013-postgresql/">Ruby 013 Postgresql</a></li>
             
                 <li><a href="/article/ruby-012-mysql/">Ruby 012 Mysql</a></li>
             

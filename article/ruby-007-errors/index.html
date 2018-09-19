@@ -84,6 +84,47 @@
     <article class="article article-scrollby" data-target="#article-scrollpy">
         <h1>Ruby 007 Errors</h1>
         
+
+<h2 id="keywords">Keywords</h2>
+
+<ul>
+<li>rescue</li>
+<li>ensure</li>
+<li>raise {ErrorType} =&gt; error</li>
+<li>error.message</li>
+<li>CustomError &lt; StandardError</li>
+</ul>
+
+<p><img src="/posts/ruby-exceptions.png" alt="r" /></p>
+
+<pre><code class="language-ruby">#!/usr/bin/env ruby
+class GreaterFive &lt; StandardError
+end
+class EqualFive &lt; StandardError
+end
+def example_errors number
+	begin
+		random_number = Random.new.rand(10)
+		puts '-'*20
+		puts &quot;Test Case #{number}&quot;		
+		raise GreaterFive, &quot;#{random_number} &gt; 5&quot; if random_number &gt; 5
+		raise EqualFive, &quot;#{random_number} = 5&quot; if random_number == 5
+		raise &quot;#{random_number} &lt; 5&quot;
+	rescue GreaterFive =&gt; error
+		puts &quot;GreaterFive: #{error.message}&quot;
+	rescue EqualFive =&gt; error
+		puts &quot;EqualFive: #{error.message}&quot;
+	rescue =&gt; error	
+		puts &quot;LesserFive: #{error.message}!&quot;
+	ensure
+		puts '-'*20
+	end
+end
+
+(1..10).each { |i| example_errors(i) }
+
+</code></pre>
+
     </article>
 
                 </main>
@@ -111,6 +152,8 @@
             <ul class="sidebar-links">
             
             
+                <li><a href="/article/ruby-016-web-apps/">Ruby 016 Web Apps</a></li>
+            
                 <li><a href="/article/ruby-015-json-xml-and-others/">Ruby 015 Json Xml and Others</a></li>
             
                 <li><a href="/article/ruby-014-mongodb/">Ruby 014 Mongodb</a></li>
@@ -128,8 +171,6 @@
                 <li><a href="/article/ruby-008-testing/">Ruby 008 Testing</a></li>
             
                 <li><a href="/article/ruby-006-mixins/">Ruby 006 Mixins</a></li>
-            
-                <li><a href="/article/ruby-005-hash/">Ruby 005 Hash</a></li>
             
             </ul>        
         

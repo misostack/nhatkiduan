@@ -84,6 +84,69 @@
     <article class="article article-scrollby" data-target="#article-scrollpy">
         <h1>Ruby 008 Testing</h1>
         
+
+<h2 id="types-of-automated-tests">Types of Automated Tests</h2>
+
+<p><strong>There are actually many different types of automated tests in widespread use. Here are some of the most common:</strong></p>
+
+<ul>
+<li><strong>Performance tests</strong> measure the speed of your program.</li>
+<li><strong>Integration tests</strong> run your entire program, to ensure that all its methods, classes, and other components integrate together successfully.</li>
+<li><strong>Unit tests</strong> run individual components (units) of your program, usually individual methods.</li>
+</ul>
+
+<h3 id="unit-test">&ndash;Unit Test</h3>
+
+<p><strong>Keywords</strong></p>
+
+<ul>
+<li>minitest</li>
+<li>assert_equal</li>
+<li>setup</li>
+<li>teardown</li>
+</ul>
+
+<pre><code class="language-ruby">#!/usr/bin/env ruby
+
+require 'minitest/autorun'
+
+def function_a(a, b)
+	a + b
+end
+
+def function_b(a, b)
+	a - b
+end
+
+class SampleTest &lt; Minitest::Test
+	def setup #run only once
+		@a = Random.new.rand(1..10)
+		@b = Random.new.rand(5..10)
+		@total = @a + @b
+		@differ = @a - @b
+	end
+	def teardown # run before each test
+		puts &quot;#{@a} + #{@b} = #{@total}&quot;
+		puts &quot;#{@a} - #{@b} = #{@differ}&quot;
+		puts '-'*20
+	end
+	def test_function_a		
+		assert_equal(@total, function_a(@a,@b))
+	end
+	def test_function_b
+		assert_equal(@differ, function_b(@a,@b))
+	end	
+end
+</code></pre>
+
+<h2 id="readmore">Readmore</h2>
+
+<ul>
+<li>Read this book : Effective-testing-rspec-3</li>
+<li>Rspec is ruby&rsquo;s testing framework that used for : unit tests, integration tests</li>
+<li>Ruby Benchmark</li>
+</ul>
+
     </article>
 
                 </main>
@@ -111,6 +174,8 @@
             <ul class="sidebar-links">
             
             
+                <li><a href="/article/ruby-016-web-apps/">Ruby 016 Web Apps</a></li>
+            
                 <li><a href="/article/ruby-015-json-xml-and-others/">Ruby 015 Json Xml and Others</a></li>
             
                 <li><a href="/article/ruby-014-mongodb/">Ruby 014 Mongodb</a></li>
@@ -128,8 +193,6 @@
                 <li><a href="/article/ruby-007-errors/">Ruby 007 Errors</a></li>
             
                 <li><a href="/article/ruby-006-mixins/">Ruby 006 Mixins</a></li>
-            
-                <li><a href="/article/ruby-005-hash/">Ruby 005 Hash</a></li>
             
             </ul>        
         

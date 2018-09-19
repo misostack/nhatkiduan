@@ -209,6 +209,57 @@ song.play
 song.display
 </code></pre>
 
+<h2 id="important-notes">Important notes</h2>
+
+<p><strong>Module</strong></p>
+
+<pre><code class="language-html">A module is a collection of methods. The main diffrence between a module and a class is that you can't create instance of a module
+</code></pre>
+
+<p>*<em>Mixins</em></p>
+
+<pre><code class="language-html">- When you mix a module into a class, it's like adding all of the modules's methods to the class as instance methods
+- Although a class can only inherit from one superclass, you can mix any number of modules into a class
+</code></pre>
+
+<h2 id="amazing-comparing-methods">Amazing comparing methods</h2>
+
+<pre><code class="language-ruby">puts 'Amazing comparing method'
+
+class Steak
+	include Comparable
+	# constants
+	GRADE_SCORES = {&quot;Prime&quot; =&gt; 3, &quot;Choice&quot; =&gt; 2, &quot;Select&quot; =&gt; 1}
+
+	attr_accessor :grade
+
+	def &gt;(other)		
+		GRADE_SCORES[grade] &gt; GRADE_SCORES[other.grade]
+	end
+end
+
+first_steak = Steak.new
+first_steak.grade = 'Prime'
+
+second_steak = Steak.new
+second_steak.grade = 'Choice'
+
+if first_steak &gt; second_steak
+	puts &quot;I'll take #{first_steak.inspect}.&quot;
+end
+
+meatA = Steak.new('meatA')
+meatA.grade = &quot;Select&quot;
+
+meatB = Steak.new('MeatB')
+meatB.grade = &quot;Choice&quot;
+
+puts &quot;I will choose #{meatA.name}&quot; if meatA &gt; meatB
+puts &quot;I will choose #{meatB.name}&quot; if meatA &lt; meatB
+meatA.grade = &quot;Choice&quot;
+puts &quot;I will choose #{meatA.name} and #{meatB.name}&quot; if meatA == meatB
+</code></pre>
+
     </article>
 
                 </main>
@@ -236,6 +287,8 @@ song.display
             <ul class="sidebar-links">
             
             
+                <li><a href="/article/ruby-016-web-apps/">Ruby 016 Web Apps</a></li>
+            
                 <li><a href="/article/ruby-015-json-xml-and-others/">Ruby 015 Json Xml and Others</a></li>
             
                 <li><a href="/article/ruby-014-mongodb/">Ruby 014 Mongodb</a></li>
@@ -253,8 +306,6 @@ song.display
                 <li><a href="/article/ruby-008-testing/">Ruby 008 Testing</a></li>
             
                 <li><a href="/article/ruby-007-errors/">Ruby 007 Errors</a></li>
-            
-                <li><a href="/article/ruby-005-hash/">Ruby 005 Hash</a></li>
             
             </ul>        
         
