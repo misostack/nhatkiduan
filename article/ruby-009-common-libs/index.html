@@ -9,10 +9,10 @@
     <meta name="generator" content="misostack-seo" />    
     
     
-    <title>Ruby 011 Sqlight | Nhật Kí Phát Triển Dự Án</title>
+    <title>Ruby 009 - Common Libs | Nhật Kí Phát Triển Dự Án</title>
     <meta name="robots" content="all" />
-    <meta name="keywords" content="Ruby 011 Sqlight" />
-    <meta name="description" content="Ruby 011 " />
+    <meta name="keywords" content="Ruby 009 - Common Libs" />
+    <meta name="description" content="Ruby 009 - Common Libs" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://nhatkiduan.misostack.com/common/no-image-available.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -82,8 +82,78 @@
                 <main class="content col-md-8">
                     
     <article class="article article-scrollby" data-target="#article-scrollpy">
-        <h1>Ruby 011 Sqlight</h1>
+        <h1>Ruby 009 - Common Libs</h1>
         
+
+<h2 id="common-libs">Common libs</h2>
+
+<ul>
+<li>MVC Framework : Ruby On Rails(ROR)</li>
+<li>dRuby</li>
+<li>CSV</li>
+</ul>
+
+<h2 id="inline-if-and-unless">Inline if and unless</h2>
+
+<pre><code class="language-ruby">puts 'example' if true
+puts 'example' unless true
+</code></pre>
+
+<h2 id="private-method">Private method</h2>
+
+<pre><code class="language-ruby">class Sample
+    def hello
+        puts 'hello'
+    end
+
+private
+    def hi
+        puts 'hi'
+    end
+end
+</code></pre>
+
+<h2 id="command-line-arguments">Command-line arguments</h2>
+
+<pre><code class="language-ruby">puts ARGV[0]
+</code></pre>
+
+<h2 id="regular-expressions">Regular Expressions</h2>
+
+<h2 id="singleton-methods">Singleton methods</h2>
+
+<pre><code class="language-ruby">superhero = Person.new
+def superhero.fly
+    puts 'Fly up'
+end
+superhero.fly
+</code></pre>
+
+<h2 id="call-any-method-even-undefined-ones">Call any method, even undefined ones</h2>
+
+<pre><code class="language-ruby">#!/usr/env/bin ruby
+
+class AskMeAnyThing
+    def method_missing(method_name, args = {})
+        &quot;You called #{method_name.to_s} #{args}&quot;
+    end
+end
+obj = AskMeAnyThing.new
+p obj.an_undefined_method({'arg1' =&gt; 'a','arg2'=&gt;'b'})
+</code></pre>
+
+<h2 id="automating-tasks-with-rake">Automating tasks with Rake</h2>
+
+<ul>
+<li>Ref : <a href="https://github.com/ruby/rake">https://github.com/ruby/rake</a></li>
+</ul>
+
+<h2 id="bundler">Bundler</h2>
+
+<ul>
+<li>Ref : <a href="https://bundler.io/">https://bundler.io/</a></li>
+</ul>
+
     </article>
 
                 </main>
@@ -121,9 +191,9 @@
             
                 <li><a href="/article/ruby-012-mysql/">Ruby 012 Mysql</a></li>
             
-                <li><a href="/article/ruby-010-redis/">Ruby 010 - Hướng dẫn sử dụng redis</a></li>
+                <li><a href="/article/ruby-011-sqlite/">Ruby 011 Sqlight</a></li>
             
-                <li><a href="/article/ruby-009-common-libs/">Ruby 009 - Common Libs</a></li>
+                <li><a href="/article/ruby-010-redis/">Ruby 010 - Hướng dẫn sử dụng redis</a></li>
             
                 <li><a href="/article/ruby-008-testing/">Ruby 008 Testing</a></li>
             

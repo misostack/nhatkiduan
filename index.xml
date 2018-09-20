@@ -80,12 +80,12 @@ cd /tmp curl -O http://download.redis.io/redis-stable.tar.gz tar xzvf redis-stab
     </item>
     
     <item>
-      <title>Ruby 009 Databases</title>
-      <link>http://nhatkiduan.misostack.com/article/ruby-009-databases/</link>
+      <title>Ruby 009 - Common Libs</title>
+      <link>http://nhatkiduan.misostack.com/article/ruby-009-common-libs/</link>
       <pubDate>Tue, 11 Sep 2018 10:47:48 +0700</pubDate>
       
-      <guid>http://nhatkiduan.misostack.com/article/ruby-009-databases/</guid>
-      <description></description>
+      <guid>http://nhatkiduan.misostack.com/article/ruby-009-common-libs/</guid>
+      <description>Common libs  MVC Framework : Ruby On Rails(ROR) dRuby CSV  Inline if and unless puts &#39;example&#39; if true puts &#39;example&#39; unless true  Private method class Sample def hello puts &#39;hello&#39; end private def hi puts &#39;hi&#39; end end  Command-line arguments puts ARGV[0]  Regular Expressions Singleton methods superhero = Person.new def superhero.fly puts &#39;Fly up&#39; end superhero.fly  Call any method, even undefined ones #!/usr/env/bin ruby class AskMeAnyThing def method_missing(method_name, args = {}) &amp;quot;You called #{method_name.</description>
     </item>
     
     <item>
@@ -135,7 +135,7 @@ Videos: need to keep track of their resolution(in pixels, eg: 1920 x 1080 resolu
       <pubDate>Wed, 05 Sep 2018 16:10:05 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/ruby-004-arrays-blocks/</guid>
-      <description> Arrays Blocks </description>
+      <description>Arrays require &#39;faker&#39; filepath = &#39;./15-votes.txt&#39; module Votes def self.generate_votes(filepath, numbers = 100) return if File.exist?(filepath) votes = [] (1..numbers).each do |num| name = Faker::Name.name (1..Random.new.rand(100)).each do |i| votes &amp;lt;&amp;lt; name end	end File.open(filepath,&#39;w+&#39;) { |fh| votes.shuffle.each do |name|	fh.puts format(&amp;quot;%s&amp;quot;, name) end } end def self.read_votes(filepath) votes = {} File.readlines(filepath).each { |line|	name = line.chomp votes[name] += 1 if votes[name] votes[name] = 1 unless votes[name] } final_votes = [] votes.</description>
     </item>
     
     <item>
