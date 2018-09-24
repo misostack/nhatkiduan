@@ -93,13 +93,13 @@
 <li>CSV</li>
 </ul>
 
-<h2 id="inline-if-and-unless">Inline if and unless</h2>
+<h2 id="inline-if-and-unless">- Inline if and unless</h2>
 
 <pre><code class="language-ruby">puts 'example' if true
 puts 'example' unless true
 </code></pre>
 
-<h2 id="private-method">Private method</h2>
+<h2 id="private-method">- Private method</h2>
 
 <pre><code class="language-ruby">class Sample
     def hello
@@ -113,14 +113,14 @@ private
 end
 </code></pre>
 
-<h2 id="command-line-arguments">Command-line arguments</h2>
+<h2 id="command-line-arguments">- Command-line arguments</h2>
 
 <pre><code class="language-ruby">puts ARGV[0]
 </code></pre>
 
-<h2 id="regular-expressions">Regular Expressions</h2>
+<h2 id="regular-expressions">- Regular Expressions</h2>
 
-<h2 id="singleton-methods">Singleton methods</h2>
+<h2 id="singleton-methods">- Singleton methods</h2>
 
 <pre><code class="language-ruby">superhero = Person.new
 def superhero.fly
@@ -129,7 +129,7 @@ end
 superhero.fly
 </code></pre>
 
-<h2 id="call-any-method-even-undefined-ones">Call any method, even undefined ones</h2>
+<h2 id="call-any-method-even-undefined-ones">- Call any method, even undefined ones</h2>
 
 <pre><code class="language-ruby">#!/usr/env/bin ruby
 
@@ -142,13 +142,117 @@ obj = AskMeAnyThing.new
 p obj.an_undefined_method({'arg1' =&gt; 'a','arg2'=&gt;'b'})
 </code></pre>
 
-<h2 id="automating-tasks-with-rake">Automating tasks with Rake</h2>
+<h2 id="automating-tasks-with-rake">- Automating tasks with Rake</h2>
 
 <ul>
-<li>Ref : <a href="https://github.com/ruby/rake">https://github.com/ruby/rake</a></li>
+<li>Ref1 : <a href="https://github.com/ruby/rake">https://github.com/ruby/rake</a></li>
+<li>Ref2 : <a href="https://jacobswanner.com/development/2013/rake-global-tasks/">https://jacobswanner.com/development/2013/rake-global-tasks/</a></li>
+<li>Ref3 : <a href="http://www.virtuouscode.com/2014/04/21/rake-part-1-basics/">http://www.virtuouscode.com/2014/04/21/rake-part-1-basics/</a></li>
+<li>Cheatsheet : <a href="https://ruby.github.io/rake/doc/rakefile_rdoc.html">https://ruby.github.io/rake/doc/rakefile_rdoc.html</a></li>
 </ul>
 
-<h2 id="bundler">Bundler</h2>
+<p><strong>Rake commands</strong></p>
+
+<pre><code class="language-bash">rake #run default task
+rake --tasks # list all tasks ( rake -T )
+rake task_nameA # run task_nameA
+rake task_nameA task_nameB # run task_nameA, then task_nameB
+</code></pre>
+
+<p><strong>Where to place tasks?</strong></p>
+
+<ul>
+<li>Global tasks are placed in <strong>Rakefile</strong></li>
+<li>Other tasks are placed in <strong>rakelib</strong> folder</li>
+</ul>
+
+<p><strong>Structures</strong></p>
+
+<pre><code class="language-html">rakelib
+    - task1.rake
+    - task2.rake
+Rakefile
+</code></pre>
+
+<p><strong>Subjects</strong></p>
+
+<h3 id="rake-global-tasks">- Rake Global Tasks</h3>
+
+<pre><code class="language-html">Rake does let you define global tasks, these global tasks can be run from any directory – even those that do not have a Rakefile in their hierarchy.
+</code></pre>
+
+<pre><code class="language-ruby">desc &quot;Default Task&quot;
+task :default do
+    'Default task'
+end
+
+task :prerequisite1 do
+	puts 'prerequisite1'
+end
+
+task :prerequisite2 do
+	puts 'prerequisite2'
+end
+
+desc &quot;The task's description&quot;
+task :task_name =&gt; [:prerequisite1, :prerequisite2] do |task| puts &quot;#{task.name}&quot; end
+</code></pre>
+
+<h3 id="rake-rule-tasks">- Rake Rule Tasks</h3>
+
+<ul>
+<li><a href="https://ruby-doc.org/stdlib-2.0.0/libdoc/rake/rdoc/Rake/FileList.html#method-i-gsub">https://ruby-doc.org/stdlib-2.0.0/libdoc/rake/rdoc/Rake/FileList.html#method-i-gsub</a></li>
+</ul>
+
+<p><strong>Some files need to be ignored</strong>:</p>
+
+<ul>
+<li>Files that contain tilde(~). Eg: ~$myfile.doc file is a temporary file used to help recover data if a program you are using stops unexpectedly.</li>
+<li>A scratch file is a temporary computer file which you use as a work area or as a store while a program is operating.</li>
+</ul>
+
+<p><strong>Rule tasks don’t need to be about files, as some of the examples above have shown, but if there is a file with the same name as the task’s name, then that task will have the characteristics of a file task</strong></p>
+
+<pre><code class="language-ruby">rule '.yml' =&gt; '.yml.example' do |t|
+	puts &quot;Make a copy of #{t.source} to %s&quot; % t.name
+	cp t.source, t.name
+end
+</code></pre>
+
+<pre><code class="language-bash">rake ./database.yml
+</code></pre>
+
+<pre><code class="language-ruby">file_list = Rake::FileList.new(&quot;26/*.yml.example&quot;) do |fl|
+	fl.exclude(&quot;~*&quot;)
+	fl.exclude(&quot;/^scratch\//&quot;)
+	fl.gsub!(&quot;.example&quot;,&quot;&quot;)
+end
+
+rule '.yml' =&gt; '.yml.example' do |t|
+	puts &quot;Make a copy of #{t.source} to %s&quot; % t.name
+	cp t.source, t.name
+end
+
+desc &quot;Setup&quot;
+task :setup =&gt; file_list do |t|
+	puts t.inspect
+end
+</code></pre>
+
+<pre><code class="language-bash">rake setup
+</code></pre>
+
+<h3 id="rake-file-tasks">- Rake File Tasks</h3>
+
+<h3 id="directory-tasks">- Directory Tasks</h3>
+
+<h3 id="tasks-with-parallel-prerequisites">- Tasks with Parallel Prerequisites</h3>
+
+<h3 id="tasks-with-arguments">- Tasks with Arguments</h3>
+
+<h3 id="namespaces">- Namespaces</h3>
+
+<h2 id="bundler">- Bundler</h2>
 
 <ul>
 <li>Ref : <a href="https://bundler.io/">https://bundler.io/</a></li>

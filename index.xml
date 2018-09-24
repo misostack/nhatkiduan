@@ -85,7 +85,7 @@ cd /tmp curl -O http://download.redis.io/redis-stable.tar.gz tar xzvf redis-stab
       <pubDate>Tue, 11 Sep 2018 10:47:48 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/ruby-009-common-libs/</guid>
-      <description>Common libs  MVC Framework : Ruby On Rails(ROR) dRuby CSV  Inline if and unless puts &#39;example&#39; if true puts &#39;example&#39; unless true  Private method class Sample def hello puts &#39;hello&#39; end private def hi puts &#39;hi&#39; end end  Command-line arguments puts ARGV[0]  Regular Expressions Singleton methods superhero = Person.new def superhero.fly puts &#39;Fly up&#39; end superhero.fly  Call any method, even undefined ones #!/usr/env/bin ruby class AskMeAnyThing def method_missing(method_name, args = {}) &amp;quot;You called #{method_name.</description>
+      <description>Common libs  MVC Framework : Ruby On Rails(ROR) dRuby CSV  - Inline if and unless puts &#39;example&#39; if true puts &#39;example&#39; unless true  - Private method class Sample def hello puts &#39;hello&#39; end private def hi puts &#39;hi&#39; end end  - Command-line arguments puts ARGV[0]  - Regular Expressions - Singleton methods superhero = Person.new def superhero.fly puts &#39;Fly up&#39; end superhero.fly  - Call any method, even undefined ones #!</description>
     </item>
     
     <item>
