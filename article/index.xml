@@ -18,7 +18,8 @@
       <pubDate>Mon, 01 Oct 2018 14:04:46 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/nodejs-001/</guid>
-      <description> Refs  Mozilla: https://developer.mozilla.org/en-US/docs/Learn/WebGL  </description>
+      <description>Refs  Mozilla: https://developer.mozilla.org/en-US/docs/Learn/WebGL  When to use? NodeJS is the best usage for streaming or event-based real-time applications like:
+ Chat applications Game servers - fast and high-performance servers that need to processes Good for collaborative enviroment - This is good enviroments which manage documents. In document management env you will have multiple people who post their documents and do constant changes by checking and out and checking in documents Advertisement servers.</description>
     </item>
     
     <item>
