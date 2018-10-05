@@ -9,10 +9,10 @@
     <meta name="generator" content="misostack-seo" />    
     
     
-    <title>Ruby Arrays - Blocks | Nhật Kí Phát Triển Dự Án</title>
+    <title>Rails 001 Firststep | Nhật Kí Phát Triển Dự Án</title>
     <meta name="robots" content="all" />
-    <meta name="keywords" content="Ruby Arrays Blocks" />
-    <meta name="description" content="Ruby Arrays Blocks" />
+    <meta name="keywords" content="Rails 001 Firststep" />
+    <meta name="description" content="Rails 001 Firststep" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://nhatkiduan.misostack.com/common/no-image-available.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -82,130 +82,71 @@
                 <main class="content col-md-8">
                     
     <article class="article article-scrollby" data-target="#article-scrollpy">
-        <h1>Ruby Arrays - Blocks</h1>
+        <h1>Rails 001 Firststep</h1>
         
 
-<h2 id="arrays">Arrays</h2>
+<h2 id="the-first-step">The first step</h2>
 
-<pre><code class="language-ruby">require 'faker'
-
-filepath = './15-votes.txt'
-
-module Votes
-	def self.generate_votes(filepath, numbers = 100)
-		return if File.exist?(filepath)
-		votes = []
-		(1..numbers).each do |num|
-			name = Faker::Name.name
-			(1..Random.new.rand(100)).each do |i|
-				votes &lt;&lt; name
-			end			
-		end
-		File.open(filepath,'w+') { |fh|
-			votes.shuffle.each do |name|				
-				fh.puts format(&quot;%s&quot;, name)
-			end
-		}
-	end
-	def self.read_votes(filepath)
-		votes = {}
-		File.readlines(filepath).each { |line|			
-			name = line.chomp
-			votes[name] += 1 if votes[name]
-			votes[name] = 1 unless votes[name]
-		}
-		final_votes = []
-		votes.each do |name, v|
-			final_votes &lt;&lt; { name: name, votes: v}
-		end
-		final_votes
-	end
-	def self.add_rank(records)
-		records.sort_by{ |item| item[:votes] }.reverse.each_with_index do |record, idx|
-			record[:rank] = idx + 1
-		end
-	end
-end
-
-Votes::generate_votes(filepath)
-# Votes::read_votes(filepath).sort_by{ |item| item[:votes] }.reverse.each { |record|
-# 	puts format(&quot;%s has %s&quot;, record[:name], record[:votes])
-# }
-Votes::add_rank(Votes::read_votes(filepath)).each { |record|
-	puts format(&quot;Name: %s - Votes: %s - Rank: %s&quot;, record[:name], record[:votes], record[:rank])
-}
+<pre><code class="language-bash">gem install rails
+rails new webapp -B
 </code></pre>
 
-<h2 id="blocks">Blocks</h2>
+<h2 id="running-first-time">Running first time</h2>
 
-<pre><code class="language-ruby">def yield_number
-	yield 4
-end
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> The default Database is SQLite</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> The default webserver is puma</label></li>
+</ul>
 
-array = [1,2,3]
-yield_number { |number| array &lt;&lt; number }
-p array
+<p><strong>Install bundler &amp;&amp; run server</strong></p>
 
-sum = 0
-[1,2,3].each{ |number| sum += number }
-p sum
-
-def print_block_value
-	puts yield
-end
-
-def other_method
-	print_block_value { 12 * 12 }
-end
-
-other_method
+<pre><code class="language-bash">cd webapp
+bundler install
+rails s -b 0.0.0.0 -p 3000 -e development
 </code></pre>
 
-<pre><code class="language-ruby">songs = [
-	{:name =&gt; 'Ngắm hoa lệ rơi', :singer =&gt; 'Châu Khải Phong', :views =&gt; 1500},
-	{:name =&gt; 'Ngắm hoa lệ rơi Offical', :singer =&gt; 'Châu Khải Phong', :views =&gt; 2000},
-	{:name =&gt; 'Ông ngoại tuổi 30', :singer =&gt; 'Trịnh Thăng Bình', :views =&gt; 500},
-	{:name =&gt; 'Nắng ấm xa dần', :singer =&gt; 'Sơn Tùng MTP', :views =&gt; 10000},
-	{:name =&gt; 'Đếm ngày xa em', :singer =&gt; 'Only C', :views =&gt; 1600}
-]
+<h2 id="generators">Generators</h2>
 
-module TopSongs
-	def self.list_songs(songs)
-		matching_songs = []
-		songs.each do |song|
-			if yield(song)
-				matching_songs &lt;&lt; song
-			end
-		end
-		matching_songs
-	end
-
-	def self.print_list(songs)
-		songs.each do |song|
-			yield(song)
-		end
-	end
-
-	def self.reduce(songs)
-		arr = []
-		songs.each do |ele|
-			arr &lt;&lt; yield(ele)
-		end
-		arr.uniq
-	end
-end
-
-TopSongs::print_list TopSongs::reduce(songs) { |song| song[:singer] } do |singer|
-	puts format &quot;Những bài hát hay nhất của %s :&quot;, singer
-	puts ' '*30
-	TopSongs::print_list(TopSongs::list_songs(songs) { |song| song[:singer] == singer}) do |song|
-	puts format &quot;Bài hát: %s&quot;, song[:name]
-	puts format &quot;Lượt xem: %s lượt&quot;, song[:views]
-	puts '-'*30		
-	end
-	puts '*'*30
-end
+<pre><code class="language-bash">rails generate -h
+rails generate controller Login
 </code></pre>
+
+<p>These files will be generated</p>
+
+<pre><code class="language-html">    create  app/controllers/login_controller.rb #
+    invoke  erb
+    create    app/views/login
+    invoke  test_unit
+    create    test/controllers/login_controller_test.rb #
+    invoke  helper
+    create    app/helpers/login_helper.rb #
+    invoke    test_unit
+    invoke  assets
+    invoke    coffee
+    create      app/assets/javascripts/login.coffee #
+    invoke    scss
+    create      app/assets/stylesheets/login.scss #
+</code></pre>
+
+<p><strong>Add new route and specify the LoginController handle this route</strong></p>
+
+<p><strong>config/routes.rb</strong></p>
+
+<pre><code class="language-bash">get '/login/index' # it will automatically find login controller and method index to serve this url
+</code></pre>
+
+<p><strong>The Main layout</strong></p>
+
+<ul>
+<li><a href="https://github.com/twbs/bootstrap-rubygem">https://github.com/twbs/bootstrap-rubygem</a></li>
+</ul>
+
+<p><strong>app/views/layouts/application.html.erb</strong></p>
+
+<pre><code class="language-bash">bundle add bootstrap # current gem version cause error
+</code></pre>
+
+<p>Ref: <a href="https://github.com/twbs/bootstrap-rubygem/issues/157">https://github.com/twbs/bootstrap-rubygem/issues/157</a></p>
 
     </article>
 
@@ -234,8 +175,6 @@ end
             <ul class="sidebar-links">
             
             
-                <li><a href="/article/rails-001-firststep/">Rails 001 Firststep</a></li>
-            
                 <li><a href="/article/ruby-016-web-apps/">Ruby 016 Web Apps</a></li>
             
                 <li><a href="/article/ruby-015-json-xml-and-others/">Ruby 015 Json Xml and Others</a></li>
@@ -253,6 +192,8 @@ end
                 <li><a href="/article/ruby-009-common-libs/">Ruby 009 - Common Libs</a></li>
             
                 <li><a href="/article/ruby-008-testing/">Ruby 008 Testing</a></li>
+            
+                <li><a href="/article/ruby-007-errors/">Ruby 007 Errors</a></li>
             
             </ul>        
         

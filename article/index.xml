@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Fri, 05 Oct 2018 11:42:10 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 05 Oct 2018 16:02:51 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/article/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rails 001 Firststep</title>
+      <link>http://nhatkiduan.misostack.com/article/rails-001-firststep/</link>
+      <pubDate>Fri, 05 Oct 2018 16:02:51 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/rails-001-firststep/</guid>
+      <description>The first step gem install rails rails new webapp -B  Running first time The default Database is SQLite The default webserver is puma  Install bundler &amp;amp;&amp;amp; run server
+cd webapp bundler install rails s -b 0.0.0.0 -p 3000 -e development  Generators rails generate -h rails generate controller Login  These files will be generated
+create app/controllers/login_controller.rb # invoke erb create app/views/login invoke test_unit create test/controllers/login_controller_test.rb # invoke helper create app/helpers/login_helper.</description>
+    </item>
+    
+    <item>
+      <title>Javascript 002 Es6 Tips and Tricks</title>
+      <link>http://nhatkiduan.misostack.com/article/javascript-002-es6-tips-and-tricks/</link>
+      <pubDate>Fri, 05 Oct 2018 14:29:54 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/javascript-002-es6-tips-and-tricks/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Javascript 001</title>
