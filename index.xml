@@ -18,9 +18,8 @@
       <pubDate>Fri, 05 Oct 2018 16:02:51 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/rails-001-firststep/</guid>
-      <description>The first step gem install rails rails new webapp -B  Running first time The default Database is SQLite The default webserver is puma  Install bundler &amp;amp;&amp;amp; run server
-cd webapp bundler install rails s -b 0.0.0.0 -p 3000 -e development  Generators rails generate -h rails generate controller Login  These files will be generated
-create app/controllers/login_controller.rb # invoke erb create app/views/login invoke test_unit create test/controllers/login_controller_test.rb # invoke helper create app/helpers/login_helper.</description>
+      <description>Main docs:  https://api.rubyonrails.org/  The first step gem install rails rails new webapp -B  Running first time The default Database is SQLite The default webserver is puma  Install bundler &amp;amp;&amp;amp; run server
+cd webapp bundler install rails s -b 0.0.0.0 -p 3000 -e development  Rail&amp;rsquo;s Anatomic &amp;mdash;-Routing  Resource routes Non-resourcefull routes Named routes Pretty URLs Regular Expressions and parameters External redirects Unicode character routes Routing to Rack Applications Reloading routes Testing routes Reload routes  https://blog.</description>
     </item>
     
     <item>

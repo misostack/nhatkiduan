@@ -85,6 +85,12 @@
         <h1>Rails 001 Firststep</h1>
         
 
+<h2 id="main-docs">Main docs:</h2>
+
+<ul>
+<li><a href="https://api.rubyonrails.org/">https://api.rubyonrails.org/</a></li>
+</ul>
+
 <h2 id="the-first-step">The first step</h2>
 
 <pre><code class="language-bash">gem install rails
@@ -105,48 +111,97 @@ bundler install
 rails s -b 0.0.0.0 -p 3000 -e development
 </code></pre>
 
-<h2 id="generators">Generators</h2>
+<h3 id="rail-s-anatomic">Rail&rsquo;s Anatomic</h3>
 
-<pre><code class="language-bash">rails generate -h
-rails generate controller Login
-</code></pre>
-
-<p>These files will be generated</p>
-
-<pre><code class="language-html">    create  app/controllers/login_controller.rb #
-    invoke  erb
-    create    app/views/login
-    invoke  test_unit
-    create    test/controllers/login_controller_test.rb #
-    invoke  helper
-    create    app/helpers/login_helper.rb #
-    invoke    test_unit
-    invoke  assets
-    invoke    coffee
-    create      app/assets/javascripts/login.coffee #
-    invoke    scss
-    create      app/assets/stylesheets/login.scss #
-</code></pre>
-
-<p><strong>Add new route and specify the LoginController handle this route</strong></p>
-
-<p><strong>config/routes.rb</strong></p>
-
-<pre><code class="language-bash">get '/login/index' # it will automatically find login controller and method index to serve this url
-</code></pre>
-
-<p><strong>The Main layout</strong></p>
+<h4 id="routing">&mdash;-Routing</h4>
 
 <ul>
-<li><a href="https://github.com/twbs/bootstrap-rubygem">https://github.com/twbs/bootstrap-rubygem</a></li>
+<li>Resource routes</li>
+<li>Non-resourcefull routes</li>
+<li>Named routes</li>
+<li>Pretty URLs</li>
+<li>Regular Expressions and parameters</li>
+<li>External redirects</li>
+<li>Unicode character routes</li>
+<li>Routing to Rack Applications</li>
+<li>Reloading routes</li>
+<li>Testing routes</li>
+<li>Reload routes</li>
 </ul>
 
-<p><strong>app/views/layouts/application.html.erb</strong></p>
+<p><a href="https://blog.bigbinary.com/2016/02/16/rails-5-options-for-rake-routes.html">https://blog.bigbinary.com/2016/02/16/rails-5-options-for-rake-routes.html</a></p>
 
-<pre><code class="language-bash">bundle add bootstrap # current gem version cause error
+<pre><code class="language-bash">rakes routes
 </code></pre>
 
-<p>Ref: <a href="https://github.com/twbs/bootstrap-rubygem/issues/157">https://github.com/twbs/bootstrap-rubygem/issues/157</a></p>
+<h4 id="render">&mdash;-Render</h4>
+
+<h4 id="helpers">&mdash;-Helpers</h4>
+
+<h4 id="generator">&ndash;Generator</h4>
+
+<pre><code class="language-bash">rails generate scaffold Example
+</code></pre>
+
+<p><strong>Custom your generator</strong></p>
+
+<ul>
+<li>Official : <a href="https://guides.rubyonrails.org/generators.html">https://guides.rubyonrails.org/generators.html</a></li>
+</ul>
+
+<p><strong>Which one can be customized?</strong></p>
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> ORM : active_record</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Template_engine : erb</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Test Framework: test_unit</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Scaffold_stylesheet : true (scaffolds.scss)</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Stylesheets: true</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Javascripts: true</label></li>
+</ul>
+
+<ol>
+<li>Test Framework</li>
+</ol>
+
+<ul>
+<li>Ref : <a href="https://github.com/rspec/rspec-rails">https://github.com/rspec/rspec-rails</a></li>
+</ul>
+
+<pre><code class="language-bash">rails g rspec:install
+</code></pre>
+
+<p>==&gt; Errors on window 10 : <a href="https://stackoverflow.com/questions/35517997/rspec-installation-error-invalid-argument">https://stackoverflow.com/questions/35517997/rspec-installation-error-invalid-argument</a></p>
+
+<p>Because of the rails generate rspec:install command:</p>
+
+<ol>
+<li>Creates a temporary directory</li>
+<li>Populates it with the files it needs</li>
+<li>Uses Thor to copy those files into your Rails app</li>
+</ol>
+
+<p><strong>The Workaround</strong></p>
+
+<ol>
+<li>Open config/application.rb.</li>
+<li>Add the following to the bottom of your Application class.
+ENV[&lsquo;TMP&rsquo;] = File.join(File.dirname(File.dirname(<strong>FILE</strong>)), &lsquo;tmp&rsquo;) # or any other valid temp directory</li>
+<li>Run rails generate rspec:install.</li>
+<li>Remove the line that was added in step 2.</li>
+</ol>
+
+<p><strong>config/application.rb</strong></p>
+
+<pre><code class="language-ruby">    config.generators do |g|      
+        g.test_framework :rspec
+    end
+</code></pre>
+
+<p><strong>Gemfile</strong></p>
+
+<pre><code class="language-ruby"># gem 'chromedriver-helper'
+</code></pre>
 
     </article>
 
