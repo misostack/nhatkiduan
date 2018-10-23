@@ -13,13 +13,12 @@
     
     
     <item>
-      <title>Rails 001 Firststep</title>
+      <title>Rails 001 - MVC</title>
       <link>http://nhatkiduan.misostack.com/article/rails-001-firststep/</link>
       <pubDate>Fri, 05 Oct 2018 16:02:51 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/rails-001-firststep/</guid>
-      <description>Main docs:  https://api.rubyonrails.org/  The first step gem install rails rails new webapp -B  Running first time The default Database is SQLite The default webserver is puma  Install bundler &amp;amp;&amp;amp; run server
-cd webapp bundler install rails s -b 0.0.0.0 -p 3000 -e development  Rail&amp;rsquo;s Anatomic &amp;mdash;-Routing  Resource routes Non-resourcefull routes Named routes Pretty URLs Regular Expressions and parameters External redirects Unicode character routes Routing to Rack Applications Reloading routes Testing routes Reload routes  https://blog.</description>
+      <description>All References  Official: https://guides.rubyonrails.org/index.html Routes: https://blog.bigbinary.com/2016/02/16/rails-5-options-for-rake-routes.html Generators : https://guides.rubyonrails.org/generators.html Mime : https://rubyplus.com/articles/3231-How-To-Get-A-List-Of-All-Currently-Registered-MIME-Types-With-Rails Web Mime : https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types DateTime : https://ruby-doc.org/stdlib-2.3.1/libdoc/date/rdoc/DateTime.html#method-c-now Routing: https://guides.rubyonrails.org/routing.html Controller : https://guides.rubyonrails.org/action_controller_overview.html#the-request-and-response-objects  Initialize gem install rails rails new webapp -B cd webapp bundler install rails s -b 0.0.0.0 -p 3000 -e development rails console Mime::LOOKUP  Samples Rails.application.routes.draw do get &#39;/ping&#39;, {to: &#39;home#ping&#39;} # run get &#39;/ping&#39;, {to: &#39;home#index&#39;} # never run root to: &amp;quot;home#index&amp;quot; # default end  The main points The default Database is SQLite The default webserver is puma MVC: controller, model, view Routes applied this priority( top to bottom )  Common errors 1.</description>
     </item>
     
     <item>
