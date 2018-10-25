@@ -376,6 +376,16 @@ MyClass.singleton_class.ancestors
 =&gt; [#&lt;Class:MyClass&gt;, C, #&lt;Class:Object&gt;, #&lt;Class:BasicObject&gt;, Class, Module, Object, Kernel, BasicObject]
 </code></pre>
 
+<h3 id="build-method">Build Method</h3>
+
+<pre><code class="language-bash">build won't &quot;create&quot; a record in database, just create a new object in memory so that the view can take this object and display something, especially for a form.
+</code></pre>
+
+<pre><code class="language-ruby">params = {name: 'A'}
+obj = objAType.send(:build, params)
+obj.displayName
+</code></pre>
+
 <p><strong>You wanna read more?</strong></p>
 
 <ul>
@@ -383,6 +393,7 @@ MyClass.singleton_class.ancestors
 <li><a href="https://learnrubythehardway.org/book/ex40.html">https://learnrubythehardway.org/book/ex40.html</a></li>
 <li><a href="https://viblo.asia/p/tim-hieu-sau-ve-ruby-modules-jvElaLgYZkw">https://viblo.asia/p/tim-hieu-sau-ve-ruby-modules-jvElaLgYZkw</a></li>
 <li><a href="https://www.sitepoint.com/get-the-low-down-on-ruby-modules/">https://www.sitepoint.com/get-the-low-down-on-ruby-modules/</a></li>
+<li><a href="https://stackoverflow.com/questions/19761766/build-method-on-ruby-on-rails">https://stackoverflow.com/questions/19761766/build-method-on-ruby-on-rails</a></li>
 </ul>
 
     </article>
