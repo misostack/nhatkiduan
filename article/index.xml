@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Fri, 05 Oct 2018 16:02:51 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 30 Oct 2018 10:17:23 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/article/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rails 002 - Cheatsheets</title>
+      <link>http://nhatkiduan.misostack.com/article/rails-002-cheatsheets/</link>
+      <pubDate>Tue, 30 Oct 2018 10:17:23 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/rails-002-cheatsheets/</guid>
+      <description>Routes cheatsheet   Command Description     root to: &amp;#39;home#index&amp;#39; Root URL, should place at the end   TOP to BOTTOM route priority is from top to bottom    Rails.application.routes.draw do get &#39;/ping&#39;, {to: &#39;home#ping&#39;} # run get &#39;/ping&#39;, {to: &#39;home#index&#39;} # never run get &#39;/download/:type&#39;, to: &#39;home#download&#39; get &#39;/fetch(/:type)&#39;, to: &#39;home#fetch&#39; get &#39;/redirect&#39;, to: &#39;home#redirect&#39; namespace :status do get &#39;/messages/ping&#39;, to: &#39;messages#ping&#39; get &#39;/messages/sample-app&#39;, to: &#39;messages#sampleapp&#39; resources :messages root to: &#39;messages#index&#39; end namespace :auth do get &#39;/basic&#39;, to: &#39;basic#index&#39; get &#39;/digest&#39;, to: &#39;digest#index&#39; end root to: &amp;quot;home#index&amp;quot; end  Rake tasks $ rake --tasks rake about # List versions of all Rails framew.</description>
+    </item>
     
     <item>
       <title>Rails 001 - MVC</title>
@@ -18,7 +27,7 @@
       <pubDate>Fri, 05 Oct 2018 16:02:51 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/rails-001-firststep/</guid>
-      <description>All References  Official Routes Generators Mime Web Mime DateTime Routing Controller Self Singed SSL Certificate Rails Server PUma SSL Not Avaible For this Build Layout rendering  Initialize gem install rails rails new webapp -B cd webapp bundler install rails s -b 0.0.0.0 -p 3000 -e development rails console Mime::LOOKUP gem install puma bundle update puma  Samples Rails.application.routes.draw do get &#39;/ping&#39;, {to: &#39;home#ping&#39;} # run get &#39;/ping&#39;, {to: &#39;home#index&#39;} # never run root to: &amp;quot;home#index&amp;quot; # default end  The main points The default Database is SQLite The default webserver is puma MVC: controller, model, view Routes applied this priority( top to bottom ) [x] Gem version: twiddle-wakka</description>
+      <description>All References  Official Routes Generators Mime Web Mime DateTime Routing Controller Self Singed SSL Certificate Rails Server PUma SSL Not Avaible For this Build Layout rendering  Initialize gem install rails rails new webapp -B cd webapp bundler install rails s -b 0.0.0.0 -p 3000 -e development rails console Mime::LOOKUP gem install puma bundle update puma  Samples Rails.application.routes.draw do get &#39;/ping&#39;, {to: &#39;home#ping&#39;} # run get &#39;/ping&#39;, {to: &#39;home#index&#39;} # never run root to: &amp;quot;home#index&amp;quot; # default end  Cheatsheet Routes cheatsheet Controller Cheatsheet View Cheatsheet Model Cheatsheet  The main points The default Database is SQLite The default webserver is puma MVC: controller, model, view Routes applied this priority( top to bottom ) Gem version: twiddle-wakka  Controllers Naming Convention: Pluralization is preferable( eg : ClientsController or SiteAdminsController ) Layout and rendering : by default render method will be execute and finding the view with the same name as action with this structure: &amp;lsquo;views/{namespace/controllernames/action.</description>
     </item>
     
     <item>

@@ -123,6 +123,15 @@ bundle update puma
 end
 </code></pre>
 
+<h2 id="cheatsheet">Cheatsheet</h2>
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="/article/rails-002-cheatsheets/#article-titles-0">Routes cheatsheet</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="/article/rails-002-cheatsheets/#article-titles-1">Controller Cheatsheet</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="/article/rails-002-cheatsheets/#article-titles-2">View Cheatsheet</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="/article/rails-002-cheatsheets/#article-titles-3">Model Cheatsheet</a></label></li>
+</ul>
+
 <h2 id="the-main-points">The main points</h2>
 
 <ul class="task-list">
@@ -130,16 +139,18 @@ end
 <li><label><input type="checkbox" checked disabled class="task-list-item"> The default webserver is puma</label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> MVC: controller, model, view</label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> Routes applied this priority( top to bottom )</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Gem version: <a href="https://robots.thoughtbot.com/rubys-pessimistic-operator">twiddle-wakka</a></label></li>
+</ul>
 
-<li><p>[x] Gem version: <a href="https://robots.thoughtbot.com/rubys-pessimistic-operator">twiddle-wakka</a></p>
+<h3 id="controllers">Controllers</h3>
 
-<h3 id="controllers">Controllers</h3></li>
-
-<li><p>[x] Naming Convention: Pluralization is preferable( eg : ClientsController or SiteAdminsController )</p></li>
-
-<li><p>[x] Layout and rendering : by default <strong>render method</strong> will be execute and finding the view with the same name as action with this structure: &lsquo;views/{namespace/controllernames/action.html.erb}&rsquo;( eg: views/status/messages/index.html.erb)</p></li>
-
-<li><p>[x] Parameters</p></li>
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Naming Convention: Pluralization is preferable( eg : ClientsController or SiteAdminsController )</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Layout and rendering : by default <strong>render method</strong> will be execute and finding the view with the same name as action with this structure: &lsquo;views/{namespace/controllernames/action.html.erb}&rsquo;( eg: views/status/messages/index.html.erb)</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Parameters</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Routes parameters</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Strong parameters</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> HTTP Basic Auth</label></li>
 </ul>
 
 <h3 id="views">Views</h3>
@@ -147,6 +158,49 @@ end
 <ul class="task-list">
 <li><label><input type="checkbox" checked disabled class="task-list-item"> By default</label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> ERB Template</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://rubygems.org/gems/haml/versions/5.0.4">HAML</a></label></li>
+</ul>
+
+<h3 id="models">Models</h3>
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://www.sqlite.org/download.html">SQLite</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://www.tutorialspoint.com/sqlite/sqlite_create_database.htm">SQLite tutorials</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://guides.rubyonrails.org/active_record_basics.html">ActiveRecord</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://guides.rubyonrails.org/active_record_validations.html">ActiveRecord Validation</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://guides.rubyonrails.org/active_record_migrations.html">ActiveRecord Migration</a></label></li>
+</ul>
+
+<h3 id="testing-with-rspec">Testing with RSpec</h3>
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://github.com/rspec/rspec-rails">Rspec Rails</a></label></li>
+</ul>
+
+<pre><code class="language-bash">bundle add rspec-rails --group=development,test
+</code></pre>
+
+<pre><code class="language-ruby">gem &quot;rspec-rails&quot;, &quot;~&gt; 3.8&quot;, :groups =&gt; [:development, :test]
+</code></pre>
+
+<p><strong>config/application.rb</strong></p>
+
+<pre><code class="language-ruby">
+    config.generators do |g|
+      g.orm             :active_record
+      g.test_framework  :rspec
+    end
+
+ENV['TMP'] = File.join(Rails.root, 'tmp')    
+</code></pre>
+
+<pre><code class="language-bash">rails generate rspec:install
+</code></pre>
+
+<h3 id="generators">Generators</h3>
+
+<ul>
+<li><a href="https://guides.rubyonrails.org/generators.html">Official</a></li>
 </ul>
 
 <h2 id="common-errors">Common errors</h2>
@@ -182,7 +236,7 @@ end
 <ol>
 <li>Open config/application.rb.</li>
 <li>Add the following to the bottom of your Application class.
-ENV[&lsquo;TMP&rsquo;] = File.join(File.dirname(File.dirname(<strong>FILE</strong>)), &lsquo;tmp&rsquo;) # or any other valid temp directory</li>
+ENV[&lsquo;TMP&rsquo;] = File.join(Rails.root, &lsquo;tmp&rsquo;) # or any other valid temp directory</li>
 <li>Run rails generate rspec:install.</li>
 <li>Remove the line that was added in step 2.</li>
 </ol>
@@ -226,6 +280,8 @@ ENV[&lsquo;TMP&rsquo;] = File.join(File.dirname(File.dirname(<strong>FILE</stron
             <ul class="sidebar-links">
             
             
+                <li><a href="/article/rails-002-cheatsheets/">Rails 002 - Cheatsheets</a></li>
+            
                 <li><a href="/article/ruby-016-web-apps/">Ruby 016 Web Apps</a></li>
             
                 <li><a href="/article/ruby-015-json-xml-and-others/">Ruby 015 Json Xml and Others</a></li>
@@ -243,8 +299,6 @@ ENV[&lsquo;TMP&rsquo;] = File.join(File.dirname(File.dirname(<strong>FILE</stron
                 <li><a href="/article/ruby-009-common-libs/">Ruby 009 - Common Libs</a></li>
             
                 <li><a href="/article/ruby-008-testing/">Ruby 008 Testing</a></li>
-            
-                <li><a href="/article/ruby-007-errors/">Ruby 007 Errors</a></li>
             
             </ul>        
         
