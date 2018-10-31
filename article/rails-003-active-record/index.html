@@ -83,7 +83,38 @@
                     
     <article class="article article-scrollby" data-target="#article-scrollpy">
         <h1>Rails 003 - The Powerfull Active Record</h1>
-        <p><strong>In this chapter, you will see how powerfull the Active Record is!</strong></p>
+        
+
+<p><strong>In this chapter, you will see how powerfull the Active Record is!</strong></p>
+
+<h2 id="the-powering-of-rails-console-to-make-your-query-with-active-record">The Powering of rails console to make your query with active record</h2>
+
+<pre><code class="language-ruby">Game::Team.all
+Game::Team.first
+Game::Team.first.class
+Status::Message.all
+Status::Message.find(1)
+Status::Message.find([1,2,3])
+Status::Message.where(:status =&gt; 1)
+Status::Message.where(:status =&gt; 1..3)
+Status::Message.where(:status =&gt; [1,2])
+Status::Message.where(:status =&gt; [1,2]).count
+Status::Message.where_not(:status =&gt; [1,2]).count
+Status::Message.where(:status =&gt; 1).or(Status::Message.where(:status =&gt; 2)).count
+Status::Message.where('title like ?', '%doing%') # prepared statement
+Status::Message.where('status = ? or status = ?', 1,2)
+Status::Message.where('status = :active or status = :inactive', :inactive =&gt; 2, :active =&gt; 1)
+#lazyload
+m = Status::Message.all
+m.find(1)
+m.where(:status =&gt; 1)
+m.order(:title)
+m.limit(3)
+m.order('id DESC').first
+m.order(:id).first
+#clear
+system('cls')
+</code></pre>
 
     </article>
 

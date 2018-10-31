@@ -259,6 +259,31 @@ end
 <li>Ref : <a href="https://bundler.io/">https://bundler.io/</a></li>
 </ul>
 
+<h2 id="ruby-special-synctax">- Ruby special synctax</h2>
+
+<ul>
+<li><a href="https://cbabhusal.wordpress.com/2015/10/06/ruby-what-is-the-asterix-in-function-param/">Asterisk or &ldquo;*&rdquo;</a></li>
+<li><a href="http://genua.github.io/ruby/2015/03/04/underscores-ampersands-asterisks/">http://genua.github.io/ruby/2015/03/04/underscores-ampersands-asterisks/</a></li>
+<li><a href="http://raysrashmi.com/2013/11/06/splat-operator-as-an-argument/">http://raysrashmi.com/2013/11/06/splat-operator-as-an-argument/</a></li>
+</ul>
+
+<h3 id="asterix">Asterix</h3>
+
+<pre><code class="language-ruby">#!/usr/env/bin ruby
+
+puts 'Asterisk - The flat operator in ruby'
+
+first, last = 1,2
+puts &quot;#{first} - #{last}&quot;
+
+a, *b = [1,2,3,4]
+puts &quot;#{a} - #{b}&quot;
+
+str = 'Just for your information'
+puts str.split.map { |e| e.chr }.join('').upcase!
+puts str.split.map(&amp;:chr).join('').upcase!
+</code></pre>
+
     </article>
 
                 </main>

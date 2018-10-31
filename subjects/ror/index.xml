@@ -180,7 +180,8 @@
       <pubDate>Wed, 31 Oct 2018 14:05:30 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/rails-003-active-record/</guid>
-      <description>In this chapter, you will see how powerfull the Active Record is!</description>
+      <description>In this chapter, you will see how powerfull the Active Record is!
+The Powering of rails console to make your query with active record Game::Team.all Game::Team.first Game::Team.first.class Status::Message.all Status::Message.find(1) Status::Message.find([1,2,3]) Status::Message.where(:status =&amp;gt; 1) Status::Message.where(:status =&amp;gt; 1..3) Status::Message.where(:status =&amp;gt; [1,2]) Status::Message.where(:status =&amp;gt; [1,2]).count Status::Message.where_not(:status =&amp;gt; [1,2]).count Status::Message.where(:status =&amp;gt; 1).or(Status::Message.where(:status =&amp;gt; 2)).count Status::Message.where(&#39;title like ?&#39;, &#39;%doing%&#39;) # prepared statement Status::Message.where(&#39;status = ? or status = ?&#39;, 1,2) Status::Message.where(&#39;status = :active or status = :inactive&#39;, :inactive =&amp;gt; 2, :active =&amp;gt; 1) #lazyload m = Status::Message.</description>
     </item>
     
     <item>
