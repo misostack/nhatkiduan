@@ -260,6 +260,59 @@ meatA.grade = &quot;Choice&quot;
 puts &quot;I will choose #{meatA.name} and #{meatB.name}&quot; if meatA == meatB
 </code></pre>
 
+<h3 id="extend-vs-include">Extend vs Include</h3>
+
+<pre><code class="language-ruby">#!/usr/bin/env ruby
+
+module Food
+	module Cream
+		# def self.extended(base)
+		# 	base.include self
+		# end
+	  def cream?
+	    true
+	  end
+	end
+end
+
+class Cookie
+	def self.extend(parent)
+		self.include parent
+	end
+  # include Cream
+end
+
+Cookie.extend ::Food::Cream
+
+cookie = Cookie.new
+p cookie.cream?
+
+module HackNao
+	class Base
+		def self.extend(expand)
+			self.include expand
+		end
+		def cau_mot
+			puts 'Con ga co truoc qua trung hay trung co truoc con ga?'
+		end
+	end
+end
+
+module HackNaoImprove
+	module HackNao
+		module ToanHoc
+			def cau_hai
+				puts 'Me hon con 22 tuoi, hoi khi nao tuoi me gap doi tuoi con?'
+			end
+		end
+		::HackNao::Base.extend ToanHoc
+	end
+end
+
+::HackNao::Base.new.cau_mot
+::HackNao::Base.new.cau_hai
+</code></pre>
+
     </article>
 
                 </main>

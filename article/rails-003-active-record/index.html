@@ -104,6 +104,20 @@ Status::Message.where(:status =&gt; 1).or(Status::Message.where(:status =&gt; 2)
 Status::Message.where('title like ?', '%doing%') # prepared statement
 Status::Message.where('status = ? or status = ?', 1,2)
 Status::Message.where('status = :active or status = :inactive', :inactive =&gt; 2, :active =&gt; 1)
+Status::Message.order(:status).reverse_order.first
+Status::Message.order(:id).limit(5).offset(0) #page 1
+Status::Message.order(:id).limit(5).offset(1) #page 2
+Status::Message.group(:status).limit(-1).count # {-1=&gt;2000, 0=&gt;2042, 1=&gt;1992, 2=&gt;2002, 3=&gt;1974}
+Status::Message.order(:title).limit(2).offset(0).pluck(:id, :title)# return an array like [[123, &quot;example mssage&quot;],[&quot;124&quot;,&quot;eample 2&quot;]]
+Status::Message.select(:id, :title).order(:title).limit(2).offset(0) # return array object like Status::Message id: 35, title: &quot;A little trick for achieving the proper competitiv...&quot;
+Status::Message.where(:title =&gt; 'Sample First Or Create', :status =&gt; -1).first_or_create # // will find and create if not exists.
+m = Status::Message.where(:title =&gt; 'Sample First Or Initialize', :status =&gt; -1).first_or_initialize # // will find and init object if not exists
+m.new_record?
+m.save
+# calculation
+Status::Message.average(:status)# AVG(status). Eg: calculate average annual income or expenses
+Status::Message.group(:status).sum(:status)# . Eg: sum annual income or expenses by month or year
+maximum|minimum # MAX, MIN. Eg: highest and lowest income or expenses
 #lazyload
 m = Status::Message.all
 m.find(1)
@@ -114,6 +128,57 @@ m.order('id DESC').first
 m.order(:id).first
 #clear
 system('cls')
+</code></pre>
+
+<h2 id="in-some-case-you-wanna-use-raw-sql-query">In some case, you wanna use raw sql query</h2>
+
+<ul>
+<li><a href="https://rubyplus.com/articles/3251-How-to-use-ActiveRecord-to-Execute-SQL-Query">https://rubyplus.com/articles/3251-How-to-use-ActiveRecord-to-Execute-SQL-Query</a></li>
+</ul>
+
+<pre><code class="language-bash">cpool = ActiveRecord::Base.establish_connection
+cpool.class # ActiveRecord::ConnectionAdapters::ConnectionPool
+c = cpool.connection
+results = c.execute('select m.status, count(m.status) as total from messages m group by m.status;')
+results = c.execute('select m.* from messages m order by m.status LIMIT 10 OFFSET 0')
+</code></pre>
+
+<h2 id="query-from-multiple-table">Query from multiple table</h2>
+
+<pre><code class="language-sql">Product.count_by_sql &quot;SELECT COUNT(*) FROM sales s, customers c WHERE s.customer_id = c.id&quot;
+Post.find_by_sql &quot;SELECT p.title, c.author FROM posts p, comments c WHERE p.id = c.post_id&quot;
+Post.find_by_sql [&quot;SELECT title FROM posts WHERE author = ? AND created &gt; ?&quot;, author_id, start_date]
+Post.find_by_sql [&quot;SELECT body FROM comments WHERE author = :user_id OR approved_by = :user_id&quot;, { :user_id =&gt; user_id }]
+</code></pre>
+
+<h2 id="debugging">Debugging</h2>
+
+<pre><code class="language-sql">EXPLAIN for: SELECT &quot;albums&quot;.* FROM &quot;albums&quot; WHERE (&quot;albums&quot;.&quot;release_year&quot;
+BETWEEN 1960 AND 1969)
+</code></pre>
+
+<h2 id="batch">Batch</h2>
+
+<pre><code class="language-html">Imagine, the cart have ten types of products, and you have to store it in order details table.
+If for each type, you make a query, it would become a nightmare later.
+So the solution here is batch insert.
+</code></pre>
+
+<h3 id="find-in-batches">Find in batches</h3>
+
+<ul>
+<li><a href="https://api.rubyonrails.org/classes/ActiveRecord/Batches.html#method-i-find_in_batches">https://api.rubyonrails.org/classes/ActiveRecord/Batches.html#method-i-find_in_batches</a></li>
+<li><a href="http://docs.w3cub.com/rails~5.1/activerecord/batches/">http://docs.w3cub.com/rails~5.1/activerecord/batches/</a></li>
+</ul>
+
+<h3 id="insert-batch">Insert batch</h3>
+
+<pre><code class="language-bash">INSERT INTO messages(title, created_at, status) VALUES
+('Custom message ' + strftime('%s', 'now'), strftime('%s', 'now'), 0),
+('Custom message ' + strftime('%s', 'now'), strftime('%s', 'now'), 1),
+('Custom message ' + strftime('%s', 'now'), strftime('%s', 'now'), 2),
+('Custom message ' + strftime('%s', 'now'), strftime('%s', 'now'), 3),
+('Custom message ' + strftime('%s', 'now'), strftime('%s', 'now'), 1);
 </code></pre>
 
     </article>
