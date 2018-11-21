@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Wed, 31 Oct 2018 14:42:01 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 21 Nov 2018 16:16:13 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Iome 001 Initialize</title>
+      <link>http://nhatkiduan.misostack.com/note/iome-001-initialize/</link>
+      <pubDate>Wed, 21 Nov 2018 16:16:13 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/note/iome-001-initialize/</guid>
+      <description>Requirements  Bài toán 1: SimpleAuth - xây dựng chức năng auth đơn giản, ko cần phân quyền theo module Bài toán 2: SimpleTodoList: List(Group Of TodoList), Statuses( Backlog, OnGoing, Postponed, ToBeTested, TobeValidated, Closed ), Types(2M, A, B, C, D) Bài toán 3: Messages: nhật kí dự án( message, statuses[&amp;lsquo;new&amp;rsquo;,&amp;lsquo;done&amp;rsquo;,&amp;lsquo;inprogress&amp;rsquo;,&amp;lsquo;error&amp;rsquo;,&amp;lsquo;delayed&amp;rsquo;,&amp;lsquo;removed&amp;rsquo;]) Bài toán 4: Status: system status( status, statuses[&amp;lsquo;up&amp;rsquo;,&amp;lsquo;bug&amp;rsquo;,&amp;lsquo;down&amp;rsquo;])  Diễn giải 2M: 2 minutes work: do it now, and the deadline is in 10 mins.</description>
+    </item>
     
     <item>
       <title>Rails 022 Restapi Ways</title>
@@ -199,7 +208,8 @@ The Powering of rails console to make your query with active record Game::Team.a
       <pubDate>Fri, 05 Oct 2018 16:02:51 +0700</pubDate>
       
       <guid>http://nhatkiduan.misostack.com/article/rails-001-firststep/</guid>
-      <description>All References  Official Routes Generators Mime Web Mime DateTime Routing Controller Self Singed SSL Certificate Rails Server PUma SSL Not Avaible For this Build Layout rendering  Initialize gem install rails rails new webapp -B cd webapp bundler install rails s -b 0.0.0.0 -p 3000 -e development rails console Mime::LOOKUP gem install puma bundle update puma  Samples Rails.application.routes.draw do get &#39;/ping&#39;, {to: &#39;home#ping&#39;} # run get &#39;/ping&#39;, {to: &#39;home#index&#39;} # never run root to: &amp;quot;home#index&amp;quot; # default end  Cheatsheet Routes cheatsheet Controller Cheatsheet View Cheatsheet Model Cheatsheet  The main points The default Database is SQLite The default webserver is puma MVC: controller, model, view Routes applied this priority( top to bottom ) Gem version: twiddle-wakka  Controllers Naming Convention: Pluralization is preferable( eg : ClientsController or SiteAdminsController ) Layout and rendering : by default render method will be execute and finding the view with the same name as action with this structure: &amp;lsquo;views/{namespace/controllernames/action.</description>
+      <description>All References  Official Routes Generators Mime Web Mime DateTime Routing Controller Self Singed SSL Certificate Rails Server PUma SSL Not Avaible For this Build Layout rendering  New Project Install rails rails new appname --skip-install cd appname bundle install  Change Test Framework bundle add rspec-rails --group=development,test  config/application.rb
+config.generators do |g| g.orm :active_record g.test_framework :rspec end ENV[&#39;TMP&#39;] = File.join(Rails.root, &#39;tmp&#39;)  rails generate rspec:install  Initialize gem install rails rails new webapp -B cd webapp bundler install rails s -b 0.</description>
     </item>
     
     <item>

@@ -101,6 +101,34 @@
 <li><a href="https://guides.rubyonrails.org/layouts_and_rendering.html">Layout rendering</a></li>
 </ul>
 
+<h2 id="new-project">New Project</h2>
+
+<h3 id="install-rails">Install rails</h3>
+
+<pre><code class="language-bash">rails new appname --skip-install
+cd appname
+bundle install
+</code></pre>
+
+<h3 id="change-test-framework">Change Test Framework</h3>
+
+<pre><code class="language-bash">bundle add rspec-rails --group=development,test
+</code></pre>
+
+<p><strong>config/application.rb</strong></p>
+
+<pre><code class="language-ruby">
+    config.generators do |g|
+      g.orm             :active_record
+      g.test_framework  :rspec
+    end
+
+ENV['TMP'] = File.join(Rails.root, 'tmp')    
+</code></pre>
+
+<pre><code class="language-bash">rails generate rspec:install
+</code></pre>
+
 <h2 id="initialize">Initialize</h2>
 
 <pre><code class="language-bash">gem install rails
