@@ -103,22 +103,22 @@ end
 class EqualFive &lt; StandardError
 end
 def example_errors number
-	begin
-		random_number = Random.new.rand(10)
-		puts '-'*20
-		puts &quot;Test Case #{number}&quot;		
-		raise GreaterFive, &quot;#{random_number} &gt; 5&quot; if random_number &gt; 5
-		raise EqualFive, &quot;#{random_number} = 5&quot; if random_number == 5
-		raise &quot;#{random_number} &lt; 5&quot;
-	rescue GreaterFive =&gt; error
-		puts &quot;GreaterFive: #{error.message}&quot;
-	rescue EqualFive =&gt; error
-		puts &quot;EqualFive: #{error.message}&quot;
-	rescue =&gt; error	
-		puts &quot;LesserFive: #{error.message}!&quot;
-	ensure
-		puts '-'*20
-	end
+    begin
+        random_number = Random.new.rand(10)
+        puts '-'*20
+        puts &quot;Test Case #{number}&quot;      
+        raise GreaterFive, &quot;#{random_number} &gt; 5&quot; if random_number &gt; 5
+        raise EqualFive, &quot;#{random_number} = 5&quot; if random_number == 5
+        raise &quot;#{random_number} &lt; 5&quot;
+    rescue GreaterFive =&gt; error
+        puts &quot;GreaterFive: #{error.message}&quot;
+    rescue EqualFive =&gt; error
+        puts &quot;EqualFive: #{error.message}&quot;
+    rescue =&gt; error 
+        puts &quot;LesserFive: #{error.message}!&quot;
+    ensure
+        puts '-'*20
+    end
 end
 
 (1..10).each { |i| example_errors(i) }

@@ -107,14 +107,16 @@
 <h3 id="update">Update</h3>
 
 
-<pre><code class="language-bash">sudo apt-get update</code></pre>
+<pre><code class="language-bash">
+sudo apt-get update</code></pre>
 
 
 <h3 id="cài-đặt-các-gói-ruby-dependencies">Cài đặt các gói ruby dependencies</h3>
 
 
-<pre><code class="language-bash">sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
-sudo apt-get install -y curl gnupg build-essential</code></pre>
+<pre><code class="language-bash">
+sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
+sudo apt-get install -y curl gnupg build-essential</code></pre>
 
 
 <h3 id="cài-đặt-rbenv">Cài đặt rbenv</h3>
@@ -270,9 +272,10 @@ ruby -v
 <h3 id="cài-đặt-các-gói-ruby-dependencies-1">Cài đặt các gói ruby dependencies</h3>
 
 
-<pre><code class="language-bash">sudo apt-get update
+<pre><code class="language-bash">
+sudo apt-get update
 sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
-sudo apt-get install -y curl gnupg build-essential</code></pre>
+sudo apt-get install -y curl gnupg build-essential</code></pre>
 
 
 <h3 id="cài-đặt-rvm">Cài đặt RVM</h3>
@@ -385,7 +388,8 @@ aria-controls="example-puma-service">
     <strong>puma.service</strong>
   </a>
 <div class="collapse" id="example-puma-service">
-<pre><code class="language-bash">ubuntu@cloud002:~# cat /etc/systemd/system/puma.service
+<pre><code class="language-bash">
+ubuntu@cloud002:~# cat /etc/systemd/system/puma.service
 [Unit]
 Description=Puma HTTP Server
 After=network.target
@@ -415,7 +419,7 @@ ExecStart=/home/ubuntu/.rbenv/shims/bundler exec --keep-file-descriptors puma -C
 Restart=always
 
 [Install]
-WantedBy=multi-user.target</code></pre>
+WantedBy=multi-user.target</code></pre>
 </div>
 
 
@@ -427,7 +431,8 @@ aria-controls="example-puma-rb">
     <strong>ror/config/puma.rb</strong>
   </a>
 <div class="collapse" id="example-puma-rb">
-<pre><code class="language-bash"># Puma can serve each request in a thread from an internal thread pool.
+<pre><code class="language-bash">
+# Puma can serve each request in a thread from an internal thread pool.
 # The `threads` method setting takes two numbers: a minimum and maximum.
 # Any libraries that use thread pools should be configured to match
 # the maximum value specified for Puma. Default is set to 5 threads for minimum
@@ -500,7 +505,7 @@ on_worker_boot do
   require &#34;active_record&#34;
   ActiveRecord::Base.connection.disconnect! rescue ActiveRecord::ConnectionNotEstablished
   ActiveRecord::Base.establish_connection(YAML.load_file(&#34;#{app_dir}/config/database.yml&#34;)[rails_env])
-end</code></pre>
+end</code></pre>
 </div>
 
 

@@ -188,11 +188,11 @@ task :default do
 end
 
 task :prerequisite1 do
-	puts 'prerequisite1'
+    puts 'prerequisite1'
 end
 
 task :prerequisite2 do
-	puts 'prerequisite2'
+    puts 'prerequisite2'
 end
 
 desc &quot;The task's description&quot;
@@ -215,8 +215,8 @@ task :task_name =&gt; [:prerequisite1, :prerequisite2] do |task| puts &quot;#{ta
 <p><strong>Rule tasks don’t need to be about files, as some of the examples above have shown, but if there is a file with the same name as the task’s name, then that task will have the characteristics of a file task</strong></p>
 
 <pre><code class="language-ruby">rule '.yml' =&gt; '.yml.example' do |t|
-	puts &quot;Make a copy of #{t.source} to %s&quot; % t.name
-	cp t.source, t.name
+    puts &quot;Make a copy of #{t.source} to %s&quot; % t.name
+    cp t.source, t.name
 end
 </code></pre>
 
@@ -224,19 +224,19 @@ end
 </code></pre>
 
 <pre><code class="language-ruby">file_list = Rake::FileList.new(&quot;26/*.yml.example&quot;) do |fl|
-	fl.exclude(&quot;~*&quot;)
-	fl.exclude(&quot;/^scratch\//&quot;)
-	fl.gsub!(&quot;.example&quot;,&quot;&quot;)
+    fl.exclude(&quot;~*&quot;)
+    fl.exclude(&quot;/^scratch\//&quot;)
+    fl.gsub!(&quot;.example&quot;,&quot;&quot;)
 end
 
 rule '.yml' =&gt; '.yml.example' do |t|
-	puts &quot;Make a copy of #{t.source} to %s&quot; % t.name
-	cp t.source, t.name
+    puts &quot;Make a copy of #{t.source} to %s&quot; % t.name
+    cp t.source, t.name
 end
 
 desc &quot;Setup&quot;
 task :setup =&gt; file_list do |t|
-	puts t.inspect
+    puts t.inspect
 end
 </code></pre>
 

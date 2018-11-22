@@ -115,7 +115,7 @@ grades.default = 0 # or grades = Hash.new(0)
 puts grades['anonymous'] # =&gt; 0
 
 class CelestialBody
-	attr_accessor :type, :name
+    attr_accessor :type, :name
 end
 
 default_body = CelestialBody.new
@@ -166,7 +166,7 @@ characters = ['a','b','c','a','c','d','e']
 counters = Hash.new(0)
 
 characters.each { |char|
-	counters[char] += 1
+    counters[char] += 1
 }
 
 p counters

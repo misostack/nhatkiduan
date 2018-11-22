@@ -115,95 +115,95 @@ as well as leave comments on them. There are some aspects that differ, howerver.
 <pre><code class="language-ruby">require 'faker'
 
 module Comments
-	def comments
+    def comments
         @comments = @comments || []
-	end
-	def list_comments
-		puts &quot;Total comments: #{@comments.length}&quot;
-		@comments.each { |comment|
-			puts format(&quot;%s : %s&quot;, comment[:email], comment[:text])
-		}
-	end
+    end
+    def list_comments
+        puts &quot;Total comments: #{@comments.length}&quot;
+        @comments.each { |comment|
+            puts format(&quot;%s : %s&quot;, comment[:email], comment[:text])
+        }
+    end
 
-	def add_comment(comment)
-		comments &lt;&lt; comment
-	end
+    def add_comment(comment)
+        comments &lt;&lt; comment
+    end
 end
 
 class Media
-	include Comments
-	attr_accessor :name, :source
-	def initialize(opts = {})
-		@name = opts[:name]
-		@source = opts[:source]
-	end
+    include Comments
+    attr_accessor :name, :source
+    def initialize(opts = {})
+        @name = opts[:name]
+        @source = opts[:source]
+    end
 
-	def display
-		puts '-'*20
-		puts &quot;Name : #{@name}&quot;
-		puts &quot;Source: #{@source}&quot;
-		list_comments
-		puts '-'*20
-	end
+    def display
+        puts '-'*20
+        puts &quot;Name : #{@name}&quot;
+        puts &quot;Source: #{@source}&quot;
+        list_comments
+        puts '-'*20
+    end
 end
 
 module Clip
-	def play
-		puts &quot;Play with #{@source}&quot;
-	end
+    def play
+        puts &quot;Play with #{@source}&quot;
+    end
 end
 
 class Picture &lt; Media
-	def show
-		puts &quot;&lt;img src=\&quot;#{@source}\&quot; /&gt;&quot;
-	end
+    def show
+        puts &quot;&lt;img src=\&quot;#{@source}\&quot; /&gt;&quot;
+    end
 end
 
 class Video &lt; Media
-	include Clip
-	attr_accessor :resolution
-	def initialize(opts = {})
-		super
-		@resolution = opts[:resolution]
-	end
+    include Clip
+    attr_accessor :resolution
+    def initialize(opts = {})
+        super
+        @resolution = opts[:resolution]
+    end
 
-	def display
-		super
-		puts &quot;Resolution: #{@resolution} px&quot;
-	end
+    def display
+        super
+        puts &quot;Resolution: #{@resolution} px&quot;
+    end
 end
 
 class Song &lt; Media
-	include Clip
-	attr_accessor :bpm	
-	def initialize(opts = {})
-		super
-		@bpm = opts[:bpm]
-	end
+    include Clip
+    attr_accessor :bpm  
+    def initialize(opts = {})
+        super
+        @bpm = opts[:bpm]
+    end
 
-	def display
-		super
-		puts &quot;Beats: #{@bpm} bpm&quot;
-	end
+    def display
+        super
+        puts &quot;Beats: #{@bpm} bpm&quot;
+    end
 end
 
 pic = Picture.new( name:'VietNam2018', source:'/media/images/vietnam2018.jpg')
 (1..Random.new().rand(5..10)).each { |i|
-	pic.add_comment( email: Faker::Internet.email, text: Faker::Lorem.sentences(1)[0])
+    pic.add_comment( email: Faker::Internet.email, text: Faker::Lorem.sentences(1)[0])
 }
 pic.show
 pic.display
 
 video = Video.new( name: 'Việt Nam quê hương tôi', source:'/media/videos/VietNam2018.mp4', resolution: '1920x1080')
 (1..Random.new().rand(5..10)).each { |i|
-	video.add_comment( email: Faker::Internet.email, text: Faker::Lorem.sentences(1)[0])
+    video.add_comment( email: Faker::Internet.email, text: Faker::Lorem.sentences(1)[0])
 }
 video.play
 video.display
 
 song = Song.new( name: 'Tiến lên Việt Nam', source:'/media/videos/VietNam2018.mp4', bpm: '90' )
 (1..Random.new().rand(5..10)).each { |i|
-	song.add_comment( email: Faker::Internet.email, text: Faker::Lorem.sentences(1)[0])
+    song.add_comment( email: Faker::Internet.email, text: Faker::Lorem.sentences(1)[0])
 }
 song.play
 song.display
@@ -227,15 +227,15 @@ song.display
 <pre><code class="language-ruby">puts 'Amazing comparing method'
 
 class Steak
-	include Comparable
-	# constants
-	GRADE_SCORES = {&quot;Prime&quot; =&gt; 3, &quot;Choice&quot; =&gt; 2, &quot;Select&quot; =&gt; 1}
+    include Comparable
+    # constants
+    GRADE_SCORES = {&quot;Prime&quot; =&gt; 3, &quot;Choice&quot; =&gt; 2, &quot;Select&quot; =&gt; 1}
 
-	attr_accessor :grade
+    attr_accessor :grade
 
-	def &gt;(other)		
-		GRADE_SCORES[grade] &gt; GRADE_SCORES[other.grade]
-	end
+    def &gt;(other)        
+        GRADE_SCORES[grade] &gt; GRADE_SCORES[other.grade]
+    end
 end
 
 first_steak = Steak.new
@@ -245,7 +245,7 @@ second_steak = Steak.new
 second_steak.grade = 'Choice'
 
 if first_steak &gt; second_steak
-	puts &quot;I'll take #{first_steak.inspect}.&quot;
+    puts &quot;I'll take #{first_steak.inspect}.&quot;
 end
 
 meatA = Steak.new('meatA')
@@ -265,20 +265,20 @@ puts &quot;I will choose #{meatA.name} and #{meatB.name}&quot; if meatA == meatB
 <pre><code class="language-ruby">#!/usr/bin/env ruby
 
 module Food
-	module Cream
-		# def self.extended(base)
-		# 	base.include self
-		# end
-	  def cream?
-	    true
-	  end
-	end
+    module Cream
+        # def self.extended(base)
+        #   base.include self
+        # end
+      def cream?
+        true
+      end
+    end
 end
 
 class Cookie
-	def self.extend(parent)
-		self.include parent
-	end
+    def self.extend(parent)
+        self.include parent
+    end
   # include Cream
 end
 
@@ -288,25 +288,25 @@ cookie = Cookie.new
 p cookie.cream?
 
 module HackNao
-	class Base
-		def self.extend(expand)
-			self.include expand
-		end
-		def cau_mot
-			puts 'Con ga co truoc qua trung hay trung co truoc con ga?'
-		end
-	end
+    class Base
+        def self.extend(expand)
+            self.include expand
+        end
+        def cau_mot
+            puts 'Con ga co truoc qua trung hay trung co truoc con ga?'
+        end
+    end
 end
 
 module HackNaoImprove
-	module HackNao
-		module ToanHoc
-			def cau_hai
-				puts 'Me hon con 22 tuoi, hoi khi nao tuoi me gap doi tuoi con?'
-			end
-		end
-		::HackNao::Base.extend ToanHoc
-	end
+    module HackNao
+        module ToanHoc
+            def cau_hai
+                puts 'Me hon con 22 tuoi, hoi khi nao tuoi me gap doi tuoi con?'
+            end
+        end
+        ::HackNao::Base.extend ToanHoc
+    end
 end
 
 ::HackNao::Base.new.cau_mot

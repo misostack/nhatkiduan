@@ -95,28 +95,28 @@
 </ul>
 
 <pre><code class="language-ruby">class Animal
-	# symbols : immutable
-	attr_reader :name, :talk	
-	def initialize
-		@name = self.class.name.capitalize		
-	end	
-	def speak
-		puts &quot;#{@name} says 'hello'&quot;
-	end
+    # symbols : immutable
+    attr_reader :name, :talk    
+    def initialize
+        @name = self.class.name.capitalize      
+    end 
+    def speak
+        puts &quot;#{@name} says 'hello'&quot;
+    end
 end
 
 class Dog &lt; Animal
-	def initialize
-		super
-		@talk = 'gou gou gou'
-	end
+    def initialize
+        super
+        @talk = 'gou gou gou'
+    end
 end
 
 class Cat &lt; Animal
-	def initialize
-		super
-		@talk = 'meow meow meow'
-	end	
+    def initialize
+        super
+        @talk = 'meow meow meow'
+    end 
 end
 
 dog = Dog.new
@@ -206,58 +206,58 @@ dog1.name = &quot;Einstein&quot;
 </ul>
 
 <pre><code class="language-ruby">module IkariamUnit
-	class Unit
-		attr_reader :name, :description, :hitpoints, :armour, :size, :type, :speed, :cost, :barracks, :status
-		def initialize(unit_type)
-			@name = unit_type
-			@status = :inactive if(unit_type == 'Hoptile')
-			@status = :active unless(unit_type == 'Hoptile')
-			Object.const_get( self.class.name.split('::')[0] + &quot;::#{unit_type}&quot;)
-		end
+    class Unit
+        attr_reader :name, :description, :hitpoints, :armour, :size, :type, :speed, :cost, :barracks, :status
+        def initialize(unit_type)
+            @name = unit_type
+            @status = :inactive if(unit_type == 'Hoptile')
+            @status = :active unless(unit_type == 'Hoptile')
+            Object.const_get( self.class.name.split('::')[0] + &quot;::#{unit_type}&quot;)
+        end
 
-		def display			
-			puts prepare_display
-		end
+        def display         
+            puts prepare_display
+        end
 
-		protected
+        protected
 
-		def prepare_display
-			'-' * 20
-			&quot;Name: #{name}\n&quot; +
-			&quot;Description: #{description}\n&quot;.capitalize +
-			&quot;hitpoints: #{hitpoints}\n&quot;.capitalize +
-			&quot;armour: #{armour}\n&quot;.capitalize +
-			&quot;size: #{size}\n&quot;.capitalize +
-			&quot;type: #{type}\n&quot;.capitalize +
-			&quot;speed: #{speed}\n&quot;.capitalize +
-			&quot;cost: #{cost}\n&quot;.capitalize +
-			&quot;barracks: #{barracks}\n&quot;.capitalize +
-			&quot;status: #{status}\n&quot;.capitalize +
-			'-' * 20
-		end
-	end
+        def prepare_display
+            '-' * 20
+            &quot;Name: #{name}\n&quot; +
+            &quot;Description: #{description}\n&quot;.capitalize +
+            &quot;hitpoints: #{hitpoints}\n&quot;.capitalize +
+            &quot;armour: #{armour}\n&quot;.capitalize +
+            &quot;size: #{size}\n&quot;.capitalize +
+            &quot;type: #{type}\n&quot;.capitalize +
+            &quot;speed: #{speed}\n&quot;.capitalize +
+            &quot;cost: #{cost}\n&quot;.capitalize +
+            &quot;barracks: #{barracks}\n&quot;.capitalize +
+            &quot;status: #{status}\n&quot;.capitalize +
+            '-' * 20
+        end
+    end
 
-	class Hoptile &lt; Unit
-	end
+    class Hoptile &lt; Unit
+    end
 
-	class SteamGiant &lt; Unit
-	end
+    class SteamGiant &lt; Unit
+    end
 
-	class Swordman &lt; Unit
-	end
+    class Swordman &lt; Unit
+    end
 
-	class Spearman &lt; Unit
-	end
+    class Spearman &lt; Unit
+    end
 
-	class SulphurCarabineer &lt; Unit
-	end
+    class SulphurCarabineer &lt; Unit
+    end
 
-	def self.show_all_units
-		['Hoptile','SteamGiant','Swordman','Spearman','SulphurCarabineer'].each do |u|
-			unit_obj = Unit.new(u)
-			unit_obj.display
-		end
-	end
+    def self.show_all_units
+        ['Hoptile','SteamGiant','Swordman','Spearman','SulphurCarabineer'].each do |u|
+            unit_obj = Unit.new(u)
+            unit_obj.display
+        end
+    end
 end
 
 IkariamUnit.show_all_units
@@ -272,28 +272,28 @@ puts 1.0/ 2
 puts Float(1.0) /2
 
 class Employee
-	attr_reader :name, :salary
+    attr_reader :name, :salary
 
-	def initialize(name = 'Anonymous', salary = 0.0)
-		@name = name
-		@salary = salary
-	end
+    def initialize(name = 'Anonymous', salary = 0.0)
+        @name = name
+        @salary = salary
+    end
 
-	def name=(name)
-		raise 'Name can not be blank' if name == ''
-		@name = name
-	end
+    def name=(name)
+        raise 'Name can not be blank' if name == ''
+        @name = name
+    end
 
-	def salary=(salary)
-		raise &quot;A salary of #{salary} is not valid!&quot; if salary &lt; 0
-		puts salary.class
-		@salary = salary * 1.0
-		puts @salary.class
-	end
+    def salary=(salary)
+        raise &quot;A salary of #{salary} is not valid!&quot; if salary &lt; 0
+        puts salary.class
+        @salary = salary * 1.0
+        puts @salary.class
+    end
 
-	def print_pay_stub
-		puts format(&quot;The %s 's pay period is $%0.2f&quot;, @name, @salary/365 * 14)
-	end
+    def print_pay_stub
+        puts format(&quot;The %s 's pay period is $%0.2f&quot;, @name, @salary/365 * 14)
+    end
 end
 
 jack = Employee.new 'Jack', 100000
@@ -326,22 +326,22 @@ p cookie.cream?
 <pre><code class="language-ruby">require 'digest'
 
 module Encryption
-	def encrypt(string)
-		Digest::SHA2.hexdigest(string)
-	end
+    def encrypt(string)
+        Digest::SHA2.hexdigest(string)
+    end
 end
 
 class User
-	include Encryption
-	
-	def login(username,password)
-		@hashed_password = encrypt_password(password)
-		p &quot;#{username} - #{@hashed_password}&quot;
-	end
+    include Encryption
+    
+    def login(username,password)
+        @hashed_password = encrypt_password(password)
+        p &quot;#{username} - #{@hashed_password}&quot;
+    end
 
-	def encrypt_password(password, salt = '')
-		encrypt(password.to_s + (salt.empty? ? '123456' : salt).to_s )
-	end
+    def encrypt_password(password, salt = '')
+        encrypt(password.to_s + (salt.empty? ? '123456' : salt).to_s )
+    end
 end
 
 u = User.new

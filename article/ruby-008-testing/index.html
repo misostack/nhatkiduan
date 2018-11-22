@@ -111,31 +111,31 @@
 require 'minitest/autorun'
 
 def function_a(a, b)
-	a + b
+    a + b
 end
 
 def function_b(a, b)
-	a - b
+    a - b
 end
 
 class SampleTest &lt; Minitest::Test
-	def setup #run only once
-		@a = Random.new.rand(1..10)
-		@b = Random.new.rand(5..10)
-		@total = @a + @b
-		@differ = @a - @b
-	end
-	def teardown # run before each test
-		puts &quot;#{@a} + #{@b} = #{@total}&quot;
-		puts &quot;#{@a} - #{@b} = #{@differ}&quot;
-		puts '-'*20
-	end
-	def test_function_a		
-		assert_equal(@total, function_a(@a,@b))
-	end
-	def test_function_b
-		assert_equal(@differ, function_b(@a,@b))
-	end	
+    def setup #run only once
+        @a = Random.new.rand(1..10)
+        @b = Random.new.rand(5..10)
+        @total = @a + @b
+        @differ = @a - @b
+    end
+    def teardown # run before each test
+        puts &quot;#{@a} + #{@b} = #{@total}&quot;
+        puts &quot;#{@a} - #{@b} = #{@differ}&quot;
+        puts '-'*20
+    end
+    def test_function_a     
+        assert_equal(@total, function_a(@a,@b))
+    end
+    def test_function_b
+        assert_equal(@differ, function_b(@a,@b))
+    end 
 end
 </code></pre>
 

@@ -92,54 +92,54 @@
 filepath = './15-votes.txt'
 
 module Votes
-	def self.generate_votes(filepath, numbers = 100)
-		return if File.exist?(filepath)
-		votes = []
-		(1..numbers).each do |num|
-			name = Faker::Name.name
-			(1..Random.new.rand(100)).each do |i|
-				votes &lt;&lt; name
-			end			
-		end
-		File.open(filepath,'w+') { |fh|
-			votes.shuffle.each do |name|				
-				fh.puts format(&quot;%s&quot;, name)
-			end
-		}
-	end
-	def self.read_votes(filepath)
-		votes = {}
-		File.readlines(filepath).each { |line|			
-			name = line.chomp
-			votes[name] += 1 if votes[name]
-			votes[name] = 1 unless votes[name]
-		}
-		final_votes = []
-		votes.each do |name, v|
-			final_votes &lt;&lt; { name: name, votes: v}
-		end
-		final_votes
-	end
-	def self.add_rank(records)
-		records.sort_by{ |item| item[:votes] }.reverse.each_with_index do |record, idx|
-			record[:rank] = idx + 1
-		end
-	end
+    def self.generate_votes(filepath, numbers = 100)
+        return if File.exist?(filepath)
+        votes = []
+        (1..numbers).each do |num|
+            name = Faker::Name.name
+            (1..Random.new.rand(100)).each do |i|
+                votes &lt;&lt; name
+            end         
+        end
+        File.open(filepath,'w+') { |fh|
+            votes.shuffle.each do |name|                
+                fh.puts format(&quot;%s&quot;, name)
+            end
+        }
+    end
+    def self.read_votes(filepath)
+        votes = {}
+        File.readlines(filepath).each { |line|          
+            name = line.chomp
+            votes[name] += 1 if votes[name]
+            votes[name] = 1 unless votes[name]
+        }
+        final_votes = []
+        votes.each do |name, v|
+            final_votes &lt;&lt; { name: name, votes: v}
+        end
+        final_votes
+    end
+    def self.add_rank(records)
+        records.sort_by{ |item| item[:votes] }.reverse.each_with_index do |record, idx|
+            record[:rank] = idx + 1
+        end
+    end
 end
 
 Votes::generate_votes(filepath)
 # Votes::read_votes(filepath).sort_by{ |item| item[:votes] }.reverse.each { |record|
-# 	puts format(&quot;%s has %s&quot;, record[:name], record[:votes])
+#   puts format(&quot;%s has %s&quot;, record[:name], record[:votes])
 # }
 Votes::add_rank(Votes::read_votes(filepath)).each { |record|
-	puts format(&quot;Name: %s - Votes: %s - Rank: %s&quot;, record[:name], record[:votes], record[:rank])
+    puts format(&quot;Name: %s - Votes: %s - Rank: %s&quot;, record[:name], record[:votes], record[:rank])
 }
 </code></pre>
 
 <h2 id="blocks">Blocks</h2>
 
 <pre><code class="language-ruby">def yield_number
-	yield 4
+    yield 4
 end
 
 array = [1,2,3]
@@ -151,59 +151,59 @@ sum = 0
 p sum
 
 def print_block_value
-	puts yield
+    puts yield
 end
 
 def other_method
-	print_block_value { 12 * 12 }
+    print_block_value { 12 * 12 }
 end
 
 other_method
 </code></pre>
 
 <pre><code class="language-ruby">songs = [
-	{:name =&gt; 'Ngắm hoa lệ rơi', :singer =&gt; 'Châu Khải Phong', :views =&gt; 1500},
-	{:name =&gt; 'Ngắm hoa lệ rơi Offical', :singer =&gt; 'Châu Khải Phong', :views =&gt; 2000},
-	{:name =&gt; 'Ông ngoại tuổi 30', :singer =&gt; 'Trịnh Thăng Bình', :views =&gt; 500},
-	{:name =&gt; 'Nắng ấm xa dần', :singer =&gt; 'Sơn Tùng MTP', :views =&gt; 10000},
-	{:name =&gt; 'Đếm ngày xa em', :singer =&gt; 'Only C', :views =&gt; 1600}
+    {:name =&gt; 'Ngắm hoa lệ rơi', :singer =&gt; 'Châu Khải Phong', :views =&gt; 1500},
+    {:name =&gt; 'Ngắm hoa lệ rơi Offical', :singer =&gt; 'Châu Khải Phong', :views =&gt; 2000},
+    {:name =&gt; 'Ông ngoại tuổi 30', :singer =&gt; 'Trịnh Thăng Bình', :views =&gt; 500},
+    {:name =&gt; 'Nắng ấm xa dần', :singer =&gt; 'Sơn Tùng MTP', :views =&gt; 10000},
+    {:name =&gt; 'Đếm ngày xa em', :singer =&gt; 'Only C', :views =&gt; 1600}
 ]
 
 module TopSongs
-	def self.list_songs(songs)
-		matching_songs = []
-		songs.each do |song|
-			if yield(song)
-				matching_songs &lt;&lt; song
-			end
-		end
-		matching_songs
-	end
+    def self.list_songs(songs)
+        matching_songs = []
+        songs.each do |song|
+            if yield(song)
+                matching_songs &lt;&lt; song
+            end
+        end
+        matching_songs
+    end
 
-	def self.print_list(songs)
-		songs.each do |song|
-			yield(song)
-		end
-	end
+    def self.print_list(songs)
+        songs.each do |song|
+            yield(song)
+        end
+    end
 
-	def self.reduce(songs)
-		arr = []
-		songs.each do |ele|
-			arr &lt;&lt; yield(ele)
-		end
-		arr.uniq
-	end
+    def self.reduce(songs)
+        arr = []
+        songs.each do |ele|
+            arr &lt;&lt; yield(ele)
+        end
+        arr.uniq
+    end
 end
 
 TopSongs::print_list TopSongs::reduce(songs) { |song| song[:singer] } do |singer|
-	puts format &quot;Những bài hát hay nhất của %s :&quot;, singer
-	puts ' '*30
-	TopSongs::print_list(TopSongs::list_songs(songs) { |song| song[:singer] == singer}) do |song|
-	puts format &quot;Bài hát: %s&quot;, song[:name]
-	puts format &quot;Lượt xem: %s lượt&quot;, song[:views]
-	puts '-'*30		
-	end
-	puts '*'*30
+    puts format &quot;Những bài hát hay nhất của %s :&quot;, singer
+    puts ' '*30
+    TopSongs::print_list(TopSongs::list_songs(songs) { |song| song[:singer] == singer}) do |song|
+    puts format &quot;Bài hát: %s&quot;, song[:name]
+    puts format &quot;Lượt xem: %s lượt&quot;, song[:views]
+    puts '-'*30     
+    end
+    puts '*'*30
 end
 </code></pre>
 

@@ -195,7 +195,8 @@ aria-controls="example-sample-component">
     <strong>sample-component</strong>
   </a>
 <div class="collapse" id="example-sample-component">
-<pre><code class="language-javascript">// Wrong
+<pre><code class="language-javascript">
+// Wrong
 this.setState({
   counter: this.state.counter &#43; this.props.increment,
 });
@@ -224,7 +225,8 @@ componentDidMount() {
         comments: response.comments
       });
     });
-  }</code></pre>
+  }
+</code></pre>
 </div>
 
 <br/>
@@ -234,7 +236,9 @@ aria-controls="example-timer-component">
     <strong>timer-component</strong>
   </a>
 <div class="collapse" id="example-timer-component">
-<pre><code class="language-javascript">import * as React from &#34;react&#34;;
+<pre><code class="language-javascript">
+
+import * as React from &#34;react&#34;;
 interface TimerProps {
     wrapperClass: string
 }
@@ -277,7 +281,8 @@ export default class Timer extends React.Component&lt;TimerProps, TimerState&gt;
             &lt;div className={this.props.wrapperClass}&gt;&lt;i className=&#34;fa fa-clock mr-md-2&#34;&gt;&lt;/i&gt;{this.state.date.toLocaleTimeString()}&lt;/div&gt;
         )
     }
-}</code></pre>
+}
+</code></pre>
 </div>
 
 <br/></p>
