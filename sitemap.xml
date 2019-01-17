@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nhatkiduan.misostack.com/article/ng-fundamental-001/</loc>
+    <lastmod>2019-01-16T22:15:25+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nhatkiduan.misostack.com/note/iome-001-initialize/</loc>
     <lastmod>2018-11-21T16:16:13+07:00</lastmod>
   </url>
@@ -288,8 +293,14 @@
   </url>
   
   <url>
+    <loc>http://nhatkiduan.misostack.com/subjects/angular/</loc>
+    <lastmod>2019-01-16T22:15:25+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://nhatkiduan.misostack.com/article/</loc>
-    <lastmod>2018-10-31T14:42:01+07:00</lastmod>
+    <lastmod>2019-01-16T22:15:25+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -342,7 +353,7 @@
   
   <url>
     <loc>http://nhatkiduan.misostack.com/</loc>
-    <lastmod>2018-11-21T16:16:13+07:00</lastmod>
+    <lastmod>2019-01-16T22:15:25+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -378,7 +389,7 @@
   
   <url>
     <loc>http://nhatkiduan.misostack.com/subjects/</loc>
-    <lastmod>2018-05-29T18:47:46+07:00</lastmod>
+    <lastmod>2019-01-16T22:15:25+07:00</lastmod>
     <priority>0</priority>
   </url>
   

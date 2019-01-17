@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-VN</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Wed, 21 Nov 2018 16:16:13 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jan 2019 22:15:25 +0700</lastBuildDate>
     
 	<atom:link href="http://nhatkiduan.misostack.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ng Fundamental 001</title>
+      <link>http://nhatkiduan.misostack.com/article/ng-fundamental-001/</link>
+      <pubDate>Wed, 16 Jan 2019 22:15:25 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ng-fundamental-001/</guid>
+      <description> Architecture Overview . . . . .  Architecture Overview </description>
+    </item>
     
     <item>
       <title>Iome 001 Initialize</title>

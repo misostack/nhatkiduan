@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angular on Nhật Kí Phát Triển Dự Án</title>
+    <link>http://nhatkiduan.misostack.com/subjects/angular/</link>
+    <description>Recent content in Angular on Nhật Kí Phát Triển Dự Án</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi-VN</language>
+    <copyright>Everything is mine</copyright>
+    <lastBuildDate>Wed, 16 Jan 2019 22:15:25 +0700</lastBuildDate>
+    
+	<atom:link href="http://nhatkiduan.misostack.com/subjects/angular/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ng Fundamental 001</title>
+      <link>http://nhatkiduan.misostack.com/article/ng-fundamental-001/</link>
+      <pubDate>Wed, 16 Jan 2019 22:15:25 +0700</pubDate>
+      
+      <guid>http://nhatkiduan.misostack.com/article/ng-fundamental-001/</guid>
+      <description> Architecture Overview . . . . .  Architecture Overview </description>
+    </item>
+    
+  </channel>
+</rss>
